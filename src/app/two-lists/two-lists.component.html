@@ -1,0 +1,29 @@
+<div class="container">
+  <!--List One-->
+  <div
+    id="list-one"
+    class="list"
+    cdkDropList
+    [cdkDropListData]="listOne"
+    [cdkDropListConnectedTo]="['list-two']"
+    (cdkDropListDropped)="onDrop($event)"
+  >
+    <div *ngFor="let item of listOne" class="list-item" cdkDrag>
+      {{ item.name }}
+    </div>
+  </div>
+
+  <!--List Two-->
+  <div
+    id="list-two"
+    class="list"
+    cdkDropList
+    [cdkDropListData]="listTwo"
+    [cdkDropListConnectedTo]="['list-one']"
+    (cdkDropListDropped)="onDrop($event)"
+  >
+    <div *ngFor="let item of listTwo" class="list-item" cdkDrag>
+      {{ item.name }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container">
+  <!--List One-->
+  <div
+    id="list-three"
+    class="list horizontal"
+    cdkDropList
+    cdkDropListSortingDisabled
+    [cdkDropListData]="listThree"
+    cdkDropListOrientation="horizontal"
+    [cdkDropListConnectedTo]="['list-four']"
+    (cdkDropListDropped)="onDrop($event)"
+    [cdkDropListEnterPredicate]="noReturnPredicate"
+  >
+    <div
+      *ngFor="let item of listThree"
+      class="list-item"
+      [cdkDragData]="item"
+      cdkDrag
+    >
+      {{ item.name }}
+    </div>
+  </div>
+
+  <!--List Two-->
+  <div
+    id="list-four"
+    class="list"
+    cdkDropList
+    [cdkDropListData]="listFour"
+    [cdkDropListConnectedTo]="['list-three']"
+    (cdkDropListDropped)="onDrop($event)"
+    [cdkDropListEnterPredicate]="lessThanThreePredicate"
+  >
+    <div
+      *ngFor="let item of listFour"
+      class="list-item"
+      [cdkDragData]="item"
+      cdkDrag
+    >
+      {{ item.name }}
+      <div class="handle" cdkDragHandle>
+      </div>
+    </div>
+  </div>
+</div>
