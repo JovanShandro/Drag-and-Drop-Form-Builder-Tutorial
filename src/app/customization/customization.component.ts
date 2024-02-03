@@ -1,21 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-
-
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-customization',
   templateUrl: './customization.component.html',
-  styleUrls: ['./customization.component.scss']
+  styleUrls: ['./customization.component.scss'],
 })
-
-
-export class CustomizationComponent implements OnInit {
+export class CustomizationComponent {
   tabNames = ['Current Element', 'Form Design'];
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
 }

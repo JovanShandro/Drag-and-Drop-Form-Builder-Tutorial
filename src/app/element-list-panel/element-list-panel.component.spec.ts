@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FieldsComponent } from './fields.component';
+import { ElementListPanelComponent } from './element-list-panel.component';
 
-describe('FieldsComponent', () => {
-  let component: FieldsComponent;
-  let fixture: ComponentFixture<FieldsComponent>;
+describe('ElementListPanelComponent', () => {
+  let component: ElementListPanelComponent;
+  let fixture: ComponentFixture<ElementListPanelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FieldsComponent ]
+      declarations: [ ElementListPanelComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FieldsComponent);
+    fixture = TestBed.createComponent(ElementListPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,12 +1,6 @@
 .app {
   height: 100%;
   width: 100%;
-  
-}
-.container {
-  display: flex;
-  height: 100%;
-  width: 100%;
 }
 
 nav {
@@ -27,4 +21,26 @@ nav {
     font-weight: bold;
     cursor: pointer;
   }
+}
+
+.container {
+  height: calc(100% - 60px);
+  width: 100%;
+  display: grid;
+  background: #f5f5f5;
+  gap: 30px;
+  grid-template-columns: 1fr 4fr 2fr;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-builder-section {
+  box-shadow: 0 0 8px -6px #000;
+  height: 100%;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.customization-section {
+  margin-right: 30px;
 }
