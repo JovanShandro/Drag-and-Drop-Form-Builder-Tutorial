@@ -1,8 +1,8 @@
 export const DraggableElementsList = [
-    {
-        title: 'Section',
-        icon: 'fa-solid fa-table-columns',
-    },
+    // {
+    //     title: 'Section',
+    //     icon: 'fa-solid fa-table-columns',
+    // },
     {
         title: 'Button',
         icon: 'fa-solid fa-square',
@@ -31,24 +31,24 @@ export const DraggableElementsList = [
         title: 'Text',
         icon: 'fa-solid fa-language',
     },
-    {
-        title: 'Picture',
-        icon: 'fa-regular fa-image',
-    },
-    {
-        title: 'Spacer',
-        icon: 'fa-solid fa-arrows-alt-v',
-    },
-    {
-        title: 'Separator',
-        icon: 'fa-solid fa-grip-lines',
-    },
-    {
-        title: 'Social',
-        icon: 'fa-solid fa-share-alt',
-    },
-    {
-        title: 'Uploader',
-        icon: 'fa-solid fa-upload',
-    },
+    // {
+    //     title: 'Picture',
+    //     icon: 'fa-regular fa-image',
+    // },
+    // {
+    //     title: 'Spacer',
+    //     icon: 'fa-solid fa-arrows-alt-v',
+    // },
+    // {
+    //     title: 'Separator',
+    //     icon: 'fa-solid fa-grip-lines',
+    // },
+    // {
+    //     title: 'Social',
+    //     icon: 'fa-solid fa-share-alt',
+    // },
+    // {
+    //     title: 'Uploader',
+    //     icon: 'fa-solid fa-upload',
+    // },
 ];
