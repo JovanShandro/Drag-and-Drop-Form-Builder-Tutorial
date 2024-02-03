@@ -59,5 +59,15 @@ export class FormService {
         },
       ],
     },
+    {
+      id: '4',
+      sectionType: FormSectionType.TwoFieldsPerRow,
+      fields: [
+        {
+          id: '2',
+          fieldType: FormFieldType.Empty,
+        },
+      ],
+    },
   ];
 }

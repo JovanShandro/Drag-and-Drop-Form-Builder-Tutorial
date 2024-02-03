@@ -1,1 +1,12 @@
-<p>form-section works! {{ section.id }}</p>
+<!-- If the section has type OneFieldPerRow-->
+<div [ngSwitch]="section.sectionType">
+  <div *ngSwitchCase="formSectionType.OneFieldPerRow">
+    One field per row type {{ section.id }}
+  </div>
+  <div *ngSwitchCase="formSectionType.TwoFieldsPerRow">
+    Two fields ....
+  </div>
+  <div *ngSwitchDefault>
+    default
+  </div>
+</div>

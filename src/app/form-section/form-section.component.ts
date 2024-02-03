@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormSection } from '../form.service';
+import { FormSection, FormSectionType } from '../form.service';
 
 @Component({
   selector: 'app-form-section',
@@ -8,4 +8,6 @@ import { FormSection } from '../form.service';
 })
 export class FormSectionComponent {
   @Input() section!: FormSection;
+
+  formSectionType = FormSectionType;
 }
