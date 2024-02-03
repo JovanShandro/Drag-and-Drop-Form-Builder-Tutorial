@@ -1,9 +1,59 @@
 .form-builder {
-    background: white;
-    border: 1px solid gray;
-    border-radius: 5px;
-    min-height: 30px;
-    width: 600px;
-    margin: 0 auto;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  min-height: 30px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
+.section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  height: 100px;
+  border: 1px dashed blue;
+  position: relative;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border-radius: 50%;
+  width: 27px;
+  cursor: pointer;
+  height: 27px;
+  background: #0d6efd;
+  transform: translate(50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handle-icon {
+  color: white;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.section-container.cdk-drop-list-dragging .section:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

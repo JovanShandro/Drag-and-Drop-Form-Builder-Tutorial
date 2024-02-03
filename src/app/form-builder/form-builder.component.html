@@ -1,2 +1,15 @@
 <div class="form-builder">
+  <div
+    class="section-container"
+    cdkDropList
+    (cdkDropListDropped)="onSectionDrop($event)"
+  >
+    <div *ngFor="let section of sections" class="section" cdkDrag>
+      section {{ section.id }}
+
+      <div class="handle" cdkDragHandle>
+        <fa-icon class="handle-icon"  [icon]="faArrowsUpDownLeftRight"></fa-icon>
+      </div>
+    </div>
+  </div>
 </div>

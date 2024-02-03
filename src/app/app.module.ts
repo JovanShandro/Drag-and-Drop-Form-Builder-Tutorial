@@ -16,6 +16,9 @@ import { FieldItemComponent } from './field-item/field-item.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElementListPanelComponent } from './element-list-panel/element-list-panel.component';
+import { FormService } from './form.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormSectionComponent } from './form-section/form-section.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +37,7 @@ export const routes: Routes = [
     CustomizationComponent,
     FieldItemComponent,
     ElementListPanelComponent,
+    FormSectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,8 +46,9 @@ export const routes: Routes = [
     DragDropModule,
     MatTabsModule,
     RouterModule.forRoot(routes),
+    FontAwesomeModule,
   ],
-  providers: [],
+  providers: [FormService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
