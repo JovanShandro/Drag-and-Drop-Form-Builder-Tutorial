@@ -1,4 +1,7 @@
 .form-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: white;
   border: 1px solid gray;
   border-radius: 5px;
@@ -6,12 +9,6 @@
   width: 600px;
   margin: 0 auto;
   padding: 15px;
-}
-
-.section-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 .section {
@@ -54,6 +51,6 @@
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.section-container.cdk-drop-list-dragging .section:not(.cdk-drag-placeholder) {
+.form-builder.cdk-drop-list-dragging .section:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }

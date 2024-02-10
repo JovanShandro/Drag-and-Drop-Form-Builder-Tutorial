@@ -29,55 +29,14 @@ export enum FormFieldType {
   providedIn: 'root',
 })
 export class FormService {
-  sections: FormSection[] = [
-    {
-      id: '1',
-      sectionType: FormSectionType.OneFieldPerRow,
-      fields: [
-        {
-          id: '2',
-          fieldType: FormFieldType.Empty,
-        },
-      ],
-    },
-    {
-      id: '2',
-      sectionType: FormSectionType.OneFieldPerRow,
-      fields: [
-        {
-          id: '2',
-          fieldType: FormFieldType.Empty,
-        },
-      ],
-    },
-    {
-      id: '3',
-      sectionType: FormSectionType.OneFieldPerRow,
-      fields: [
-        {
-          id: '2',
-          fieldType: FormFieldType.Empty,
-        },
-      ],
-    },
-    {
-      id: '4',
-      sectionType: FormSectionType.TwoFieldsPerRow,
-      fields: [
-        {
-          id: '2',
-          fieldType: FormFieldType.Empty,
-        },
-      ],
-    },
-  ];
+  sections: FormSection[] = [];
 
   createSection(sectionType: FormSectionType, index: number) {
     const newSection: FormSection = {
       id: uuid(),
       sectionType,
       fields: [],
-    }
+    };
 
     const numberOfFieldsBySectionType = {
       [FormSectionType.OneFieldPerRow]: 1,
@@ -86,14 +45,14 @@ export class FormService {
       [FormSectionType.FourFieldsPerRow]: 4,
       [FormSectionType.OneToTwoPerRow]: 2,
       [FormSectionType.TwoToOnePerRow]: 2,
-    }
+    };
 
     for (let i = 0; i < numberOfFieldsBySectionType[sectionType]; i++) {
       // create new field and push it in the fields property
       const newField: FormField = {
         id: uuid(),
         fieldType: FormFieldType.Empty,
-      }
+      };
       newSection.fields.push(newField);
     }
 
