@@ -1,1 +1,23 @@
-<p>element-list-panel works!</p>
+<section class="element-list-panel">
+  <h3 class="headline">Form Sections</h3>
+
+  <div
+    class="draggable-section-list"
+    id="draggable-section-list"
+    cdkDropList
+    cdkDropListSortingDisabled
+  >
+    <div
+      *ngFor="let draggableSection of draggableSections"
+      class="draggable-section"
+      cdkDrag
+    >
+      <!-- Find a way to know how to show the right number of
+      rectanges and with the right width based on the section type -->
+      <ng-container *ngFor="let width of draggableSection.pattern.split(':')">
+        <div *ngIf="width === '1'" class="placeholder"></div>
+        <div *ngIf="width === '2'" class="placeholder placeholder--wide"></div>
+      </ng-container>
+    </div>
+  </div>
+</section>

@@ -19,6 +19,7 @@ import { ElementListPanelComponent } from './element-list-panel/element-list-pan
 import { FormService } from './form.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormSectionComponent } from './form-section/form-section.component';
+import { SingleFieldSectionComponent } from './single-field-section/single-field-section.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -38,6 +39,7 @@ export const routes: Routes = [
     FieldItemComponent,
     ElementListPanelComponent,
     FormSectionComponent,
+    SingleFieldSectionComponent,
   ],
   imports: [
     BrowserModule,
