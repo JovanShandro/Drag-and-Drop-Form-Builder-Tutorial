@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { v4 as uuid } from 'uuid';
 
 export interface FormSection {
   id: string;
@@ -70,4 +71,32 @@ export class FormService {
       ],
     },
   ];
+
+  createSection(sectionType: FormSectionType, index: number) {
+    const newSection: FormSection = {
+      id: uuid(),
+      sectionType,
+      fields: [],
+    }
+
+    const numberOfFieldsBySectionType = {
+      [FormSectionType.OneFieldPerRow]: 1,
+      [FormSectionType.TwoFieldsPerRow]: 2,
+      [FormSectionType.ThreeFieldsPerRow]: 3,
+      [FormSectionType.FourFieldsPerRow]: 4,
+      [FormSectionType.OneToTwoPerRow]: 2,
+      [FormSectionType.TwoToOnePerRow]: 2,
+    }
+
+    for (let i = 0; i < numberOfFieldsBySectionType[sectionType]; i++) {
+      // create new field and push it in the fields property
+      const newField: FormField = {
+        id: uuid(),
+        fieldType: FormFieldType.Empty,
+      }
+      newSection.fields.push(newField);
+    }
+
+    this.sections.splice(index, 0, newSection);
+  }
 }

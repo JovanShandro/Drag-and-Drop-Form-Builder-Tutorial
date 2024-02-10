@@ -4,6 +4,11 @@
     *ngSwitchCase="formSectionType.OneFieldPerRow"
     [field]="section.fields[0]"
   ></app-single-field-section>
+
   <div *ngSwitchCase="formSectionType.TwoFieldsPerRow">Two fields ....</div>
+  <div *ngSwitchCase="formSectionType.ThreeFieldsPerRow">Three fields ....</div>
+  <div *ngSwitchCase="formSectionType.FourFieldsPerRow">Four fields ....</div>
+  <div *ngSwitchCase="formSectionType.OneToTwoPerRow">One to Two fields ....</div>
+  <div *ngSwitchCase="formSectionType.TwoToOnePerRow">Two to one fields ....</div>
   <div *ngSwitchDefault>default</div>
 </div>

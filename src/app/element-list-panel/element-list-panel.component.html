@@ -6,10 +6,15 @@
     id="draggable-section-list"
     cdkDropList
     cdkDropListSortingDisabled
+    [cdkDropListConnectedTo]="['section-list']"
+    [cdkDropListEnterPredicate]="noEnterPredicate"
+
+    [cdkDropListData]="draggableSections"
   >
     <div
       *ngFor="let draggableSection of draggableSections"
       class="draggable-section"
+      [cdkDragData]="draggableSection"
       cdkDrag
     >
       <!-- Find a way to know how to show the right number of

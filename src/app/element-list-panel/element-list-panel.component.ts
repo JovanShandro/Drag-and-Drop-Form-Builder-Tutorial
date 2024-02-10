@@ -33,4 +33,11 @@ export class ElementListPanelComponent {
       pattern: '2:1',
     },
   ];
+
+  noEnterPredicate() {
+    // The way how predicates work is that if this function
+    // returns true, the item will be allows to be dropped in the list,
+    // and if it returns false, it won't
+    return false;
+  }
 }

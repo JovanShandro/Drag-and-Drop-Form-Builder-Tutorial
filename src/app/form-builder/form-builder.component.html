@@ -1,8 +1,10 @@
 <div class="form-builder">
   <div
     class="section-container"
+    id="section-list"
     cdkDropList
     (cdkDropListDropped)="onSectionDrop($event)"
+    [cdkDropListConnectedTo]="['draggable-section-list']"
   >
     <div *ngFor="let section of sections" class="section" cdkDrag>
       <app-form-section [section]="section"></app-form-section>

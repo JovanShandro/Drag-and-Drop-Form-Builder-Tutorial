@@ -19,6 +19,12 @@ export class FormBuilderComponent implements OnInit {
   }
 
   onSectionDrop(event: CdkDragDrop<FormSection>) {
+    if (event.container !== event.previousContainer) {
+      // Handle creation of new section
+      this.formService.createSection(event.item.data.sectionType, event.currentIndex)
+      return;
+    }
+
     // Reorder in the list
     moveItemInArray(
       this.formService.sections,
