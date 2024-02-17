@@ -25,6 +25,7 @@ import { TripleFieldSectionComponent } from './triple-field-section/triple-field
 import { QuadrupleFieldSectionComponent } from './quadruple-field-section/quadruple-field-section.component';
 import { OneToTwoFieldSectionComponent } from './one-to-two-field-section/one-to-two-field-section.component';
 import { TwoToOneFieldSectionComponent } from './two-to-one-field-section/two-to-one-field-section.component';
+import { FormFieldComponent } from './form-field/form-field.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,7 @@ export const routes: Routes = [
     QuadrupleFieldSectionComponent,
     OneToTwoFieldSectionComponent,
     TwoToOneFieldSectionComponent,
+    FormFieldComponent,
   ],
   imports: [
     BrowserModule,
