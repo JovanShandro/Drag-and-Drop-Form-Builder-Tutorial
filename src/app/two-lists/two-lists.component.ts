@@ -50,7 +50,7 @@ export class TwoListsComponent {
   onDrop(event: CdkDragDrop<any>) {
     const previousList = event.previousContainer.data;
     const currentList = event.container.data;
-    console.log(event);
+
     if (event.previousContainer === event.container) {
       moveItemInArray(currentList, event.previousIndex, event.currentIndex);
     } else {

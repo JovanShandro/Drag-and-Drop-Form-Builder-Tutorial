@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormFieldType, FormSectionType, FormService } from '../form.service';
+import { FormFieldType, FormItemType, FormSectionType, FormService } from '../form.service';
 import { faSquare as faSquareOutline } from '@fortawesome/free-regular-svg-icons';
 import {
   faSquare as faSquareFilled,
@@ -14,26 +14,32 @@ import {
 export class ElementListPanelComponent {
   draggableSections = [
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.OneFieldPerRow,
       pattern: '1',
     },
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.TwoFieldsPerRow,
       pattern: '1:1',
     },
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.ThreeFieldsPerRow,
       pattern: '1:1:1',
     },
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.FourFieldsPerRow,
       pattern: '1:1:1:1',
     },
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.OneToTwoPerRow,
       pattern: '1:2',
     },
     {
+      type: FormItemType.Section,
       sectionType: FormSectionType.TwoToOnePerRow,
       pattern: '2:1',
     },
@@ -41,16 +47,19 @@ export class ElementListPanelComponent {
 
   draggableFields = [
     {
+      type: FormItemType.Field,
       fieldType: FormFieldType.Input,
       title: 'Input',
       icon: faSquareOutline,
     },
     {
+      type: FormItemType.Field,
       fieldType: FormFieldType.Button,
       title: 'Button',
       icon: faSquareFilled,
     },
     {
+      type: FormItemType.Field,
       fieldType: FormFieldType.Textarea,
       title: 'Textarea',
       icon: faWindowMaximize,

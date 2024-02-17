@@ -18,6 +18,10 @@ export class FormBuilderComponent implements OnInit {
     this.sections = this.formService.sections;
   }
 
+  onlySectionsPredicate(item: CdkDrag<FormSection | FormField>) {
+    return item.data.type === FormItemType.Section;
+  }
+
   onSectionDrop(event: CdkDragDrop<FormSection>) {
     if (event.container !== event.previousContainer) {
       // Handle creation of new section

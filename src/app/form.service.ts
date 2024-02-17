@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 
+export enum FormItemType {
+  Section = 0,
+  Field = 1,
+}
+
 export interface FormSection {
   id: string;
+  type: FormItemType.Section;
   sectionType: FormSectionType;
   fields: FormField[];
 }
@@ -18,11 +24,15 @@ export enum FormSectionType {
 
 export interface FormField {
   id: string;
+  type: FormItemType.Field;
   fieldType: FormFieldType;
 }
 
 export enum FormFieldType {
   Empty = 0,
+  Input = 1,
+  Textarea = 2,
+  Button = 3,
 }
 
 @Injectable({
@@ -34,6 +44,7 @@ export class FormService {
   createSection(sectionType: FormSectionType, index: number) {
     const newSection: FormSection = {
       id: uuid(),
+      type: FormItemType.Section,
       sectionType,
       fields: [],
     };
@@ -51,6 +62,7 @@ export class FormService {
       // create new field and push it in the fields property
       const newField: FormField = {
         id: uuid(),
+        type: FormItemType.Field,
         fieldType: FormFieldType.Empty,
       };
       newSection.fields.push(newField);

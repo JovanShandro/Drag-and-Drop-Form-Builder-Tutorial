@@ -4,6 +4,7 @@
   cdkDropList
   (cdkDropListDropped)="onSectionDrop($event)"
   [cdkDropListConnectedTo]="['draggable-section-list']"
+  [cdkDropListEnterPredicate]="onlySectionsPredicate"
 >
   <div *ngFor="let section of sections" class="section" cdkDrag>
     <app-form-section [section]="section"></app-form-section>
