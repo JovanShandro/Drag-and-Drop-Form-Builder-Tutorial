@@ -6,8 +6,13 @@
   [cdkDropListEnterPredicate]="noEnterPredicate"
 >
   <div
-    *ngFor="let field of fields"
+    *ngFor="let field of section.fields; index as idx"
     class="field"
+    [ngClass]="{
+      'field--wide':
+        (section.sectionType === formSectionType.OneToTwoPerRow && idx === 1) ||
+        (section.sectionType === formSectionType.TwoToOnePerRow && idx === 0)
+    }"
     [id]="field.id"
     cdkDropList
     (cdkDropListDropped)="onDrop($event, field)"

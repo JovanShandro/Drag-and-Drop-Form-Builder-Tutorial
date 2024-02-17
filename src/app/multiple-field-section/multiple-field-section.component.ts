@@ -4,6 +4,7 @@ import {
   FormFieldType,
   FormItemType,
   FormSection,
+  FormSectionType,
 } from '../form.service';
 import { CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
@@ -14,9 +15,10 @@ import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./multiple-field-section.component.scss'],
 })
 export class MultipleFieldSectionComponent {
-  @Input() fields!: FormField[];
+  @Input() section!: FormSection;
 
   formFieldType = FormFieldType;
+  formSectionType = FormSectionType;
   faArrowsUpDownLeftRight = faArrowsUpDownLeftRight;
 
   onlyFieldsPredicate(item: CdkDrag<FormSection | FormField>) {
@@ -34,6 +36,10 @@ export class MultipleFieldSectionComponent {
   }
 
   onReorderFields(event: CdkDragDrop<FormField>) {
-    moveItemInArray(this.fields, event.previousIndex, event.currentIndex);
+    moveItemInArray(
+      this.section.fields,
+      event.previousIndex,
+      event.currentIndex
+    );
   }
 }

@@ -21,8 +21,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormSectionComponent } from './form-section/form-section.component';
 import { SingleFieldSectionComponent } from './single-field-section/single-field-section.component';
 import { MultipleFieldSectionComponent } from './multiple-field-section/multiple-field-section.component';
-import { OneToTwoFieldSectionComponent } from './one-to-two-field-section/one-to-two-field-section.component';
-import { TwoToOneFieldSectionComponent } from './two-to-one-field-section/two-to-one-field-section.component';
 import { FormFieldComponent } from './form-field/form-field.component';
 
 export const routes: Routes = [
@@ -45,8 +43,6 @@ export const routes: Routes = [
     FormSectionComponent,
     SingleFieldSectionComponent,
     MultipleFieldSectionComponent,
-    OneToTwoFieldSectionComponent,
-    TwoToOneFieldSectionComponent,
     FormFieldComponent,
   ],
   imports: [

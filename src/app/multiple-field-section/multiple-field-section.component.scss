@@ -16,6 +16,10 @@
   position: relative;
 }
 
+.field--wide {
+  flex: 2;
+}
+
 .handle {
   position: absolute;
   top: 50%;

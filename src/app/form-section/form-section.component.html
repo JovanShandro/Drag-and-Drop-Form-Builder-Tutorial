@@ -5,18 +5,8 @@
     [field]="section.fields[0]"
   ></app-single-field-section>
 
-  <app-one-to-two-field-section
-    *ngSwitchCase="formSectionType.OneToTwoPerRow"
-    [field]="section.fields[1]"
-  ></app-one-to-two-field-section>
-
-  <app-two-to-one-field-section
-    *ngSwitchCase="formSectionType.TwoToOnePerRow"
-    [field]="section.fields[1]"
-  ></app-two-to-one-field-section>
-
   <app-multiple-field-section
     *ngSwitchDefault
-    [fields]="section.fields"
+    [section]="section"
   ></app-multiple-field-section>
 </div>
