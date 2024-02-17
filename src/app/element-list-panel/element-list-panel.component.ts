@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormSectionType } from '../form.service';
+import { FormFieldType, FormSectionType, FormService } from '../form.service';
+import { faSquare as faSquareOutline } from '@fortawesome/free-regular-svg-icons';
+import {
+  faSquare as faSquareFilled,
+  faWindowMaximize,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-element-list-panel',
@@ -33,6 +38,38 @@ export class ElementListPanelComponent {
       pattern: '2:1',
     },
   ];
+
+  draggableFields = [
+    {
+      fieldType: FormFieldType.Input,
+      title: 'Input',
+      icon: faSquareOutline,
+    },
+    {
+      fieldType: FormFieldType.Button,
+      title: 'Button',
+      icon: faSquareFilled,
+    },
+    {
+      fieldType: FormFieldType.Textarea,
+      title: 'Textarea',
+      icon: faWindowMaximize,
+    },
+  ];
+
+  constructor(private formService: FormService) {}
+
+  get allFieldIds() {
+    const fieldIds: string[] = [];
+
+    this.formService.sections.forEach((section) => {
+      section.fields.forEach((field) => {
+        fieldIds.push(field.id);
+      });
+    });
+
+    return fieldIds;
+  }
 
   noEnterPredicate() {
     // The way how predicates work is that if this function

@@ -8,7 +8,6 @@
     cdkDropListSortingDisabled
     [cdkDropListConnectedTo]="['section-list']"
     [cdkDropListEnterPredicate]="noEnterPredicate"
-
     [cdkDropListData]="draggableSections"
   >
     <div
@@ -23,6 +22,29 @@
         <div *ngIf="width === '1'" class="placeholder"></div>
         <div *ngIf="width === '2'" class="placeholder placeholder--wide"></div>
       </ng-container>
+    </div>
+  </div>
+
+  <br />
+
+  <h3 class="headline">Form Fields</h3>
+  <div
+    class="draggable-field-list"
+    id="draggable-field-list"
+    cdkDropList
+    cdkDropListSortingDisabled
+    [cdkDropListData]="draggableFields"
+    [cdkDropListEnterPredicate]="noEnterPredicate"
+    [cdkDropListConnectedTo]="allFieldIds"
+  >
+    <div
+      *ngFor="let draggableField of draggableFields"
+      class="draggable-field"
+      cdkDrag
+      [cdkDragData]="draggableField"
+    >
+      <fa-icon size="lg" [icon]="draggableField.icon"></fa-icon>
+      <div>{{ draggableField.title }}</div>
     </div>
   </div>
 </section>

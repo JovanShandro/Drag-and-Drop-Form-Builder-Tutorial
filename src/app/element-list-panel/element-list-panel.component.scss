@@ -1,3 +1,7 @@
+.element-list-panel {
+  padding-left: 15px;
+}
+
 .headline {
   display: flex;
   justify-content: center;
@@ -13,7 +17,7 @@
 
 .draggable-section {
   display: flex;
-  cursor: pointer;
+  cursor: move;
 }
 
 .placeholder {
@@ -25,6 +29,26 @@
 .placeholder--wide {
   min-width: 100px;
   height: 25px;
+}
+
+.draggable-field-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.draggable-field {
+  background-color: white;
+  width: 90px;
+  padding: 5px;
+  box-shadow: 0 0 8px -6px #000;
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
 }
 
 .cdk-drag-preview {

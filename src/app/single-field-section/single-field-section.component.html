@@ -1,8 +1,26 @@
 <div class="field">
-  <div class="content">
-    <div *ngIf="field?.fieldType === formFieldType.Empty">
+  <div
+    class="content"
+    [id]="field.id"
+    cdkDropList
+    (cdkDropListDropped)="onDrop($event)"
+    [cdkDropListConnectedTo]="['draggable-field-list']"
+  >
+    <div class="empty-field" *ngIf="field?.fieldType === formFieldType.Empty">
+      <img src="assets/down-arrow.png" alt="down-arrow" />
       Drop Content Here
+    </div>
+    <div *ngIf="field?.fieldType === formFieldType.Input">
+      Input
+      <input type="text" />
+    </div>
+    <div *ngIf="field?.fieldType === formFieldType.Button">
+      Button
+      <button>Click me</button>
+    </div>
+    <div *ngIf="field?.fieldType === formFieldType.Textarea">
+      Textarea
+      <textarea></textarea>
     </div>
   </div>
 </div>
-
