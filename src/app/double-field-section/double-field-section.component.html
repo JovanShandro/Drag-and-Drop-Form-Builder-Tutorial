@@ -1,4 +1,10 @@
-<div class="field-list">
+<div
+  class="field-list"
+  cdkDropList
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="onReorderFields($event)"
+  [cdkDropListEnterPredicate]="noEnterPredicate"
+>
   <div
     *ngFor="let field of fields"
     class="field"
@@ -6,7 +12,12 @@
     cdkDropList
     (cdkDropListDropped)="onDrop($event, field)"
     [cdkDropListEnterPredicate]="onlyFieldsPredicate"
+    cdkDrag
   >
     <app-form-field [field]="field"></app-form-field>
+
+    <div class="handle" cdkDragHandle>
+      <fa-icon class="handle-icon" [icon]="faArrowsUpDownLeftRight"></fa-icon>
+    </div>
   </div>
 </div>
