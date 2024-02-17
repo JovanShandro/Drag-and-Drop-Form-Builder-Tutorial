@@ -1,13 +1,12 @@
-<div class="field">
-    <div class="content">
-      <div *ngIf="field?.fieldType === formFieldType.Empty">
-        Drop Content Here
-      </div>
-    </div>
-
-    <div class="content">
-        <div *ngIf="field?.fieldType === formFieldType.Empty">
-          Drop Content Here
-        </div>
-      </div>
+<div class="field-list">
+  <div
+    *ngFor="let field of fields"
+    class="field"
+    [id]="field.id"
+    cdkDropList
+    (cdkDropListDropped)="onDrop($event, field)"
+    [cdkDropListEnterPredicate]="onlyFieldsPredicate"
+  >
+    <app-form-field [field]="field"></app-form-field>
   </div>
+</div>

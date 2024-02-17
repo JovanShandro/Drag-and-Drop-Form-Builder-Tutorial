@@ -1,15 +1,17 @@
-.field {
-    height: 100%;
-    padding: 0.75rem;
-    display: flex;
-    gap: 0.5rem;
+.field-list {
+  padding: 0.75rem;
+  display: flex;
+  border: 1px solid red;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
 }
 
-.content {
-    height: 100%;
-    border: 1px dashed purple;
-    display: flex;
-    flex:1;
-    justify-content: center;
-    align-items: center;
+.field {
+  height: 100%;
+  border: 1px dashed purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
