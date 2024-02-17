@@ -5,21 +5,6 @@
     [field]="section.fields[0]"
   ></app-single-field-section>
 
-  <app-double-field-section
-    *ngSwitchCase="formSectionType.TwoFieldsPerRow"
-    [fields]="section.fields"
-  ></app-double-field-section>
-
-  <app-triple-field-section
-    *ngSwitchCase="formSectionType.ThreeFieldsPerRow"
-    [field]="section.fields[2]"
-  ></app-triple-field-section>
-
-  <app-quadruple-field-section
-    *ngSwitchCase="formSectionType.FourFieldsPerRow"
-    [field]="section.fields[3]"
-  ></app-quadruple-field-section>
-
   <app-one-to-two-field-section
     *ngSwitchCase="formSectionType.OneToTwoPerRow"
     [field]="section.fields[1]"
@@ -30,5 +15,8 @@
     [field]="section.fields[1]"
   ></app-two-to-one-field-section>
 
-  <div *ngSwitchDefault>default</div>
+  <app-multiple-field-section
+    *ngSwitchDefault
+    [fields]="section.fields"
+  ></app-multiple-field-section>
 </div>

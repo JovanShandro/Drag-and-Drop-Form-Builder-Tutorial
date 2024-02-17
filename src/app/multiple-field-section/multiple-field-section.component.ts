@@ -9,11 +9,11 @@ import { CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-double-field-section',
-  templateUrl: './double-field-section.component.html',
-  styleUrls: ['./double-field-section.component.scss'],
+  selector: 'app-multiple-field-section',
+  templateUrl: './multiple-field-section.component.html',
+  styleUrls: ['./multiple-field-section.component.scss'],
 })
-export class DoubleFieldSectionComponent {
+export class MultipleFieldSectionComponent {
   @Input() fields!: FormField[];
 
   formFieldType = FormFieldType;
