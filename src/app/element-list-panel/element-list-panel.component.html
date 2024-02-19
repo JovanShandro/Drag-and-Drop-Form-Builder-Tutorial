@@ -1,50 +1,9 @@
 <section class="element-list-panel">
   <h3 class="headline">Form Sections</h3>
-
-  <div
-    class="draggable-section-list"
-    id="draggable-section-list"
-    cdkDropList
-    cdkDropListSortingDisabled
-    [cdkDropListConnectedTo]="['section-list']"
-    [cdkDropListEnterPredicate]="noEnterPredicate"
-    [cdkDropListData]="draggableSections"
-  >
-    <div
-      *ngFor="let draggableSection of draggableSections"
-      class="draggable-section"
-      [cdkDragData]="draggableSection"
-      cdkDrag
-    >
-      <!-- Find a way to know how to show the right number of
-      rectanges and with the right width based on the section type -->
-      <ng-container *ngFor="let width of draggableSection.pattern.split(':')">
-        <div *ngIf="width === '1'" class="placeholder"></div>
-        <div *ngIf="width === '2'" class="placeholder placeholder--wide"></div>
-      </ng-container>
-    </div>
-  </div>
+  <app-draggable-section-list></app-draggable-section-list>
 
   <br />
 
   <h3 class="headline">Form Fields</h3>
-  <div
-    class="draggable-field-list"
-    id="draggable-field-list"
-    cdkDropList
-    cdkDropListSortingDisabled
-    [cdkDropListData]="draggableFields"
-    [cdkDropListEnterPredicate]="noEnterPredicate"
-    [cdkDropListConnectedTo]="allFieldIds"
-  >
-    <div
-      *ngFor="let draggableField of draggableFields"
-      class="draggable-field"
-      cdkDrag
-      [cdkDragData]="draggableField"
-    >
-      <fa-icon size="lg" [icon]="draggableField.icon"></fa-icon>
-      <div>{{ draggableField.title }}</div>
-    </div>
-  </div>
+  <app-draggable-field-list></app-draggable-field-list>
 </section>

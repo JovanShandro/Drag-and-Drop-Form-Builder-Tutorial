@@ -22,6 +22,8 @@ import { FormSectionComponent } from './form-section/form-section.component';
 import { SingleFieldSectionComponent } from './single-field-section/single-field-section.component';
 import { MultipleFieldSectionComponent } from './multiple-field-section/multiple-field-section.component';
 import { FormFieldComponent } from './form-field/form-field.component';
+import { DraggableSectionListComponent } from './draggable-section-list/draggable-section-list.component';
+import { DraggableFieldListComponent } from './draggable-field-list/draggable-field-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +46,8 @@ export const routes: Routes = [
     SingleFieldSectionComponent,
     MultipleFieldSectionComponent,
     FormFieldComponent,
+    DraggableSectionListComponent,
+    DraggableFieldListComponent,
   ],
   imports: [
     BrowserModule,
