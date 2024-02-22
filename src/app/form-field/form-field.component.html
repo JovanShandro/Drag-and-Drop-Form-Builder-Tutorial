@@ -1,15 +1,21 @@
-<div class="empty-field" *ngIf="field?.fieldType === formFieldType.Empty">
-  <img src="assets/down-arrow.png" alt="down-arrow" />
-  Drop Content Here
-</div>
-<div class="field" *ngIf="field?.fieldType === formFieldType.Input">
-  Input
-  <input type="text" placeholder="Placeholder text..." />
-</div>
-<div class="field" *ngIf="field?.fieldType === formFieldType.Button">
-  <button>Button</button>
-</div>
-<div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
-  Textarea
-  <textarea placeholder="Placeholder text..."></textarea>
+<div
+  class="form-field"
+  [ngClass]="{ 'form-field--active': (selectedField$ | async)?.id === field?.id }"
+  (click)="selectField()"
+>
+  <div class="empty-field" *ngIf="field?.fieldType === formFieldType.Empty">
+    <img src="assets/down-arrow.png" alt="down-arrow" />
+    Drop Content Here
+  </div>
+  <div class="field" *ngIf="field?.fieldType === formFieldType.Input">
+    Input
+    <input type="text" placeholder="Placeholder text..." />
+  </div>
+  <div class="field" *ngIf="field?.fieldType === formFieldType.Button">
+    <button>Button</button>
+  </div>
+  <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
+    Textarea
+    <textarea placeholder="Placeholder text..."></textarea>
+  </div>
 </div>
