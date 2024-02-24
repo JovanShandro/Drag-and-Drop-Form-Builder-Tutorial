@@ -8,7 +8,6 @@
 
 .field {
   height: 100%;
-  border: 1px dashed purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +36,24 @@
 
 .handle-icon {
   color: white;
+}
+
+.placeholder {
+  background: #eee;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #aaa;
+}
+
+.field.cdk-drop-list-dragging .placeholder {
+    display: flex;
+}
+
+.field.cdk-drop-list-dragging .form-field {
+    display: none;
 }
 
 .cdk-drag-preview {

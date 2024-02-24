@@ -26,7 +26,8 @@
 }
 
 .cdk-drag-placeholder {
-  opacity: 0;
+  position: absolute;
+  top: -10000px;
 }
 
 .cdk-drag-animating {

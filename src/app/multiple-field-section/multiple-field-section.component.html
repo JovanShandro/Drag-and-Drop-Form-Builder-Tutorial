@@ -19,7 +19,9 @@
     [cdkDropListEnterPredicate]="onlyFieldsPredicate"
     cdkDrag
   >
-    <app-form-field [field]="field"></app-form-field>
+    <app-form-field class="form-field" [field]="field"></app-form-field>
+
+    <div class="placeholder">Drop here</div>
 
     <div class="handle" cdkDragHandle>
       <fa-icon class="handle-icon" [icon]="faArrowsUpDownLeftRight"></fa-icon>

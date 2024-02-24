@@ -1,9 +1,19 @@
+:host {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .empty-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  text-align: center;
 }
 
 .empty-field img {
