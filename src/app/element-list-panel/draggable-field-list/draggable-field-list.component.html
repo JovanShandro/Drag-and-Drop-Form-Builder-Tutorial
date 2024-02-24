@@ -1,0 +1,19 @@
+<div
+  class="draggable-field-list"
+  id="draggable-field-list"
+  cdkDropList
+  cdkDropListSortingDisabled
+  [cdkDropListData]="draggableFields"
+  [cdkDropListEnterPredicate]="noEnterPredicate"
+  [cdkDropListConnectedTo]="allFieldIds"
+>
+  <div
+    *ngFor="let draggableField of draggableFields"
+    class="draggable-field"
+    cdkDrag
+    [cdkDragData]="draggableField"
+  >
+    <fa-icon size="lg" [icon]="draggableField.icon"></fa-icon>
+    <div>{{ draggableField.title }}</div>
+  </div>
+</div>
