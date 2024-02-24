@@ -4,6 +4,7 @@ import {
   FormFieldType,
   FormItemType,
   FormSection,
+  FormService,
 } from '../form.service';
 import { CdkDrag, CdkDragDrop } from '@angular/cdk/drag-drop';
 
@@ -17,13 +18,15 @@ export class SingleFieldSectionComponent {
 
   formFieldType = FormFieldType;
 
+  constructor(private formService: FormService) {}
+
   onlyFieldsPredicate(item: CdkDrag<FormSection | FormField>) {
     return item.data.type === FormItemType.Field;
   }
 
   onDrop(event: CdkDragDrop<FormField>) {
     if (event.item.data.fieldType) {
-      this.field.fieldType = event.item.data.fieldType;
+      this.formService.changeFieldType(this.field, event.item.data.fieldType)
     }
   }
 }

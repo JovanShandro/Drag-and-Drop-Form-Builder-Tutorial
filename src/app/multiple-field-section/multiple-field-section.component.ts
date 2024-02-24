@@ -39,7 +39,7 @@ export class MultipleFieldSectionComponent {
 
   onDrop(event: CdkDragDrop<FormField>, currentField: FormField) {
     if (event.item.data.fieldType) {
-      currentField.fieldType = event.item.data.fieldType;
+      this.formService.changeFieldType(currentField, event.item.data.fieldType)
     }
   }
 

@@ -14,7 +14,9 @@
     <input type="text" placeholder="Placeholder text..." />
   </div>
   <div class="field" *ngIf="field?.fieldType === formFieldType.Button">
-    <button mat-flat-button color="primary">Button</button>
+    <button mat-flat-button color="primary">
+      {{ field.settings?.buttonText }}
+    </button>
   </div>
   <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
     Textarea
