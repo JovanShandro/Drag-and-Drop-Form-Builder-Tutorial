@@ -14,6 +14,7 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { CustomizationComponent } from './customization/customization.component';
 import { FieldItemComponent } from './field-item/field-item.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElementListPanelComponent } from './element-list-panel/element-list-panel.component';
 import { FormService } from './form.service';
@@ -57,6 +58,7 @@ export const routes: Routes = [
     MatTabsModule,
     RouterModule.forRoot(routes),
     FontAwesomeModule,
+    MatButtonModule,
   ],
   providers: [FormService],
   bootstrap: [AppComponent],

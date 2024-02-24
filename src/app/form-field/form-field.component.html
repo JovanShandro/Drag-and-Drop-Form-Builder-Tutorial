@@ -2,15 +2,14 @@
   <img src="assets/down-arrow.png" alt="down-arrow" />
   Drop Content Here
 </div>
-<div *ngIf="field?.fieldType === formFieldType.Input">
+<div class="field" *ngIf="field?.fieldType === formFieldType.Input">
   Input
-  <input type="text" />
+  <input type="text" placeholder="Placeholder text..." />
 </div>
-<div *ngIf="field?.fieldType === formFieldType.Button">
-  Button
-  <button>Click me</button>
+<div class="field" *ngIf="field?.fieldType === formFieldType.Button">
+  <button mat-flat-button color="primary">Button</button>
 </div>
-<div *ngIf="field?.fieldType === formFieldType.Textarea">
+<div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
   Textarea
-  <textarea></textarea>
+  <textarea placeholder="Placeholder text..."></textarea>
 </div>
