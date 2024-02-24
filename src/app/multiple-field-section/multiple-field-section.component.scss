@@ -29,9 +29,13 @@
   height: 27px;
   background: #0d6efd;
   transform: translate(50%, -50%);
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+}
+
+.handle--show {
+  display: flex;
 }
 
 .handle-icon {

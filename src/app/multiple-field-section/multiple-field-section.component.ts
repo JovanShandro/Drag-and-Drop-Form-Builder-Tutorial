@@ -5,9 +5,11 @@ import {
   FormItemType,
   FormSection,
   FormSectionType,
+  FormService,
 } from '../form.service';
 import { CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-multiple-field-section',
@@ -20,6 +22,12 @@ export class MultipleFieldSectionComponent {
   formFieldType = FormFieldType;
   formSectionType = FormSectionType;
   faArrowsUpDownLeftRight = faArrowsUpDownLeftRight;
+
+  selectedField$: Observable<FormField | null> = of(null);
+
+  constructor(private formService: FormService) {
+    this.selectedField$ = this.formService.selectedField$;
+  }
 
   onlyFieldsPredicate(item: CdkDrag<FormSection | FormField>) {
     return item.data.type === FormItemType.Field;

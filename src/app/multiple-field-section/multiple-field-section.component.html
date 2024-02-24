@@ -23,7 +23,13 @@
 
     <div class="placeholder">Drop here</div>
 
-    <div class="handle" cdkDragHandle>
+    <div
+      class="handle"
+      [ngClass]="{
+        'handle--show': (selectedField$ | async)?.id === field?.id
+      }"
+      cdkDragHandle
+    >
       <fa-icon class="handle-icon" [icon]="faArrowsUpDownLeftRight"></fa-icon>
     </div>
   </div>
