@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -24,6 +24,8 @@ import { MultipleFieldSectionComponent } from './multiple-field-section/multiple
 import { FormFieldComponent } from './form-field/form-field.component';
 import { DraggableSectionListComponent } from './draggable-section-list/draggable-section-list.component';
 import { DraggableFieldListComponent } from './draggable-field-list/draggable-field-list.component';
+import { ElementCustomizationComponent } from './element-customization/element-customization.component';
+import { FormsModule } from '@angular/forms';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,6 +50,7 @@ export const routes: Routes = [
     FormFieldComponent,
     DraggableSectionListComponent,
     DraggableFieldListComponent,
+    ElementCustomizationComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +60,8 @@ export const routes: Routes = [
     MatTabsModule,
     RouterModule.forRoot(routes),
     FontAwesomeModule,
+    NgSelectModule,
+    FormsModule,
   ],
   providers: [FormService],
   bootstrap: [AppComponent],

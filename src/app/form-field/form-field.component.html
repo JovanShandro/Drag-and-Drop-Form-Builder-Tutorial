@@ -1,6 +1,8 @@
 <div
   class="form-field"
-  [ngClass]="{ 'form-field--active': (selectedField$ | async)?.id === field?.id }"
+  [ngClass]="{
+    'form-field--active': (selectedField$ | async)?.id === field?.id
+  }"
   (click)="selectField()"
 >
   <div class="empty-field" *ngIf="field?.fieldType === formFieldType.Empty">
@@ -12,7 +14,7 @@
     <input type="text" placeholder="Placeholder text..." />
   </div>
   <div class="field" *ngIf="field?.fieldType === formFieldType.Button">
-    <button>Button</button>
+    <button>{{ field.settings?.buttonText }}</button>
   </div>
   <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
     Textarea

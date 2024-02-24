@@ -27,6 +27,28 @@ export interface FormField {
   id: string;
   type: FormItemType.Field;
   fieldType: FormFieldType;
+  settings?: FormFieldSettings;
+}
+
+export type FormFieldSettings = ButtonSettings | null;
+
+export interface ButtonSettings {
+  buttonType: 'button' | 'submit';
+  buttonText: string;
+  linkTo: string;
+  buttonStyle: 'fill' | 'outline' | 'gradient';
+  buttonColor: string;
+  roundedCorners: number;
+  buttonHeight: number;
+  buttonWidth: 'auto' | 'full-width' | 'fixed';
+  fixedButtonSize?: number;
+  buttonAlignment: 'left' | 'center' | 'right';
+  fontSize: number;
+  fontFamily: string;
+  isBold: boolean;
+  isItalic: boolean;
+  textColor: string;
+  textAlignment: 'top' | 'center' | 'bottom';
 }
 
 export enum FormFieldType {
@@ -71,5 +93,38 @@ export class FormService {
     }
 
     this.sections.splice(index, 0, newSection);
+  }
+
+  changeFieldType(field: FormField, newType: FormFieldType) {
+    field.fieldType = newType;
+    field.settings = this.createDefaultSettingsForFieldType(newType);
+  }
+
+  private createDefaultSettingsForFieldType(
+    type: FormFieldType
+  ): FormFieldSettings {
+    switch (type) {
+      case FormFieldType.Button: {
+        return {
+          buttonType: 'button',
+          buttonText: 'Button',
+          linkTo: '',
+          buttonStyle: 'fill',
+          buttonColor: 'rgb(1, 67, 163)',
+          roundedCorners: 0,
+          buttonHeight: 35,
+          buttonWidth: 'auto',
+          buttonAlignment: 'center',
+          fontSize: 16,
+          fontFamily: 'sans-serif',
+          isBold: false,
+          isItalic: false,
+          textColor: 'white',
+          textAlignment: 'center',
+        };
+      }
+      default:
+        return null;
+    }
   }
 }
