@@ -30,10 +30,10 @@ export interface FormField {
   settings?: FormFieldSettings;
 }
 
-export type FormFieldSettings = ButtonSettings | null;
+export type FormFieldSettings = ButtonSettings | InputSettings | TextAreaSettings | null;
 
 export interface ButtonSettings {
-  buttonType: 'button' | 'submit';
+  type: 'button' | 'submit';
   buttonText: string;
   linkTo: string;
   buttonStyle: 'flat' | 'raised' | 'stroked';
@@ -41,6 +41,41 @@ export interface ButtonSettings {
   borderRadius: number;
   buttonHeight: number;
   buttonWidth: 'auto' | 'full-width' | 'fixed-size';
+  fixedWidth?: number;
+  alignment: 'left' | 'center' | 'right';
+  fontSize: number;
+  fontFamily: string;
+  isBold: boolean;
+  isItalic: boolean;
+  textColor: string;
+  textAlignment: 'top' | 'center' | 'bottom';
+}
+
+export interface InputSettings {
+  label: string;
+  placeholder: string;
+  type: 'text' | 'email' | 'password' | 'number';
+  inputColor: string;
+  borderRadius: number;
+  inputHeight: number;
+  inputWidth: 'auto' | 'full-width' | 'fixed-size';
+  fixedWidth?: number;
+  alignment: 'left' | 'center' | 'right';
+  fontSize: number;
+  fontFamily: string;
+  isBold: boolean;
+  isItalic: boolean;
+  textColor: string;
+  textAlignment: 'top' | 'center' | 'bottom';
+}
+
+export interface TextAreaSettings {
+  label: string;
+  placeholder: string;
+  textareaColor: string;
+  borderRadius: number;
+  textareaHeight: number;
+  textareaWidth: 'auto' | 'full-width' | 'fixed-size';
   fixedWidth?: number;
   alignment: 'left' | 'center' | 'right';
   fontSize: number;
@@ -106,7 +141,7 @@ export class FormService {
     switch (type) {
       case FormFieldType.Button: {
         return {
-          buttonType: 'button',
+          type: 'button',
           buttonText: 'Button',
           linkTo: '',
           buttonStyle: 'flat',
@@ -120,6 +155,41 @@ export class FormService {
           isBold: false,
           isItalic: false,
           textColor: 'white',
+          textAlignment: 'center',
+        };
+      }
+      case FormFieldType.Input: {
+        return {
+          label: 'Label',
+          placeholder: 'Placeholder',
+          type: 'text',
+          inputColor: '#0143a3',
+          borderRadius: 0,
+          inputHeight: 35,
+          inputWidth: 'auto',
+          alignment: 'center',
+          fontSize: 16,
+          fontFamily: 'sans-serif',
+          isBold: false,
+          isItalic: false,
+          textColor: 'black',
+          textAlignment: 'center',
+        };
+      }
+      case FormFieldType.Textarea: {
+        return {
+          label: 'Label',
+          placeholder: 'Placeholder',
+          textareaColor: '#0143a3',
+          borderRadius: 0,
+          textareaHeight: 100,
+          textareaWidth: 'auto',
+          alignment: 'center',
+          fontSize: 16,
+          fontFamily: 'sans-serif',
+          isBold: false,
+          isItalic: false,
+          textColor: 'black',
           textAlignment: 'center',
         };
       }

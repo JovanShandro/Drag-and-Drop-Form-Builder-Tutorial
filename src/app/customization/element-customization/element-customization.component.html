@@ -24,6 +24,351 @@
         [(ngModel)]="selectedField.settings!.buttonText"
       />
     </div>
+    <!--add new divs for linkTo -->
+    <div>
+      <label>Link To</label>
+
+      <input
+        class="custom-input"
+        type="text"
+        [(ngModel)]="selectedField.settings!.linkTo"
+      />
+    </div>
+    <!--add new divs for buttonStyle -->
+    <div>
+      <label>Button Style</label>
+
+      <ng-select
+        [items]="buttonStyles"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="selectedField.settings!.buttonStyle"
+      >
+      </ng-select>
+    </div>
+    
+    <div class="color-input">
+      <label>Button Color</label>
+      <input
+        class="custom-input"
+        type="color"
+        [(ngModel)]="selectedField.settings!.buttonColor"
+      />
+      <input
+        class="custom-input"
+        type="text"
+        [(ngModel)]="selectedField.settings!.buttonColor"
+        readonly
+      />
+    </div>
+    <!--border radius-->
+    <div>
+      <label>Border Radius</label>
+      <input
+        class="custom-input"
+        type="number"
+        [(ngModel)]="selectedField.settings!.borderRadius"
+      />
+    </div>
+    <!--button height and width-->
+    <div>
+      <label>Button Height</label>
+      <input
+        class="custom-input"
+        type="number"
+        [(ngModel)]="selectedField.settings!.buttonHeight"
+      />
+    </div>
+    <div>
+      <label>Button Width</label>
+      <input
+        class="custom-input"
+        type="number"
+        [(ngModel)]="selectedField.settings!.buttonWidth"
+      />
+    </div>
+    <!--a dropdown title alignment with options left, center, down-->
+    <div>
+      <label>Button Alignment</label>
+      <ng-select
+        [items]="alignments"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="selectedField.settings!.alignment"
+      >
+      </ng-select>
+    </div>
+    <!--font size and family-->
+    <div>
+      <label>Font Size</label>
+      <input
+        class="custom-input"
+        type="number"
+        [(ngModel)]="selectedField.settings!.fontSize"
+      />
+    </div>
+    <div>
+      <label>Font Family</label>
+      <ng-select
+        [items]="fonts"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="selectedField.settings!.fontFamily"
+      >
+      </ng-select>
+    </div>
+    <!--is bold and is italic checkboxes-->
+    <div>
+      <label>Is Bold</label>
+      <input
+        type="checkbox"
+        [(ngModel)]="selectedField.settings!.isBold"
+      />
+    </div>
+    <div>
+      <label>Is Italic</label>
+      <input
+        type="checkbox"
+        [(ngModel)]="selectedField.settings!.isItalic"
+      />
+    </div>
+    <!--text color picker-->
+    <div class="color-input">
+      <label>Text Color</label>
+      <input
+        class="custom-input"
+        type="color"
+        [(ngModel)]="selectedField.settings!.textColor"
+      />
+      <input
+        class="custom-input"
+        type="text"
+        [(ngModel)]="selectedField.settings!.textColor"
+        readonly
+      />
+    </div>
+    <!--text alignment-->
+    <div>
+      <label>Text Alignment</label>
+      <ng-select
+        [items]="textAlignment"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="selectedField.settings!.textAlignment"
+      >
+      </ng-select>
+    </div>
+    
+    
     <pre>{{ selectedField | json }}</pre>
   </div>
+  <div
+      *ngIf="selectedField.fieldType === fieldTypes.Input"
+      class="input-customization"
+    >
+      <div>
+        <label>Input Type</label>
+
+        <ng-select
+          [items]="inputTypes"
+          bindLabel="label"
+          bindValue="value"
+          [(ngModel)]="selectedField.settings!.type"
+        >
+        </ng-select>
+      </div>
+
+      <div>
+        <label>Input Placeholder</label>
+
+        <input
+          class="custom-input"
+          type="text"
+          [(ngModel)]="selectedField.settings!.placeholder"
+        />
+      </div>
+
+      <div class="color-input">
+        <label>Input Color</label>
+        <input
+          class="custom-input"
+          type="color"
+          [(ngModel)]="selectedField.settings!.inputColor"
+        />
+        <input
+          class="custom-input"
+          type="text"
+          [(ngModel)]="selectedField.settings!.inputColor"
+          readonly
+        />
+      </div>
+
+      <div>
+        <label>Border Radius</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.borderRadius"
+        />
+      </div>
+
+      <div>
+        <label>Input Height</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.inputHeight"
+        />
+      </div>
+
+      <div>
+        <label>Input Width</label>
+
+        <ng-select
+          [items]="inputWidths"
+          bindLabel="label"
+          bindValue="value"
+          [(ngModel)]="selectedField.settings!.inputWidth"
+        >
+        </ng-select>
+      </div>
+
+      <div *ngIf="selectedField.settings!.inputWidth === 'fixed-size'">
+        <label>Fixed Width</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.fixedWidth"
+        />
+      </div>
+
+      <div>
+        <label>Alignment</label>
+
+        <ng-select
+          [items]="alignments"
+          bindLabel="label"
+          bindValue="value"
+          [(ngModel)]="selectedField.settings!.alignment"
+        >
+        </ng-select>
+      </div>
+
+      <div>
+        <label>Font Size</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.fontSize"
+        />
+      </div>
+  </div>
+  <!--add new divs for text area-->
+  <!-- 
+    label: string;
+  placeholder: string;
+  textareaColor: string;
+  borderRadius: number;
+  textareaHeight: number;
+  textareaWidth: 'auto' | 'full-width' | 'fixed-size';
+  fixedWidth?: number;
+  alignment: 'left' | 'center' | 'right';
+  fontSize: number;
+  fontFamily: string;
+  isBold: boolean;
+  isItalic: boolean;
+  textColor: string;
+  textAlignment: 'top' | 'center' | 'bottom';
+  -->
+  <div
+      *ngIf="selectedField.fieldType === fieldTypes.Textarea"
+      class="textarea-customization"
+    >
+      <div>
+        <label>Textarea Placeholder</label>
+
+        <input
+          class="custom-input"
+          type="text"
+          [(ngModel)]="selectedField.settings!.placeholder"
+        />
+      </div>
+
+      <div class="color-input">
+        <label>Textarea Color</label>
+        <input
+          class="custom-input"
+          type="color"
+          [(ngModel)]="selectedField.settings!.textareaColor"
+        />
+        <input
+          class="custom-input"
+          type="text"
+          [(ngModel)]="selectedField.settings!.textareaColor"
+          readonly
+        />
+      </div>
+
+      <div>
+        <label>Border Radius</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.borderRadius"
+        />
+      </div>
+
+      <div>
+        <label>Textarea Height</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.textareaHeight"
+        />
+      </div>
+
+      <div>
+        <label>Textarea Width</label>
+
+        <ng-select
+          [items]="textareaWidths"
+          bindLabel="label"
+          bindValue="value"
+          [(ngModel)]="selectedField.settings!.textareaWidth"
+        >
+        </ng-select>
+      </div>
+
+      <div *ngIf="selectedField.settings!.textareaWidth === 'fixed-size'">
+        <label>Fixed Width</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.fixedWidth"
+        />
+      </div>
+
+      <div>
+        <label>Alignment</label>
+
+        <ng-select
+          [items]="alignments"
+          bindLabel="label"
+          bindValue="value"
+          [(ngModel)]="selectedField.settings!.alignment"
+        >
+        </ng-select>
+      </div>
+
+      <div>
+        <label>Font Size</label>
+        <input
+          class="custom-input"
+          type="number"
+          [(ngModel)]="selectedField.settings!.fontSize"
+        />
+      </div>
+      <div>
+        <label>Font Family</label>
+        <ng-select
 </div>
