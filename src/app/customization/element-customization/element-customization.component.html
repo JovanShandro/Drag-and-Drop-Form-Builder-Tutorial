@@ -46,7 +46,7 @@
       >
       </ng-select>
     </div>
-    
+
     <div class="color-input">
       <label>Button Color</label>
       <input
@@ -158,8 +158,8 @@
       >
       </ng-select>
     </div>
-    
-    
+
+
     <pre>{{ selectedField | json }}</pre>
   </div>
   <div
@@ -173,7 +173,7 @@
           [items]="inputTypes"
           bindLabel="label"
           bindValue="value"
-          [(ngModel)]="selectedField.settings!.type"
+          [(ngModel)]="selectedField.settings!.inputType"
         >
         </ng-select>
       </div>
@@ -261,7 +261,7 @@
       </div>
   </div>
   <!--add new divs for text area-->
-  <!-- 
+  <!--
     label: string;
   placeholder: string;
   textareaColor: string;

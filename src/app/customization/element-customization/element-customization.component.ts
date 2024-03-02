@@ -58,6 +58,6 @@ export class ElementCustomizationComponent {
 
   fieldTypes = FormFieldType;
 
-  
+
 
 }

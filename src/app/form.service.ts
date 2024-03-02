@@ -31,13 +31,13 @@ export interface FormField {
 }
 
 export type FormFieldSettings = {
-  alignment: 'left' | 'center' | 'right';
-  fontSize: number;
-  fontFamily: string;
-  isBold: boolean;
-  isItalic: boolean;
-  textColor: string;
-  textAlignment: 'top' | 'center' | 'bottom';
+  alignment?: 'left' | 'center' | 'right';
+  fontSize?: number;
+  fontFamily?: string;
+  isBold?: boolean;
+  isItalic?: boolean;
+  textColor?: string;
+  textAlignment?: 'top' | 'center' | 'bottom';
   buttonType?: 'button' | 'submit';
   buttonText?: string;
   linkTo?: string;
@@ -49,16 +49,17 @@ export type FormFieldSettings = {
   fixedWidth?: number;
   label?: string;
   placeholder?: string;
-  type?: 'text' | 'email' | 'password' | 'number';
+  inputType?: 'text' | 'email' | 'password' | 'number';
   inputColor?: string;
   inputHeight?: number;
   inputWidth?: 'auto' | 'full-width' | 'fixed-size';
+  fieldName?: string;
+  inputBackgroundColor?: string;
   textareaColor?: string;
   textareaHeight?: number;
   textareaWidth?: 'auto' | 'full-width' | 'fixed-size';
+  isRequired?: boolean;
 };
-
-
 
 export enum FormFieldType {
   Empty = 0,
@@ -130,6 +131,29 @@ export class FormService {
           isItalic: false,
           textColor: 'white',
           textAlignment: 'center',
+        };
+      }
+      case FormFieldType.Input: {
+        return {
+          inputType: 'text',
+          label: 'Input label',
+          placeholder: 'Placeholder text',
+          fieldName: uuid(),
+          isRequired: false,
+          inputBackgroundColor : 'transparent',
+          borderRadius: 0,
+          // TODO Check if it makes sense to add height and padding
+        };
+      }
+      case FormFieldType.Textarea: {
+        return {
+          label: 'Textarea label',
+          placeholder: 'Placeholder text',
+          fieldName: uuid(),
+          isRequired: false,
+          inputBackgroundColor : 'transparent',
+          borderRadius: 0,
+          // TODO Check if it makes sense to add height and padding
         };
       }
       default:
