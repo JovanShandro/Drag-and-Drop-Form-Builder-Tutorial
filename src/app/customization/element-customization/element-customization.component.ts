@@ -54,17 +54,10 @@ export class ElementCustomizationComponent {
   fonts = Object.keys(Fonts);
   inputTypes = Object.keys(InputTypes);
 
+  buttonTypes = ['button', 'submit'];
+
   fieldTypes = FormFieldType;
 
-  buttonTypes = [
-    {
-      label: 'Submit',
-      value: 'submit',
-    },
-    {
-      label: 'Button',
-      value: 'button',
-    },
-  ];
+  
 
 }
