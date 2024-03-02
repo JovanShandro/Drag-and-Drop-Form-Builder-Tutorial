@@ -1,0 +1,151 @@
+<div class="button-customization">
+  <div>
+    <label>Button Type</label>
+
+    <ng-select
+      [items]="buttonTypes"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.type"
+    >
+    </ng-select>
+  </div>
+
+  <div>
+    <label>Button Text</label>
+
+    <input
+      class="custom-input"
+      type="text"
+      [(ngModel)]="settings.text"
+    />
+  </div>
+  <!--add new divs for linkTo -->
+  <div>
+    <label>Link To</label>
+
+    <input
+      class="custom-input"
+      type="text"
+      [(ngModel)]="settings.linkTo"
+    />
+  </div>
+  <!--add new divs for buttonStyle -->
+  <div>
+    <label>Button Style</label>
+
+    <ng-select
+      [items]="buttonStyles"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.style"
+    >
+    </ng-select>
+  </div>
+
+  <div class="color-input">
+    <label>Button Color</label>
+    <input
+      class="custom-input"
+      type="color"
+      [(ngModel)]="settings.color"
+    />
+    <input
+      class="custom-input"
+      type="text"
+      [(ngModel)]="settings.color"
+      readonly
+    />
+  </div>
+  <!--border radius-->
+  <div>
+    <label>Border Radius</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.borderRadius"
+    />
+  </div>
+  <!--button height and width-->
+  <div>
+    <label>Button Height</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.height"
+    />
+  </div>
+  <div>
+    <label>Button Width</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.width"
+    />
+  </div>
+  <!--a dropdown title alignment with options left, center, down-->
+  <div>
+    <label>Button Alignment</label>
+    <ng-select
+      [items]="alignments"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.alignment"
+    >
+    </ng-select>
+  </div>
+  <!--font size and family-->
+  <div>
+    <label>Font Size</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.fontSize"
+    />
+  </div>
+  <div>
+    <label>Font Family</label>
+    <ng-select
+      [items]="fonts"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.fontFamily"
+    >
+    </ng-select>
+  </div>
+  <!--is bold and is italic checkboxes-->
+  <div>
+    <label>Is Bold</label>
+    <input type="checkbox" [(ngModel)]="settings.isBold" />
+  </div>
+  <div>
+    <label>Is Italic</label>
+    <input type="checkbox" [(ngModel)]="settings.isItalic" />
+  </div>
+  <!--text color picker-->
+  <div class="color-input">
+    <label>Text Color</label>
+    <input
+      class="custom-input"
+      type="color"
+      [(ngModel)]="settings.textColor"
+    />
+    <input
+      class="custom-input"
+      type="text"
+      [(ngModel)]="settings.textColor"
+      readonly
+    />
+  </div>
+  <!--text alignment-->
+  <div>
+    <label>Text Alignment</label>
+    <ng-select
+      [items]="textAlignment"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.textAlignment"
+    >
+    </ng-select>
+  </div>
+</div>

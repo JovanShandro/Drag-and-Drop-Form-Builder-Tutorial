@@ -27,6 +27,8 @@ import { FormFieldComponent } from './form-field/form-field.component';
 import { DraggableSectionListComponent } from './element-list-panel/draggable-section-list/draggable-section-list.component';
 import { DraggableFieldListComponent } from './element-list-panel/draggable-field-list/draggable-field-list.component';
 import { ElementCustomizationComponent } from './customization/element-customization/element-customization.component';
+import { ButtonCustomizationComponent } from './customization/element-customization/button-customization/button-customization.component';
+import { FormButtonFieldComponent } from './form-field/form-button-field/form-button-field.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -52,6 +54,8 @@ export const routes: Routes = [
     DraggableSectionListComponent,
     DraggableFieldListComponent,
     ElementCustomizationComponent,
+    ButtonCustomizationComponent,
+    FormButtonFieldComponent,
   ],
   imports: [
     BrowserModule,

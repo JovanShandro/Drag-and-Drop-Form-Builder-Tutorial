@@ -1,7 +1,7 @@
 <div
   class="form-field"
   [ngClass]="{
-    'form-field--selected': (selectedField$ | async)?.id === field?.id
+    'form-field--selected': (selectedField$ | async)?.id === field.id
   }"
   (click)="selectField()"
 >
@@ -13,11 +13,12 @@
     Input
     <input type="text" placeholder="Placeholder text..." />
   </div>
-  <div class="field" *ngIf="field?.fieldType === formFieldType.Button">
-    <button mat-flat-button color="primary">
-      {{ field.settings?.buttonText }}
-    </button>
-  </div>
+
+  <app-form-button-field
+    *ngIf="field?.fieldType === formFieldType.Button"
+    [settings]="asButtonSettings(field.settings!)"
+  ></app-form-button-field>
+
   <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
     Textarea
     <textarea placeholder="Placeholder text..."></textarea>

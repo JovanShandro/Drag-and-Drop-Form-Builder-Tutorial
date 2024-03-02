@@ -2,6 +2,54 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { v4 as uuid } from 'uuid';
 
+export enum ButtonStyle {
+  Flat = 'flat',
+  Raised = 'raised',
+  Stroked = 'stroked',
+}
+
+export enum ButtonType {
+  Button = 'button',
+  Submit = 'submit',
+}
+
+export enum ButtonWidth {
+  Auto = 'auto',
+  FullWidth = 'full-width',
+  FixedSize = 'fixed-size',
+}
+
+export enum Alignment {
+  Left = 'left',
+  Center = 'center',
+  Down = 'down',
+}
+
+export enum TextAlignment {
+  Top = 'top',
+  Center = 'center',
+  Bottom = 'bottom',
+}
+
+export enum Font {
+  Arial = 'Arial',
+  Verdana = 'Verdana',
+  Tahoma = 'Tahoma',
+  TimesNewRoman = 'Times New Roman',
+  Georgia = 'Georgia',
+  CourierNew = 'Courier New',
+  LucidaConsole = 'Lucida Console',
+  Impact = 'Impact',
+  ComicSansMS = 'Comic Sans MS',
+  TrebuchetMS = 'Trebuchet MS',
+}
+
+export enum InputType {
+  Text = 'text',
+  Email = 'email',
+  Password = 'password',
+}
+
 export enum FormItemType {
   Section = 0,
   Field = 1,
@@ -30,36 +78,30 @@ export interface FormField {
   settings?: FormFieldSettings;
 }
 
-export type FormFieldSettings = {
-  alignment?: 'left' | 'center' | 'right';
-  fontSize?: number;
-  fontFamily?: string;
-  isBold?: boolean;
-  isItalic?: boolean;
-  textColor?: string;
-  textAlignment?: 'top' | 'center' | 'bottom';
-  buttonType?: 'button' | 'submit';
-  buttonText?: string;
-  linkTo?: string;
-  buttonStyle?: 'flat' | 'raised' | 'stroked';
-  buttonColor?: string;
-  borderRadius?: number;
-  buttonHeight?: number;
-  buttonWidth?: 'auto' | 'full-width' | 'fixed-size';
+export interface ButtonSettings {
+  type: ButtonType;
+  text: string;
+  linkTo: string;
+  style: ButtonStyle;
+  color: string;
+  borderRadius: number;
+  height: number;
+  width: ButtonWidth;
   fixedWidth?: number;
-  label?: string;
-  placeholder?: string;
-  inputType?: 'text' | 'email' | 'password' | 'number';
-  inputColor?: string;
-  inputHeight?: number;
-  inputWidth?: 'auto' | 'full-width' | 'fixed-size';
-  fieldName?: string;
-  inputBackgroundColor?: string;
-  textareaColor?: string;
-  textareaHeight?: number;
-  textareaWidth?: 'auto' | 'full-width' | 'fixed-size';
-  isRequired?: boolean;
-};
+  alignment: Alignment;
+  fontSize: number;
+  fontFamily: Font;
+  isBold: boolean;
+  isItalic: boolean;
+  textColor: string;
+  textAlignment: TextAlignment;
+}
+
+export interface InputSettings {}
+
+export interface TextareaSettings {}
+
+export type FormFieldSettings = ButtonSettings | InputSettings | TextareaSettings;
 
 export enum FormFieldType {
   Empty = 0,
@@ -116,22 +158,22 @@ export class FormService {
     switch (type) {
       case FormFieldType.Button: {
         return {
-          buttonType: 'button',
-          buttonText: 'Button',
+          type: ButtonType.Button,
+          text: 'Button',
           linkTo: '',
-          buttonStyle: 'flat',
-          buttonColor: '#0143a3',
+          style: ButtonStyle.Flat,
+          color: '#0143a3',
           borderRadius: 0,
-          buttonHeight: 35,
-          buttonWidth: 'auto',
-          alignment: 'center',
+          height: 35,
+          width: ButtonWidth.Auto,
+          alignment: Alignment.Center,
           fontSize: 16,
-          fontFamily: 'sans-serif',
+          fontFamily: Font.Arial,
           isBold: false,
           isItalic: false,
           textColor: 'white',
-          textAlignment: 'center',
-        };
+          textAlignment: TextAlignment.Center,
+        } as ButtonSettings;
       }
       case FormFieldType.Input: {
         return {

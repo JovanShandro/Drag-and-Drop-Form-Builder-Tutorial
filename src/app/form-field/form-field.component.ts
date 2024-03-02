@@ -1,6 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { FormField, FormFieldType, FormService } from '../form.service';
+import {
+  ButtonSettings,
+  FormField,
+  FormFieldSettings,
+  FormFieldType,
+  FormService,
+} from '../form.service';
 
 @Component({
   selector: 'app-form-field',
@@ -23,5 +29,9 @@ export class FormFieldComponent {
     }
 
     this.formService.selectedField$.next(this.field);
+  }
+
+  asButtonSettings(settings: FormFieldSettings) {
+    return settings as ButtonSettings;
   }
 }
