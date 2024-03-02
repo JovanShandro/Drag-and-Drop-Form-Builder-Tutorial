@@ -7,10 +7,13 @@
   }"
 >
   <button
-    *ngIf="settings.style === ButtonStyle.Flat"
-    mat-flat-button
     [ngStyle]="{
-      backgroundColor: settings.color,
+      backgroundColor:
+        settings.style !== ButtonStyle.Stroked ? settings.color : null,
+      border:
+        settings.style === ButtonStyle.Stroked
+          ? '1px solid ' + settings.color
+          : null,
       borderRadius: settings.borderRadius + 'px',
       height: settings.height + 'px',
       width:
@@ -19,50 +22,12 @@
           : null
     }"
     [ngClass]="{
+      'flat-button': settings.style === ButtonStyle.Flat,
+      'raised-button': settings.style === ButtonStyle.Raised,
+      'stroked-button': settings.style === ButtonStyle.Stroked,
       'width-auto': settings.width === ButtonWidth.Auto,
       'full-width': settings.width === ButtonWidth.FullWidth
     }"
-    color="primary"
-  >
-    {{ settings.text }}
-  </button>
-  <button
-    *ngIf="settings.style === ButtonStyle.Raised"
-    mat-raised-button
-    [ngStyle]="{
-      backgroundColor: settings.color,
-      borderRadius: settings.borderRadius + 'px',
-      height: settings.height + 'px',
-      width:
-        settings.width === ButtonWidth.FixedSize
-          ? settings.fixedWidth + 'px'
-          : null
-    }"
-    [ngClass]="{
-      'width-auto': settings.width === ButtonWidth.Auto,
-      'full-width': settings.width === ButtonWidth.FullWidth
-    }"
-    color="primary"
-  >
-    {{ settings.text }}
-  </button>
-  <button
-    *ngIf="settings.style === ButtonStyle.Stroked"
-    mat-stroked-button
-    [ngStyle]="{
-      backgroundColor: settings.color,
-      borderRadius: settings.borderRadius + 'px',
-      height: settings.height + 'px',
-      width:
-        settings.width === ButtonWidth.FixedSize
-          ? settings.fixedWidth + 'px'
-          : null
-    }"
-    [ngClass]="{
-      'width-auto': settings.width === ButtonWidth.Auto,
-      'full-width': settings.width === ButtonWidth.FullWidth
-    }"
-    color="primary"
   >
     {{ settings.text }}
   </button>
