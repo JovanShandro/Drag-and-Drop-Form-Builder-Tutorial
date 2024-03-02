@@ -178,7 +178,7 @@ export class FormService {
       }
       case FormFieldType.Input: {
         return {
-          inputType: 'text',
+          type: 'text',
           label: 'Input label',
           placeholder: 'Placeholder text',
           fieldName: uuid(),

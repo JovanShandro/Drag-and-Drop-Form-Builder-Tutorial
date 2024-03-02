@@ -15,7 +15,7 @@
     <label>Button Text</label>
 
     <input
-      class="custom-input"
+      class="custom-input full-width"
       type="text"
       [(ngModel)]="settings.text"
     />
@@ -25,7 +25,7 @@
     <label>Link To</label>
 
     <input
-      class="custom-input"
+      class="custom-input full-width"
       type="text"
       [(ngModel)]="settings.linkTo"
     />
@@ -43,15 +43,16 @@
     </ng-select>
   </div>
 
-  <div class="color-input">
+  <div class="row">
     <label>Button Color</label>
     <input
+      class="color-input"
       type="color"
       [(ngModel)]="settings.color"
     />
   </div>
   <!--border radius-->
-  <div>
+  <div class="row">
     <label>Border Radius</label>
     <input
       class="custom-input"
@@ -60,7 +61,7 @@
     />
   </div>
   <!--button height and width-->
-  <div>
+  <div class="row">
     <label>Button Height</label>
     <input
       class="custom-input"
@@ -68,7 +69,7 @@
       [(ngModel)]="settings.height"
     />
   </div>
-  <div>
+  <div class="row">
     <label>Button Width</label>
     <ng-select
       [items]="buttonWidthValues"
