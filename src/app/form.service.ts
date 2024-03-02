@@ -22,7 +22,7 @@ export enum ButtonWidth {
 export enum Alignment {
   Left = 'left',
   Center = 'center',
-  Down = 'down',
+  Right = 'right',
 }
 
 export enum TextAlignment {
@@ -166,6 +166,7 @@ export class FormService {
           borderRadius: 0,
           height: 35,
           width: ButtonWidth.Auto,
+          fixedWidth: 80,
           alignment: Alignment.Center,
           fontSize: 16,
           fontFamily: Font.Arial,

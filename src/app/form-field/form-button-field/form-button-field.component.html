@@ -1,5 +1,69 @@
-<div class="form-button-field">
-  <button mat-flat-button color="primary">
+<div
+  class="form-button-field"
+  [ngClass]="{
+    'align-left': settings.alignment === Alignment.Left,
+    'align-center': settings.alignment === Alignment.Center,
+    'align-right': settings.alignment === Alignment.Right
+  }"
+>
+  <button
+    *ngIf="settings.style === ButtonStyle.Flat"
+    mat-flat-button
+    [ngStyle]="{
+      backgroundColor: settings.color,
+      borderRadius: settings.borderRadius + 'px',
+      height: settings.height + 'px',
+      width:
+        settings.width === ButtonWidth.FixedSize
+          ? settings.fixedWidth + 'px'
+          : null
+    }"
+    [ngClass]="{
+      'width-auto': settings.width === ButtonWidth.Auto,
+      'full-width': settings.width === ButtonWidth.FullWidth
+    }"
+    color="primary"
+  >
+    {{ settings.text }}
+  </button>
+  <button
+    *ngIf="settings.style === ButtonStyle.Raised"
+    mat-raised-button
+    [ngStyle]="{
+      backgroundColor: settings.color,
+      borderRadius: settings.borderRadius + 'px',
+      height: settings.height + 'px',
+      width:
+        settings.width === ButtonWidth.FixedSize
+          ? settings.fixedWidth + 'px'
+          : null
+    }"
+    [ngClass]="{
+      'width-auto': settings.width === ButtonWidth.Auto,
+      'full-width': settings.width === ButtonWidth.FullWidth
+    }"
+    color="primary"
+  >
+    {{ settings.text }}
+  </button>
+  <button
+    *ngIf="settings.style === ButtonStyle.Stroked"
+    mat-stroked-button
+    [ngStyle]="{
+      backgroundColor: settings.color,
+      borderRadius: settings.borderRadius + 'px',
+      height: settings.height + 'px',
+      width:
+        settings.width === ButtonWidth.FixedSize
+          ? settings.fixedWidth + 'px'
+          : null
+    }"
+    [ngClass]="{
+      'width-auto': settings.width === ButtonWidth.Auto,
+      'full-width': settings.width === ButtonWidth.FullWidth
+    }"
+    color="primary"
+  >
     {{ settings.text }}
   </button>
 </div>

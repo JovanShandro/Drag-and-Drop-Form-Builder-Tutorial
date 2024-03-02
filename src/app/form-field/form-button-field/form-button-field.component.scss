@@ -1,17 +1,33 @@
 .form-button-field {
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   padding: 0 20px;
   height: 100%;
-  justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+.form-button-field.align-left {
+  justify-content: flex-start;
+}
+
+.form-button-field.align-center {
+  justify-content: center;
+}
+
+.form-button-field.align-right {
+  justify-content: flex-end;
 }
 
 button {
   pointer-events: none;
   font-size: 16px;
-  min-width: 80px;
-  min-height: 35px;
-  margin: 0 auto;
+}
+
+.width-auto {
+  width: auto;
+}
+
+.full-width{
+  width: 100%;
 }

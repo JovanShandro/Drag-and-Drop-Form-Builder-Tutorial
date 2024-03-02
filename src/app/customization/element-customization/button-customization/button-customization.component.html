@@ -46,15 +46,8 @@
   <div class="color-input">
     <label>Button Color</label>
     <input
-      class="custom-input"
       type="color"
       [(ngModel)]="settings.color"
-    />
-    <input
-      class="custom-input"
-      type="text"
-      [(ngModel)]="settings.color"
-      readonly
     />
   </div>
   <!--border radius-->
@@ -77,10 +70,21 @@
   </div>
   <div>
     <label>Button Width</label>
+    <ng-select
+      [items]="buttonWidthValues"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.width"
+    >
+    </ng-select>
+  </div>
+
+  <div *ngIf="settings.width === ButtonWidth.FixedSize">
+    <label>Fixed size</label>
     <input
       class="custom-input"
       type="number"
-      [(ngModel)]="settings.width"
+      [(ngModel)]="settings.fixedWidth"
     />
   </div>
   <!--a dropdown title alignment with options left, center, down-->

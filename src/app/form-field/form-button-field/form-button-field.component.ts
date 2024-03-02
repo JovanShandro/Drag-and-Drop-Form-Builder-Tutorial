@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ButtonSettings } from '../../form.service';
+import { Alignment, ButtonSettings, ButtonStyle, ButtonWidth } from '../../form.service';
 
 @Component({
   selector: 'app-form-button-field',
@@ -8,4 +8,8 @@ import { ButtonSettings } from '../../form.service';
 })
 export class FormButtonFieldComponent {
   @Input() settings!: ButtonSettings;
+
+  ButtonStyle = ButtonStyle;
+  ButtonWidth = ButtonWidth;
+  Alignment = Alignment;
 }

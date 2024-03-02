@@ -4,6 +4,7 @@ import {
   ButtonSettings,
   ButtonStyle,
   ButtonType,
+  ButtonWidth,
   Font,
   TextAlignment,
 } from '../../../form.service';
@@ -16,9 +17,65 @@ import {
 export class ButtonCustomizationComponent {
   @Input() settings!: ButtonSettings;
 
-  buttonStyles = Object.keys(ButtonStyle);
-  alignments = Object.keys(Alignment);
+  ButtonWidth = ButtonWidth;
+
   textAlignment = Object.keys(TextAlignment);
   fonts = Object.keys(Font);
-  buttonTypes = Object.keys(ButtonType);
+
+  buttonTypes = [
+    {
+      label: 'Button',
+      value: ButtonType.Button,
+    },
+    {
+      label: 'Submit',
+      value: ButtonType.Submit,
+    },
+  ];
+
+  buttonStyles = [
+    {
+      label: 'Flat',
+      value: ButtonStyle.Flat,
+    },
+    {
+      label: 'Raised',
+      value: ButtonStyle.Raised,
+    },
+    {
+      label: 'Stroked',
+      value: ButtonStyle.Stroked,
+    },
+  ];
+
+  buttonWidthValues = [
+    {
+      label: 'Auto',
+      value: ButtonWidth.Auto,
+    },
+    {
+      label: 'Full width',
+      value: ButtonWidth.FullWidth,
+    },
+    {
+      label: 'Fixed size',
+      value: ButtonWidth.FixedSize,
+    },
+  ];
+
+
+  alignments = [
+    {
+      label: 'Left',
+      value: Alignment.Left,
+    },
+    {
+      label: 'Center',
+      value: Alignment.Center,
+    },
+    {
+      label: 'Right',
+      value: Alignment.Right,
+    },
+  ];
 }
