@@ -6,7 +6,7 @@ import {
   FormFieldSettings,
   FormFieldType,
   FormService,
-} from '../form.service';
+} from '../../services/form.service';
 
 @Component({
   selector: 'app-form-field',

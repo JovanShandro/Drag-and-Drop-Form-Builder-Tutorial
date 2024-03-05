@@ -7,7 +7,7 @@ import {
   ButtonWidth,
   Font,
   TextAlignment,
-} from '../../../form.service';
+} from '../../../services/form.service';
 
 @Component({
   selector: 'app-button-customization',

@@ -4,7 +4,7 @@ import {
   ButtonSettings,
   ButtonStyle,
   ButtonWidth,
-} from '../../form.service';
+} from '../../../services/form.service';
 
 @Component({
   selector: 'app-form-button-field',

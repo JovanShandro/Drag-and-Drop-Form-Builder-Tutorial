@@ -5,7 +5,7 @@ import {
   FormFieldSettings,
   FormFieldType,
   InputType
-} from '../../form.service';
+} from '../../services/form.service';
 
 @Component({
   selector: 'app-element-customization',

@@ -6,7 +6,7 @@ import {
   FormSection,
   FormSectionType,
   FormService,
-} from '../form.service';
+} from '../../services/form.service';
 import { CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 import { Observable, of } from 'rxjs';

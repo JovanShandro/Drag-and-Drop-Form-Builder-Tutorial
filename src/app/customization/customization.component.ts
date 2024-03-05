@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { FormField, FormService } from '../form.service';
+import { FormField, FormService } from '../services/form.service';
 
 @Component({
   selector: 'app-customization',

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormSection, FormSectionType } from '../form.service';
+import { FormSection, FormSectionType } from '../../services/form.service';
 
 @Component({
   selector: 'app-form-section',

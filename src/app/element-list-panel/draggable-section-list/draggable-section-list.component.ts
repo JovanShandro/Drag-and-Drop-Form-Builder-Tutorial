@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormItemType, FormSectionType } from '../../form.service';
+import { FormItemType, FormSectionType } from '../../services/form.service';
 
 @Component({
   selector: 'app-draggable-section-list',

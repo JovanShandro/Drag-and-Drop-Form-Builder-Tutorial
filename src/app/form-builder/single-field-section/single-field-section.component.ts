@@ -5,7 +5,7 @@ import {
   FormItemType,
   FormSection,
   FormService,
-} from '../form.service';
+} from '../../services/form.service';
 import { CdkDrag, CdkDragDrop } from '@angular/cdk/drag-drop';
 
 @Component({

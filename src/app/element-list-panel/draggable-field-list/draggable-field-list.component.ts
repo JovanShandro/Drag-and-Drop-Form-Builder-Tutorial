@@ -4,7 +4,7 @@ import {
   faSquare as faSquareFilled,
   faWindowMaximize,
 } from '@fortawesome/free-solid-svg-icons';
-import { FormFieldType, FormItemType, FormService } from '../../form.service';
+import { FormFieldType, FormItemType, FormService } from '../../services/form.service';
 
 @Component({
   selector: 'app-draggable-field-list',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormField, FormItemType, FormSection, FormService } from '../form.service';
+import { FormField, FormItemType, FormSection, FormService } from '../services/form.service';
 import { CdkDrag, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { faArrowsUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 
