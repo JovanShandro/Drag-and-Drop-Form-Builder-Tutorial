@@ -10,7 +10,7 @@
     Drop Content Here
   </div>
   <div class="field" *ngIf="field?.fieldType === formFieldType.Input">
-    Input
+    <label>Input</label>
     <input type="text" placeholder="Placeholder text..." />
   </div>
 
@@ -20,7 +20,7 @@
   ></app-form-button-field>
 
   <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
-    Textarea
+    <label>Textarea</label>
     <textarea placeholder="Placeholder text..."></textarea>
   </div>
 </div>

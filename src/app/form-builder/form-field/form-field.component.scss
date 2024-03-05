@@ -35,13 +35,23 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 15px;
   height: 100%;
   justify-content: center;
   width: 100%;
 }
 
 input, textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+input, textarea {
   width: 100%;
   pointer-events: none;
+  border-color: 1px solid lightgrey;
+}
+
+label {
+  margin-bottom: 5px;
 }
