@@ -1,10 +1,24 @@
 <div class="customization">
-  <mat-tab-group animationDuration="300ms">
-    <mat-tab label="Current Element">
-      <app-element-customization
-        [selectedField]="selectedField$ | async"
-      ></app-element-customization>
-    </mat-tab>
-    <mat-tab label="Form Design">Form Design Component</mat-tab>
-  </mat-tab-group>
+  <div class="tab-header">
+    <div
+      class="tab"
+      [ngClass]="{ active: selectedTab === 0 }"
+      (click)="selectedTab = 0"
+    >
+      Current Element
+    </div>
+    <div
+      class="tab"
+      [ngClass]="{ active: selectedTab === 1 }"
+      (click)="selectedTab = 1"
+    >
+      Form Design
+    </div>
+  </div>
+  <div *ngIf="selectedTab === 0" class="tab-content">
+    <app-element-customization
+      [selectedField]="selectedField$ | async"
+    ></app-element-customization>
+  </div>
+  <div *ngIf="selectedTab === 1" class="tab-content">Tab 2</div>
 </div>

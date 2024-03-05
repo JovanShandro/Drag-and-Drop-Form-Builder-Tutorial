@@ -8,7 +8,9 @@ import { FormField, FormService } from '../services/form.service';
   styleUrls: ['./customization.component.scss'],
 })
 export class CustomizationComponent {
-  tabNames = ['Current Element', 'Form Design'];
+  // 0 for 'Current Element'
+  // 1 for 'Form Design'
+  selectedTab = 0;
 
   selectedField$: Observable<FormField | null> = of(null);
 
