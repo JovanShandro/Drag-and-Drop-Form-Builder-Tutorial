@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { v4 as uuid } from 'uuid';
 
 export enum ButtonStyle {
@@ -115,7 +115,7 @@ export enum FormFieldType {
 })
 export class FormService {
   sections: FormSection[] = [];
-  selectedField$ = new Subject<FormField>();
+  selectedField$ = new BehaviorSubject<FormField | null>(null);
 
   createSection(sectionType: FormSectionType, index: number) {
     const newSection: FormSection = {
