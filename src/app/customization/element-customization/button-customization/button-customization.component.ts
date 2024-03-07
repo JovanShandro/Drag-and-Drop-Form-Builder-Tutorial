@@ -19,8 +19,63 @@ export class ButtonCustomizationComponent {
 
   ButtonWidth = ButtonWidth;
 
-  textAlignment = Object.keys(TextAlignment);
-  fonts = Object.keys(Font);
+  textAlignment = [
+    {
+      label: 'Start',
+      value: TextAlignment.Start,
+    },
+    {
+      label: 'Center',
+      value: TextAlignment.Center,
+    },
+    {
+      label: 'End',
+      value: TextAlignment.End,
+    },
+    {
+      label: 'Justify',
+      value: TextAlignment.Justify,
+    }
+  ]
+
+  fonts = [
+    {
+      label: 'Arial',
+      value: Font.Arial,
+    },
+    {
+      label: 'Comic Sans MS',
+      value: Font.ComicSansMS,
+    },
+    {
+      label: 'Courier New',
+      value: Font.CourierNew,
+    },
+    {
+      label: 'Georgia',
+      value: Font.Georgia,
+    },
+    {
+      label: 'Lucida Console',
+      value: Font.LucidaConsole,
+    },
+    {
+      label: 'Tahoma',
+      value: Font.Tahoma,
+    },
+    {
+      label: 'Times New Roman',
+      value: Font.TimesNewRoman,
+    },
+    {
+      label: 'Trebuchet MS',
+      value: Font.TrebuchetMS,
+    },
+    {
+      label: 'Verdana',
+      value: Font.Verdana,
+    },
+  ];
 
   buttonTypes = [
     {

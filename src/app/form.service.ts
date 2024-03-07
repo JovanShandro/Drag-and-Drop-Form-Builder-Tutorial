@@ -26,9 +26,10 @@ export enum Alignment {
 }
 
 export enum TextAlignment {
-  Top = 'top',
+  Start = 'start',
+  End = 'end',
   Center = 'center',
-  Bottom = 'bottom',
+  Justify = 'justify',
 }
 
 export enum Font {
@@ -48,6 +49,7 @@ export enum InputType {
   Text = 'text',
   Email = 'email',
   Password = 'password',
+  Checkbox = 'checkbox',
 }
 
 export enum FormItemType {
@@ -97,9 +99,29 @@ export interface ButtonSettings {
   textAlignment: TextAlignment;
 }
 
-export interface InputSettings {}
+export interface InputSettings {
+  type: InputType;
+  label: string;
+  placeholder: string;
+  fieldName: string;
+  isRequired: boolean;
+  inputBackgroundColor: string;
+  borderRadius: number;
+  placeHolderColor: string;
+  // TODO Check if it makes sense to add height and padding
+}
 
-export interface TextareaSettings {}
+
+export interface TextareaSettings {
+  label: string;
+  placeholder: string;
+  fieldName: string;
+  isRequired: boolean;
+  inputBackgroundColor: string;
+  borderRadius: number;
+  textAreaHeight: number;
+  // TODO Check if it makes sense to add height and padding
+}
 
 export type FormFieldSettings = ButtonSettings | InputSettings | TextareaSettings;
 
@@ -178,15 +200,16 @@ export class FormService {
       }
       case FormFieldType.Input: {
         return {
-          type: 'text',
+          type: InputType.Text,
           label: 'Input label',
           placeholder: 'Placeholder text',
-          fieldName: uuid(),
+          fieldName: "inputName",
           isRequired: false,
-          inputBackgroundColor : 'transparent',
+          inputBackgroundColor : 'white',
           borderRadius: 0,
+          placeHolderColor: 'black',
           // TODO Check if it makes sense to add height and padding
-        };
+        } as InputSettings;
       }
       case FormFieldType.Textarea: {
         return {
@@ -196,8 +219,9 @@ export class FormService {
           isRequired: false,
           inputBackgroundColor : 'transparent',
           borderRadius: 0,
+          textAreaHeight: 57,
           // TODO Check if it makes sense to add height and padding
-        };
+        } as TextareaSettings;
       }
       default:
         return null as any;

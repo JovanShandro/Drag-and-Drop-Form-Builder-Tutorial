@@ -1,0 +1,50 @@
+
+.input-customization {
+    overflow-y: scroll;
+    max-height: 75vh;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .some-margin-on-left-and-right {
+    margin: 0 10px;
+  }
+  
+  .min-width-sm {
+    min-width: 35px;
+  }
+  
+  .min-width-md {
+    min-width: 150px;
+  }
+  
+  .min-width-lg {
+    min-width: 200px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .color-input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .row > ng-select {
+    min-width: 200px;
+  }
+  

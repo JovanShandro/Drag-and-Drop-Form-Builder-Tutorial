@@ -1,0 +1,22 @@
+<div class="form-input-field">
+
+
+  <label for="inputName">{{settings.label}}</label>
+  <input
+    class="custom-input"
+    [ngStyle]="{
+      'background-color': settings.inputBackgroundColor,
+      'border-radius': settings.borderRadius + 'px'
+    }"
+    
+    [type]="settings.type"
+    name="inputName"
+    readonly
+    [placeholder]="settings.placeholder"
+    [name]="settings.fieldName"
+    [required]="settings.isRequired"
+    
+    />
+
+
+</div>

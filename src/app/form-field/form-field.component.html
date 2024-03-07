@@ -9,18 +9,19 @@
     <img src="assets/down-arrow.png" alt="down-arrow" />
     Drop Content Here
   </div>
-  <div class="field" *ngIf="field?.fieldType === formFieldType.Input">
-    Input
-    <input type="text" placeholder="Placeholder text..." />
-  </div>
+  <app-form-input-field
+    *ngIf="field?.fieldType === formFieldType.Input"
+    [settings]="asInputSettings(field.settings!)"
+  ></app-form-input-field>
+
 
   <app-form-button-field
     *ngIf="field?.fieldType === formFieldType.Button"
     [settings]="asButtonSettings(field.settings!)"
   ></app-form-button-field>
 
-  <div class="field" *ngIf="field?.fieldType === formFieldType.Textarea">
-    Textarea
-    <textarea placeholder="Placeholder text..."></textarea>
-  </div>
+  <app-form-textarea-field
+    *ngIf="field?.fieldType === formFieldType.Textarea"
+    [settings]="asTextareaSettings(field.settings!)"
+  ></app-form-textarea-field>
 </div>

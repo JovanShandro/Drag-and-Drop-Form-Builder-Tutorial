@@ -4,7 +4,9 @@ import {
   FormField,
   FormFieldSettings,
   FormFieldType,
-  InputType
+  InputSettings,
+  InputType,
+  TextareaSettings
 } from '../../form.service';
 
 @Component({
@@ -21,5 +23,13 @@ export class ElementCustomizationComponent {
 
   asButtonSettings(settings: FormFieldSettings) {
     return settings as ButtonSettings;
+  }
+
+  asInputSettings(settings: FormFieldSettings) {
+    return settings as InputSettings;
+  }
+
+  asTextareaSettings(settings: FormFieldSettings) {
+    return settings as TextareaSettings;
   }
 }

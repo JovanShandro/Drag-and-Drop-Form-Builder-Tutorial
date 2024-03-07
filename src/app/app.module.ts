@@ -29,6 +29,12 @@ import { DraggableFieldListComponent } from './element-list-panel/draggable-fiel
 import { ElementCustomizationComponent } from './customization/element-customization/element-customization.component';
 import { ButtonCustomizationComponent } from './customization/element-customization/button-customization/button-customization.component';
 import { FormButtonFieldComponent } from './form-field/form-button-field/form-button-field.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { InputCustomizationComponent } from './customization/element-customization/input-customization/input-customization.component';
+import { FormInputFieldComponent } from './form-field/form-input-field/form-input-field.component';
+import { FormTextareaFieldComponent } from './form-field/form-textarea-field/form-textarea-field.component';
+import { TextareaCustomizationComponent } from './customization/element-customization/textarea-customization/textarea-customization.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -56,6 +62,10 @@ export const routes: Routes = [
     ElementCustomizationComponent,
     ButtonCustomizationComponent,
     FormButtonFieldComponent,
+    InputCustomizationComponent,
+    FormInputFieldComponent,
+    FormTextareaFieldComponent,
+    TextareaCustomizationComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +73,8 @@ export const routes: Routes = [
     AppRoutingModule,
     DragDropModule,
     MatTabsModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
     RouterModule.forRoot(routes),
     FontAwesomeModule,
     MatButtonModule,

@@ -6,6 +6,8 @@ import {
   FormFieldSettings,
   FormFieldType,
   FormService,
+  InputSettings,
+  TextareaSettings,
 } from '../form.service';
 
 @Component({
@@ -33,5 +35,13 @@ export class FormFieldComponent {
 
   asButtonSettings(settings: FormFieldSettings) {
     return settings as ButtonSettings;
+  }
+
+  asInputSettings(settings: FormFieldSettings) {
+    return settings as InputSettings;
+  }
+
+  asTextareaSettings(settings: FormFieldSettings) {
+    return settings as TextareaSettings;
   }
 }

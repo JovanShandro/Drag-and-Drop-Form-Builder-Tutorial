@@ -19,7 +19,13 @@
       width:
         settings.width === ButtonWidth.FixedSize
           ? settings.fixedWidth + 'px'
-          : null
+          : null,
+      fontSize: settings.fontSize + 'px',
+      fontWeight: settings.isBold ? 'bold' : null,
+      fontStyle: settings.isItalic ? 'italic' : null,
+      textAlign: settings.textAlignment,
+      color: settings.textColor,
+      fontFamily: settings.fontFamily
     }"
     [ngClass]="{
       'flat-button': settings.style === ButtonStyle.Flat,
