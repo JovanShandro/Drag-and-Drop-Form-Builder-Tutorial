@@ -1,14 +1,14 @@
 <div class="form-textarea-field">
   <!--Make a text area with a label and place holder-->
-  <label [for]="textareaId">{{ settings.label }}</label>
+  <label *ngIf="settings.showLabel" [for]="textareaId">{{
+    settings.label
+  }}</label>
   <textarea
     [id]="textareaId"
     [placeholder]="settings.placeholder"
     [required]="settings.isRequired"
     [ngStyle]="{
-      backgroundColor: settings.inputBackgroundColor,
-      borderRadius: settings.borderRadius + 'px',
-      height: settings.textAreaHeight + 'px'
+      borderRadius: settings.borderRadius + 'px'
     }"
   ></textarea>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TextareaSettings } from 'src/app/services/form.service';
 
 @Component({
@@ -6,13 +6,6 @@ import { TextareaSettings } from 'src/app/services/form.service';
   templateUrl: './textarea-customization.component.html',
   styleUrls: ['./textarea-customization.component.scss']
 })
-export class TextareaCustomizationComponent implements OnInit {
-
+export class TextareaCustomizationComponent {
   @Input() settings!: TextareaSettings;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

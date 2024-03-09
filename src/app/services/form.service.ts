@@ -110,11 +110,9 @@ export interface TextareaSettings {
   label: string;
   placeholder: string;
   fieldName: string;
+  showLabel: boolean;
   isRequired: boolean;
-  inputBackgroundColor: string;
   borderRadius: number;
-  textAreaHeight: number;
-  // TODO Check if it makes sense to add height and padding
 }
 
 export type FormFieldSettings = ButtonSettings | InputSettings | TextareaSettings;
@@ -206,12 +204,10 @@ export class FormService {
         return {
           label: 'Textarea label',
           placeholder: 'Placeholder text',
-          fieldName: uuid(),
+          fieldName: "textareaName",
           isRequired: false,
-          inputBackgroundColor : 'transparent',
+          showLabel: true,
           borderRadius: 0,
-          textAreaHeight: 57,
-          // TODO Check if it makes sense to add height and padding
         } as TextareaSettings;
       }
       default:
