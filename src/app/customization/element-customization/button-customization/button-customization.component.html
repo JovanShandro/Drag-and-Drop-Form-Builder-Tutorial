@@ -1,5 +1,5 @@
 <div class="button-customization">
-  <div>
+  <div class="row">
     <label>Button Type</label>
 
     <ng-select
@@ -11,7 +11,7 @@
     </ng-select>
   </div>
 
-  <div>
+  <div class="row">
     <label>Button Text</label>
 
     <input
@@ -21,7 +21,7 @@
     />
   </div>
   <!--add new divs for linkTo -->
-  <div>
+  <div class="row">
     <label>Link To</label>
 
     <input
@@ -31,7 +31,7 @@
     />
   </div>
   <!--add new divs for buttonStyle -->
-  <div>
+  <div class="row">
     <label>Button Style</label>
 
     <ng-select
@@ -80,7 +80,7 @@
     </ng-select>
   </div>
 
-  <div *ngIf="settings.width === ButtonWidth.FixedSize">
+  <div class="row" *ngIf="settings.width === ButtonWidth.FixedSize">
     <label>Fixed size</label>
     <input
       class="custom-input"
@@ -89,7 +89,7 @@
     />
   </div>
   <!--a dropdown title alignment with options left, center, down-->
-  <div>
+  <div class="row">
     <label>Button Alignment</label>
     <ng-select
       [items]="alignments"
@@ -100,7 +100,7 @@
     </ng-select>
   </div>
   <!--font size and family-->
-  <div>
+  <div class="row">
     <label>Font Size</label>
     <input
       class="custom-input"
@@ -108,7 +108,7 @@
       [(ngModel)]="settings.fontSize"
     />
   </div>
-  <div>
+  <div class="row">
     <label>Font Family</label>
     <ng-select
       [items]="fonts"
@@ -119,19 +119,19 @@
     </ng-select>
   </div>
   <!--is bold and is italic checkboxes-->
-  <div>
+  <div class="row">
     <label>Is Bold</label>
-    <input type="checkbox" [(ngModel)]="settings.isBold" />
+    <mat-checkbox [(ngModel)]="settings.isBold"></mat-checkbox>
   </div>
-  <div>
+  <div class="row">
     <label>Is Italic</label>
-    <input type="checkbox" [(ngModel)]="settings.isItalic" />
+    <mat-checkbox [(ngModel)]="settings.isItalic" ></mat-checkbox>
   </div>
   <!--text color picker-->
-  <div class="color-input">
+  <div class="color-input row">
     <label>Text Color</label>
     <input
-      class="custom-input"
+      class="custom-input min-width-sm some-margin-on-left-and-right"
       type="color"
       [(ngModel)]="settings.textColor"
     />
@@ -143,7 +143,7 @@
     />
   </div>
   <!--text alignment-->
-  <div>
+  <div class="row">
     <label>Text Alignment</label>
     <ng-select
       [items]="textAlignment"
