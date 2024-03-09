@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { InputSettings, InputType } from 'src/app/services/form.service';
 
 @Component({
@@ -6,8 +6,7 @@ import { InputSettings, InputType } from 'src/app/services/form.service';
   templateUrl: './input-customization.component.html',
   styleUrls: ['./input-customization.component.scss']
 })
-export class InputCustomizationComponent implements OnInit {
-
+export class InputCustomizationComponent {
   @Input() settings!: InputSettings;
 
   inputTypes = [
@@ -28,10 +27,4 @@ export class InputCustomizationComponent implements OnInit {
       value: InputType.Checkbox,
     }
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

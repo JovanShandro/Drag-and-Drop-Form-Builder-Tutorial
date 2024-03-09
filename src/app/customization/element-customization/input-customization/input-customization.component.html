@@ -1,81 +1,50 @@
 <div class="input-customization">
-    <div class="row">
-        <label>Input Type</label>
+  <div class="row">
+    <label>Input Type</label>
+    <ng-select
+      [items]="inputTypes"
+      [clearable]="false"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.type"
+    >
+    </ng-select>
+  </div>
 
-        <ng-select
-          [items]="inputTypes"
-          bindLabel="label"
-          bindValue="value"
-          [(ngModel)]="settings.type"
-        >
-        </ng-select>   
-    </div>
-    <div class="row">
-        <label>Label</label>
-        <input
-          class="custom-input"
-          type="text"
-          [(ngModel)]="settings.label"
-        />
-    </div>
-    <div class="row">
-        <label>Input Placeholder</label>
-        <input
-          class="custom-input"
-          type="text"
-          [(ngModel)]="settings.placeholder"
-        />
-    </div>
-    <div class="row">
-        <label>Field Name</label>
-        <input
-          class="custom-input"
-          type="text"
-          [(ngModel)]="settings.fieldName"
-        />
-    </div>
-    <div class="row">
-        <label>Is Required</label>
-        <input
-          class="custom-input"
-          type="checkbox"
-          [(ngModel)]="settings.isRequired"
-        />
-    </div>
-    <div class="row">
-        <label>Input Bg Color</label>
-        <input
-          class="color-input"
-          type="color"
-          [(ngModel)]="settings.inputBackgroundColor"
-        />
-        <input
-          class="custom-input"
-          type="text"
-          [(ngModel)]="settings.inputBackgroundColor"
-          readonly
-        />
-    </div>
-    <div class="row">
-        <label>PlaceHolder Color</label>
-        <input
-          class="color-input"
-          type="color"
-          [(ngModel)]="settings.placeHolderColor"
-        />
-        <input
-          class="custom-input"
-          type="text"
-          [(ngModel)]="settings.placeHolderColor"
-          readonly
-        />
-    </div>
-    <div class="row">
-        <label>Border Radius</label>
-        <input
-          class="custom-input"
-          type="number"
-          [(ngModel)]="settings.borderRadius"
-        />
-    </div>
+  <div class="row">
+    <label>Show label</label>
+    <mat-checkbox [(ngModel)]="settings.showLabel"></mat-checkbox>
+  </div>
+
+  <div>
+    <label class="mb">Label</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.label"
+    />
+  </div>
+
+  <div>
+    <label class="mb">Placeholder text</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.placeholder"
+    />
+  </div>
+
+  <div>
+    <label class="mb">Field name</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.fieldName"
+    />
+  </div>
+
+  <div class="row">
+    <label>Is Required</label>
+    <mat-checkbox [(ngModel)]="settings.isRequired"></mat-checkbox>
+  </div>
 </div>
