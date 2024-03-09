@@ -1,39 +1,40 @@
 .form-textarea-field {
-    cursor: pointer;
-    display: flex;
-    padding: 0 20px;
-    height: 100%;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .form-textarea-field.align-left {
-    justify-content: flex-start;
-  }
-  
-  .form-textarea-field.align-center {
-    justify-content: center;
-  }
-  
-  .form-textarea-field.align-right {
-    justify-content: flex-end;
-  }
-  
-  textarea {
-    pointer-events: none;
-    font-size: 16px;
-    color: #fff;
-    line-height: 36px;
-    padding: 0 16px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-  }
-  
-  .width-auto {
-    width: auto;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-textarea-field.align-left {
+  justify-content: flex-start;
+}
+
+.form-textarea-field.align-center {
+  justify-content: center;
+}
+
+.form-textarea-field.align-right {
+  justify-content: flex-end;
+}
+
+.width-auto {
+  width: auto;
+}
+
+textarea {
+  width: 100%;
+  pointer-events: none;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  margin: 5px 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+textarea::placeholder {
+  font-size: 14px;
+}
