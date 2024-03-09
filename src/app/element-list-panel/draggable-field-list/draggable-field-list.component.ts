@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
-import { faSquare as faSquareOutline } from '@fortawesome/free-regular-svg-icons';
+import {
+  faSquare as faSquareOutline,
+  faCheckSquare,
+} from '@fortawesome/free-regular-svg-icons';
 import {
   faSquare as faSquareFilled,
   faWindowMaximize,
 } from '@fortawesome/free-solid-svg-icons';
-import { FormFieldType, FormItemType, FormService } from '../../services/form.service';
+import {
+  FormFieldType,
+  FormItemType,
+  FormService,
+} from '../../services/form.service';
 
 @Component({
   selector: 'app-draggable-field-list',
@@ -30,6 +37,12 @@ export class DraggableFieldListComponent {
       fieldType: FormFieldType.Textarea,
       title: 'Textarea',
       icon: faWindowMaximize,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.Checkbox,
+      title: 'Checkbox',
+      icon: faCheckSquare,
     },
   ];
 

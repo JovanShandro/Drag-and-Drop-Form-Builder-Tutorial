@@ -6,7 +6,8 @@ import {
   FormFieldType,
   InputType,
   InputSettings,
-  TextareaSettings
+  TextareaSettings,
+  CheckboxSettings
 } from '../../services/form.service';
 
 @Component({
@@ -31,5 +32,9 @@ export class ElementCustomizationComponent {
 
   asTextareaSettings(settings: FormFieldSettings) {
     return settings as TextareaSettings;
+  }
+
+  asCheckboxSettings(settings: FormFieldSettings) {
+    return settings as CheckboxSettings;
   }
 }

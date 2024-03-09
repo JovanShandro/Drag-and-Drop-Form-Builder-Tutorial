@@ -1,0 +1,27 @@
+<div class="checkbox-customization">
+  <div>
+    <label class="mb-1">Checkbox label</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.label"
+    />
+  </div>
+
+  <div>
+    <label class="mb-1">Field name</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings!.fieldName"
+    />
+  </div>
+
+  <div class="row">
+    <label>Is required</label>
+    <mat-checkbox
+      color="primary"
+      [(ngModel)]="settings.isRequired"
+    ></mat-checkbox>
+  </div>
+</div>

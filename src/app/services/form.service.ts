@@ -115,13 +115,20 @@ export interface TextareaSettings {
   borderRadius: number;
 }
 
-export type FormFieldSettings = ButtonSettings | InputSettings | TextareaSettings;
+export interface CheckboxSettings {
+  label: string;
+  isRequired: boolean;
+  fieldName: string;
+}
+
+export type FormFieldSettings = CheckboxSettings | ButtonSettings | InputSettings | TextareaSettings;
 
 export enum FormFieldType {
   Empty = 0,
   Input = 1,
   Textarea = 2,
   Button = 3,
+  Checkbox = 4,
 }
 
 @Injectable({
@@ -209,6 +216,13 @@ export class FormService {
           showLabel: true,
           borderRadius: 0,
         } as TextareaSettings;
+      }
+      case FormFieldType.Checkbox: {
+        return {
+          label: 'Checkbox label',
+          fieldName: "checkboxName",
+          isRequired: false,
+        } as CheckboxSettings;
       }
       default:
         return null as any;
