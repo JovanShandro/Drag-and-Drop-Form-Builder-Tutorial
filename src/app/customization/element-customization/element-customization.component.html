@@ -4,6 +4,16 @@
     [settings]="asButtonSettings(selectedField.settings!)"
   ></app-button-customization>
 
+  <app-input-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Input"
+    [settings]="asInputSettings(selectedField.settings!)"
+  ></app-input-customization>
+
+  <app-textarea-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Textarea"
+    [settings]="asTextareaSettings(selectedField.settings!)"
+  ></app-textarea-customization>
+
   <!--<div-->
   <!--*ngIf="selectedField.fieldType === fieldTypes.Input"-->
   <!--class="input-customization"-->

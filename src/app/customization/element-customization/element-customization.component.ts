@@ -1,10 +1,12 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   ButtonSettings,
   FormField,
   FormFieldSettings,
   FormFieldType,
-  InputType
+  InputType,
+  InputSettings,
+  TextareaSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -21,5 +23,13 @@ export class ElementCustomizationComponent {
 
   asButtonSettings(settings: FormFieldSettings) {
     return settings as ButtonSettings;
+  }
+
+  asInputSettings(settings: FormFieldSettings) {
+    return settings as InputSettings;
+  }
+
+  asTextareaSettings(settings: FormFieldSettings) {
+    return settings as TextareaSettings;
   }
 }
