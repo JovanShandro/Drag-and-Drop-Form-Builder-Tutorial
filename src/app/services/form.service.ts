@@ -48,7 +48,6 @@ export enum InputType {
   Text = 'text',
   Email = 'email',
   Password = 'password',
-  Checkbox = 'checkbox',
 }
 
 export enum FormItemType {
@@ -103,13 +102,9 @@ export interface InputSettings {
   label: string;
   placeholder: string;
   fieldName: string;
+  showLabel: boolean;
   isRequired: boolean;
-  inputBackgroundColor: string;
-  borderRadius: number;
-  placeHolderColor: string;
-  // TODO Check if it makes sense to add height and padding
 }
-
 
 export interface TextareaSettings {
   label: string;
@@ -204,10 +199,7 @@ export class FormService {
           placeholder: 'Placeholder text',
           fieldName: "inputName",
           isRequired: false,
-          inputBackgroundColor : 'white',
-          borderRadius: 0,
-          placeHolderColor: 'black',
-          // TODO Check if it makes sense to add height and padding
+          showLabel: true,
         } as InputSettings;
       }
       case FormFieldType.Textarea: {

@@ -1,12 +1,8 @@
 <div class="form-input-field">
-  <label [for]="inputId">{{ settings.label }}</label>
+  <label *ngIf="settings.showLabel" [for]="inputId">{{ settings.label }}</label>
   <input
     [id]="inputId"
     class="custom-input"
-    [ngStyle]="{
-      'background-color': settings.inputBackgroundColor,
-      'border-radius': settings.borderRadius + 'px'
-    }"
     [type]="settings.type"
     readonly
     [placeholder]="settings.placeholder"
