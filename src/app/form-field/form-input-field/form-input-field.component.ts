@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { InputSettings } from 'src/app/form.service';
+import { InputSettings } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-form-input-field',

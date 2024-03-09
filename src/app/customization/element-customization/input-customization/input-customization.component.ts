@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { InputSettings, InputType } from 'src/app/form.service';
+import { InputSettings, InputType } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-input-customization',

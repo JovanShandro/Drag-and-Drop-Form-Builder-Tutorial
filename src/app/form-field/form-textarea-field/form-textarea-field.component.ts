@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TextareaSettings } from 'src/app/form.service';
+import { TextareaSettings } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-form-textarea-field',
