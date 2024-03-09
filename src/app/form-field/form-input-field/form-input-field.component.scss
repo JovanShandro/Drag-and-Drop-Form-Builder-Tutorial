@@ -1,0 +1,25 @@
+.form-input-field {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  pointer-events: none;
+  border: 1px solid lightgrey;
+}
+
+input::placeholder {
+  font-size: 14px;
+}
+
+label {
+  margin-bottom: 5px;
+}
