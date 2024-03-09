@@ -1,9 +1,10 @@
 <div class="button-customization">
-  <div class="row">
-    <label>Button Type</label>
+  <div>
+    <label class="mb-1">Button Type</label>
 
     <ng-select
       [items]="buttonTypes"
+      [clearable]="false"
       bindLabel="label"
       bindValue="value"
       [(ngModel)]="settings.type"
@@ -11,8 +12,8 @@
     </ng-select>
   </div>
 
-  <div class="row">
-    <label>Button Text</label>
+  <div>
+    <label class="mb-1">Button Text</label>
 
     <input
       class="custom-input full-width"
@@ -20,9 +21,9 @@
       [(ngModel)]="settings.text"
     />
   </div>
-  <!--add new divs for linkTo -->
-  <div class="row">
-    <label>Link To</label>
+
+  <div>
+    <label class="mb-1">Link To</label>
 
     <input
       class="custom-input full-width"
@@ -30,12 +31,13 @@
       [(ngModel)]="settings.linkTo"
     />
   </div>
-  <!--add new divs for buttonStyle -->
-  <div class="row">
-    <label>Button Style</label>
+
+  <div>
+    <label class="mb-1">Button Style</label>
 
     <ng-select
       [items]="buttonStyles"
+      [clearable]="false"
       bindLabel="label"
       bindValue="value"
       [(ngModel)]="settings.style"
@@ -45,13 +47,14 @@
 
   <div class="row">
     <label>Button Color</label>
-    <input
-      class="color-input"
-      type="color"
-      [(ngModel)]="settings.color"
-    />
+    <input class="color-input" type="color" [(ngModel)]="settings.color" />
   </div>
-  <!--border radius-->
+
+  <div class="row">
+    <label>Text Color</label>
+    <input class="color-input" type="color" [(ngModel)]="settings.textColor" />
+  </div>
+
   <div class="row">
     <label>Border Radius</label>
     <input
@@ -60,19 +63,16 @@
       [(ngModel)]="settings.borderRadius"
     />
   </div>
-  <!--button height and width-->
+
   <div class="row">
     <label>Button Height</label>
-    <input
-      class="custom-input"
-      type="number"
-      [(ngModel)]="settings.height"
-    />
+    <input class="custom-input" type="number" [(ngModel)]="settings.height" />
   </div>
   <div class="row">
     <label>Button Width</label>
     <ng-select
       [items]="buttonWidthValues"
+      [clearable]="false"
       bindLabel="label"
       bindValue="value"
       [(ngModel)]="settings.width"
@@ -88,69 +88,55 @@
       [(ngModel)]="settings.fixedWidth"
     />
   </div>
-  <!--a dropdown title alignment with options left, center, down-->
+
   <div class="row">
     <label>Button Alignment</label>
     <ng-select
       [items]="alignments"
+      [clearable]="false"
       bindLabel="label"
       bindValue="value"
       [(ngModel)]="settings.alignment"
     >
     </ng-select>
   </div>
-  <!--font size and family-->
+
+  <div class="row">
+    <label>Text Alignment</label>
+    <ng-select
+      [items]="textAlignment"
+      [clearable]="false"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.textAlignment"
+    >
+    </ng-select>
+  </div>
+
   <div class="row">
     <label>Font Size</label>
-    <input
-      class="custom-input"
-      type="number"
-      [(ngModel)]="settings.fontSize"
-    />
+    <input class="custom-input" type="number" [(ngModel)]="settings.fontSize" />
   </div>
+
   <div class="row">
     <label>Font Family</label>
     <ng-select
       [items]="fonts"
+      [clearable]="false"
       bindLabel="label"
       bindValue="value"
       [(ngModel)]="settings.fontFamily"
     >
     </ng-select>
   </div>
-  <!--is bold and is italic checkboxes-->
+
   <div class="row">
     <label>Is Bold</label>
     <mat-checkbox [(ngModel)]="settings.isBold"></mat-checkbox>
   </div>
+
   <div class="row">
     <label>Is Italic</label>
-    <mat-checkbox [(ngModel)]="settings.isItalic" ></mat-checkbox>
-  </div>
-  <!--text color picker-->
-  <div class="color-input row">
-    <label>Text Color</label>
-    <input
-      class="custom-input min-width-sm some-margin-on-left-and-right"
-      type="color"
-      [(ngModel)]="settings.textColor"
-    />
-    <input
-      class="custom-input"
-      type="text"
-      [(ngModel)]="settings.textColor"
-      readonly
-    />
-  </div>
-  <!--text alignment-->
-  <div class="row">
-    <label>Text Alignment</label>
-    <ng-select
-      [items]="textAlignment"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.textAlignment"
-    >
-    </ng-select>
+    <mat-checkbox [(ngModel)]="settings.isItalic"></mat-checkbox>
   </div>
 </div>

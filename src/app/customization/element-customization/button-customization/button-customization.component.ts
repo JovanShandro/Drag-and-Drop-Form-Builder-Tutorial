@@ -32,10 +32,6 @@ export class ButtonCustomizationComponent {
       label: 'End',
       value: TextAlignment.End,
     },
-    {
-      label: 'Justify',
-      value: TextAlignment.Justify,
-    }
   ]
 
   fonts = [

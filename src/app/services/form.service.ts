@@ -29,7 +29,6 @@ export enum TextAlignment {
   Start = 'start',
   End = 'end',
   Center = 'center',
-  Justify = 'justify',
 }
 
 export enum Font {
@@ -194,7 +193,7 @@ export class FormService {
           fontFamily: Font.Arial,
           isBold: false,
           isItalic: false,
-          textColor: 'white',
+          textColor: '#ffffff',
           textAlignment: TextAlignment.Center,
         } as ButtonSettings;
       }
