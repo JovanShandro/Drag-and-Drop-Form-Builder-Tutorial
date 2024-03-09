@@ -1,34 +1,54 @@
 <div class="textarea-customization">
-    <div class="row">
-        <label>Label</label>
-        <input class="custom-input" type="text" [(ngModel)]="settings!.label" />
-    </div>
-    <div class="row">
-        <label>Textarea Placeholder</label>
-        <input class="custom-input" type="text" [(ngModel)]="settings!.placeholder" />
-    </div>
-    <div class="row">
-        <label>Is Required</label>
-        <input class="custom-input" type="checkbox" [(ngModel)]="settings!.isRequired" />
-    </div>
-    <div class="row">
-        <label>Field Name</label>
-        <input class="custom-input" type="text" [(ngModel)]="settings!.fieldName" />
-    </div>
-    <div class="row">
-        <label>Textarea Color</label>
-        <input class="custom-input" type="color" [(ngModel)]="settings!.inputBackgroundColor" />
-        <input class="custom-input" type="text" [(ngModel)]="settings!.inputBackgroundColor" readonly />
-    </div>
-    <div class="row">
-        <label>Border Radius</label>
-        <input class="custom-input" type="number" [(ngModel)]="settings!.borderRadius" />
-    </div>
-    
-    <div class="row">
-        <label>Textarea Height</label>
-        <input min="37" max="57" class="custom-input" type="number" [(ngModel)]="settings!.textAreaHeight" />
-    </div>
-    <div class="row"></div>
-    <div class="row"></div>
+  <div class="row">
+    <label>Label</label>
+    <input class="custom-input" type="text" [(ngModel)]="settings.label" />
+  </div>
+
+  <div class="row">
+    <label>Textarea Placeholder</label>
+    <input
+      class="custom-input"
+      type="text"
+      [(ngModel)]="settings.placeholder"
+    />
+  </div>
+
+  <div class="row">
+    <label>Field Name</label>
+    <input class="custom-input" type="text" [(ngModel)]="settings.fieldName" />
+  </div>
+
+  <div class="row">
+    <label>Textarea Color</label>
+    <input
+      class="color-input"
+      type="color"
+      [(ngModel)]="settings.inputBackgroundColor"
+    />
+  </div>
+
+  <div class="row">
+    <label>Border Radius</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.borderRadius"
+    />
+  </div>
+
+  <div class="row">
+    <label>Textarea Height</label>
+    <input
+      min="37"
+      max="57"
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.textAreaHeight"
+    />
+  </div>
+
+  <div class="row">
+    <label>Is Required</label>
+    <mat-checkbox [(ngModel)]="settings.isRequired"></mat-checkbox>
+  </div>
 </div>
