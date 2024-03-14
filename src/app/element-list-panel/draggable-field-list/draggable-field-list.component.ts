@@ -4,6 +4,7 @@ import {
   faCheckSquare,
 } from '@fortawesome/free-regular-svg-icons';
 import {
+  faLanguage,
   faSquare as faSquareFilled,
   faWindowMaximize,
 } from '@fortawesome/free-solid-svg-icons';
@@ -43,6 +44,12 @@ export class DraggableFieldListComponent {
       fieldType: FormFieldType.Checkbox,
       title: 'Checkbox',
       icon: faCheckSquare,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.Text,
+      title: 'Text',
+      icon: faLanguage,
     },
   ];
 

@@ -37,6 +37,8 @@ import { FormTextareaFieldComponent } from './form-field/form-textarea-field/for
 import { TextareaCustomizationComponent } from './customization/element-customization/textarea-customization/textarea-customization.component';
 import { FormCheckboxFieldComponent } from './form-builder/form-field/form-checkbox-field/form-checkbox-field.component';
 import { CheckboxCustomizationComponent } from './customization/element-customization/checkbox-customization/checkbox-customization.component';
+import { FormTextFieldComponent } from './form-builder/form-field/form-text-field/form-text-field.component';
+import { TextCustomizationComponent } from './customization/element-customization/text-customization/text-customization.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -70,6 +72,8 @@ export const routes: Routes = [
     TextareaCustomizationComponent,
     FormCheckboxFieldComponent,
     CheckboxCustomizationComponent,
+    FormTextFieldComponent,
+    TextCustomizationComponent,
   ],
   imports: [
     BrowserModule,

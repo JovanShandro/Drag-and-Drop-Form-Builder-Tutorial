@@ -29,4 +29,9 @@
     *ngIf="field?.fieldType === formFieldType.Checkbox"
     [settings]="asCheckboxSettings(field.settings!)"
   ></app-form-checkbox-field>
+
+  <app-form-text-field
+    *ngIf="field?.fieldType === formFieldType.Text"
+    [settings]="asTextSettings(field.settings!)"
+  ></app-form-text-field>
 </div>

@@ -19,5 +19,10 @@
     [settings]="asCheckboxSettings(selectedField.settings!)"
   ></app-checkbox-customization>
 
+  <app-text-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Text"
+    [settings]="asTextSettings(selectedField.settings!)"
+  ></app-text-customization>
+
   <!--<div>{{ selectedField | json }}</div>-->
 </div>

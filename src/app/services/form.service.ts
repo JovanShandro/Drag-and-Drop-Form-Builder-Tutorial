@@ -121,7 +121,14 @@ export interface CheckboxSettings {
   fieldName: string;
 }
 
-export type FormFieldSettings = CheckboxSettings | ButtonSettings | InputSettings | TextareaSettings;
+export interface TextSettings {
+  textColor: string;
+  font: Font;
+  lineHeight: number;
+  text: string;
+}
+
+export type FormFieldSettings = TextSettings | CheckboxSettings | ButtonSettings | InputSettings | TextareaSettings;
 
 export enum FormFieldType {
   Empty = 0,
@@ -129,6 +136,7 @@ export enum FormFieldType {
   Textarea = 2,
   Button = 3,
   Checkbox = 4,
+  Text = 5,
 }
 
 @Injectable({
@@ -223,6 +231,14 @@ export class FormService {
           fieldName: "checkboxName",
           isRequired: false,
         } as CheckboxSettings;
+      }
+      case FormFieldType.Text: {
+        return {
+          textColor: '#000000',
+          font: Font.Arial,
+          lineHeight: 1.5,
+          text: 'Example Text',
+        } as TextSettings;
       }
       default:
         return null as any;
