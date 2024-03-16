@@ -66,7 +66,7 @@ export class DraggableFieldListComponent {
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.RadioButton,
-      title: 'Radio Buttons',
+      title: 'Radio',
       icon: faList,
     },
     {
@@ -84,7 +84,7 @@ export class DraggableFieldListComponent {
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.SeparatorLine,
-      title: 'Separator Line',
+      title: 'Separator',
       icon: faGripLines,
     }
   ];
