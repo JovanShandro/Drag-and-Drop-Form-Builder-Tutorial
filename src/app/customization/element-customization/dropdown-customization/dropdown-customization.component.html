@@ -1,77 +1,89 @@
 <div class="dropdown-customization">
+  <div>
+    <label class="mb-1">Dropdown label</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.label"
+    />
+  </div>
+
+  <div class="row">
+    <label>Show label</label>
+    <mat-checkbox
+      color="primary"
+      [(ngModel)]="settings.showLabel"
+    ></mat-checkbox>
+  </div>
+
+  <div class="row">
+    <label>Is required</label>
+    <mat-checkbox
+      color="primary"
+      [(ngModel)]="settings.isRequired"
+    ></mat-checkbox>
+  </div>
+
+  <div>
+    <label class="mb-1">Field name</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings!.fieldName"
+    />
+  </div>
+
+  <div class="options">
+    <label class="mb-1">Options List</label>
     <div>
-      <label class="mb-1">Dropdown label</label>
-      <input
-        class="custom-input full-width"
-        type="text"
-        [(ngModel)]="settings.label"
-      />
-    </div>
+      <div
+        class="option"
+        *ngFor="let option of settings.options; let i = index"
+      >
+        <div class="row">
+          <div>Option {{ i + 1 }}</div>
+          <button
+            (click)="deleteOption(i)"
+            class="option-delete-button"
+            mat-fab
+            color="warn"
+            aria-label="Example icon button with a delete icon"
+          >
+            <fa-icon size="xs" class="trash-icon" [icon]="trashIcon"></fa-icon>
+          </button>
+        </div>
 
-    <!--show label-->
-    <div class="row">
-      <label>Show label</label>
-      <mat-checkbox
-        color="primary"
-        [(ngModel)]="settings.showLabel"
-      ></mat-checkbox>
-    </div>
-  
-    <div>
-      <label class="mb-1">Field name</label>
-      <input
-        class="custom-input full-width"
-        type="text"
-        [(ngModel)]="settings!.fieldName"
-      />
-    </div>
-  
-    <div class="row">
-      <label>Is required</label>
-      <mat-checkbox
-        color="primary"
-        [(ngModel)]="settings.isRequired"
-      ></mat-checkbox>
-    </div>
+        <div class="row">
+          <label [for]="'label-' + i">Label</label>
+          <input
+            [id]="'label-' + i"
+            class="custom-input"
+            type="text"
+            [(ngModel)]="settings.options[i].label"
+          />
+        </div>
 
-    <div class="options">
-      <label class="mb-1">Options List</label>
-      <div >
+        <div class="row">
+          <label [for]="'value-' + i">Value</label>
+          <input
+            [id]="'value-' + i"
+            class="custom-input"
+            type="text"
+            [(ngModel)]="settings.options[i].value"
+          />
+        </div>
 
-        <div *ngFor="let option of settings.options; let i = index">
-
-            <div class="row">
-                <label class="mb-1" [for]="'label-'+i">label</label>
-                <input
-                    [id]="'label-'+i"
-                    class="custom-input full-width"
-                    type="text"
-                    [(ngModel)]="settings.options[i].label"
-                />
-            </div>
-            <br>
-            <div class="row">
-                <label class="mb-1" [for]="'value-'+i">value</label>
-                <input
-                    [id]="'value-'+i"
-                    class="custom-input full-width"
-                    type="text"
-                    [(ngModel)]="settings.options[i].value"
-                />
-            </div>
-            <div class="row">
-                <label class="mb-1">Is selected</label>
-                <mat-checkbox
-                    color="primary"
-                    [(ngModel)]="settings.options[i].isSelected"
-                ></mat-checkbox>
-            </div>
-            <button (click)="deleteBtn(i)" class="option-delete-btn" mat-fab color="warn" aria-label="Example icon button with a delete icon">
-                <fa-icon class="trash-icon" [icon]="trashIcon"></fa-icon>
-            </button>
+        <div class="row">
+          <label>Is selected</label>
+          <mat-checkbox
+            color="primary"
+            [(ngModel)]="settings.options[i].isSelected"
+          ></mat-checkbox>
         </div>
       </div>
-      <button mat-raised-button color="primary" (click)="addOption(  )">Add option</button>
     </div>
+    <button mat-raised-button color="primary" (click)="addOption()">
+      Add option
+    </button>
   </div>
-  
+</div>

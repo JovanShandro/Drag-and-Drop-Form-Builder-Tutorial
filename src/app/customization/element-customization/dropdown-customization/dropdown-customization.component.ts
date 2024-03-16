@@ -6,12 +6,9 @@ import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'app-dropdown-customization',
   templateUrl: './dropdown-customization.component.html',
-  styleUrls: ['./dropdown-customization.component.scss']
+  styleUrls: ['./dropdown-customization.component.scss'],
 })
 export class DropdownCustomizationComponent {
-removeOption(_t32: number) {
-throw new Error('Method not implemented.');
-}
   @Input() settings!: DropdownSettings;
   trashIcon = faTrash;
 
@@ -25,7 +22,7 @@ throw new Error('Method not implemented.');
     });
   }
 
-  deleteBtn(index: number){
+  deleteOption(index: number) {
     this.settings.options.splice(index, 1);
   }
 }
