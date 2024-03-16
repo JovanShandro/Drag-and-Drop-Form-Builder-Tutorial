@@ -34,5 +34,10 @@
     [settings]="asRadioButtonsSettings(selectedField.settings!)"
   ></app-radiobutton-customization>
 
+  <app-spacer-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Spacer"
+    [settings]="asSpacerSettings(selectedField.settings!)"
+  ></app-spacer-customization>
+
   <!--<div>{{ selectedField | json }}</div>-->
 </div>

@@ -44,6 +44,8 @@ import { FormDropdownFieldComponent } from './form-builder/form-field/form-dropd
 import { DropdownCustomizationComponent } from './customization/element-customization/dropdown-customization/dropdown-customization.component';
 import { RadiobuttonCustomizationComponent } from './customization/element-customization/radiobutton-customization/radiobutton-customization.component';
 import { FormRadiobuttonFieldComponent } from './form-builder/form-field/form-radiobutton-field/form-radiobutton-field.component';
+import { FormSpacerFieldComponent } from './form-builder/form-field/form-spacer-field/form-spacer-field.component';
+import { SpacerCustomizationComponent } from './customization/element-customization/spacer-customization/spacer-customization.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -83,6 +85,8 @@ export const routes: Routes = [
     DropdownCustomizationComponent,
     RadiobuttonCustomizationComponent,
     FormRadiobuttonFieldComponent,
+    FormSpacerFieldComponent,
+    SpacerCustomizationComponent,
   ],
   imports: [
     BrowserModule,

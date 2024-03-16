@@ -12,6 +12,7 @@ import {
   TextSettings,
   DropdownSettings,
   RadioButtonSettings,
+  SpacerSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -63,5 +64,9 @@ export class FormFieldComponent {
 
   asRadioButtonSettings(settings: FormFieldSettings) {
     return settings as RadioButtonSettings;
+  }
+
+  asSpacerSettings(settings: FormFieldSettings) {
+    return settings as SpacerSettings;
   }
 }

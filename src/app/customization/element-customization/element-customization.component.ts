@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   ButtonSettings,
   FormField,
@@ -10,7 +10,8 @@ import {
   CheckboxSettings,
   TextSettings,
   DropdownSettings,
-  RadioButtonSettings
+  RadioButtonSettings,
+  SpacerSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -51,5 +52,9 @@ export class ElementCustomizationComponent {
 
   asRadioButtonsSettings(settings: FormFieldSettings) {
     return settings as RadioButtonSettings;
+  }
+
+  asSpacerSettings(settings: FormFieldSettings) {
+    return settings as SpacerSettings;
   }
 }

@@ -336,7 +336,7 @@ export class FormService {
       }
       case FormFieldType.Spacer: {
         return {
-          height: 20,
+          height: 95,
         } as SpacerSettings;
       }
       case FormFieldType.SeparatorLine: {

@@ -44,4 +44,9 @@
     *ngIf="field?.fieldType === formFieldType.RadioButton"
     [settings]="asRadioButtonSettings(field.settings!)"
   ></app-form-radiobutton-field>
+
+  <app-form-spacer-field
+    *ngIf="field?.fieldType === formFieldType.Spacer"
+    [settings]="asSpacerSettings(field.settings!)"
+  ></app-form-spacer-field>
 </div>
