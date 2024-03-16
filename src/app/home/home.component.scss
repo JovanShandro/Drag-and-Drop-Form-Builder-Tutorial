@@ -23,6 +23,22 @@ nav {
   }
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ng-select {
+  min-width: 139px;
+}
+
 .container {
   height: calc(100% - 60px);
   width: 100%;
