@@ -1,12 +1,12 @@
 <div class="text-customization">
   <div class="row">
-    <label class="mb-1">Text Color</label>
+    <label>Text Color</label>
     <input class="color-input" type="color" [(ngModel)]="settings.textColor" />
   </div>
 
   <div class="row">
-    <label class="mb-1">Font</label>
-    
+    <label>Font</label>
+
     <ng-select
       [items]="fonts"
       [clearable]="false"
@@ -17,8 +17,8 @@
     </ng-select>
   </div>
 
-  <div>
-    <label class="mb-1">Line Height</label>
+  <div class="row">
+    <label>Line Height</label>
     <input
       class="custom-input"
       type="number"
@@ -26,13 +26,12 @@
     />
   </div>
 
-    <div>
-        <label class="mb-1">Text</label>
-        <input
-            class="custom-input full-width"
-            type="text"
-            [(ngModel)]="settings.text"
-        />
-    </div>
+  <div>
+    <label class="mb-1">Text</label>
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.text"
+    />
+  </div>
 </div>
-

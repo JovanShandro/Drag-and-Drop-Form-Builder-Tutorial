@@ -4,33 +4,31 @@ import { Font, TextSettings } from 'src/app/services/form.service';
 @Component({
   selector: 'app-text-customization',
   templateUrl: './text-customization.component.html',
-  styleUrls: ['./text-customization.component.scss']
+  styleUrls: ['./text-customization.component.scss'],
 })
 export class TextCustomizationComponent {
-  @Input () settings!: TextSettings;
+  @Input() settings!: TextSettings;
 
   fonts = [
     {
       label: 'Arial',
-      value: Font.Arial
+      value: Font.Arial,
     },
     {
       label: 'Times New Roman',
-      value: Font.TimesNewRoman
+      value: Font.TimesNewRoman,
     },
     {
       label: 'Courier New',
-      value: Font.CourierNew
+      value: Font.CourierNew,
     },
     {
       label: 'Verdana',
-      value: Font.Verdana
+      value: Font.Verdana,
     },
     {
       label: 'Georgia',
-      value: Font.Georgia
-    }
+      value: Font.Georgia,
+    },
   ];
-  
-
 }
