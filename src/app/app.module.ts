@@ -46,6 +46,8 @@ import { RadiobuttonCustomizationComponent } from './customization/element-custo
 import { FormRadiobuttonFieldComponent } from './form-builder/form-field/form-radiobutton-field/form-radiobutton-field.component';
 import { FormSpacerFieldComponent } from './form-builder/form-field/form-spacer-field/form-spacer-field.component';
 import { SpacerCustomizationComponent } from './customization/element-customization/spacer-customization/spacer-customization.component';
+import { PictureCustomizationComponent } from './customization/element-customization/picture-customization/picture-customization.component';
+import { FormPictureFieldComponent } from './form-builder/form-field/form-picture-field/form-picture-field.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -87,6 +89,8 @@ export const routes: Routes = [
     FormRadiobuttonFieldComponent,
     FormSpacerFieldComponent,
     SpacerCustomizationComponent,
+    PictureCustomizationComponent,
+    FormPictureFieldComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,53 @@
+<div class="picture-customization">
+  <div>
+    <label class="mb-1">Image source</label>
+
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.imageSrc"
+    />
+  </div>
+
+  <div>
+    <label class="mb-1">Alternative text</label>
+
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.altText"
+    />
+  </div>
+
+  <div>
+    <label class="mb-1">Link to</label>
+
+    <input
+      class="custom-input full-width"
+      type="text"
+      [(ngModel)]="settings.linkTo"
+    />
+  </div>
+
+  <div class="row">
+    <label>Image width</label>
+
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.width"
+    />
+  </div>
+
+  <div class="row">
+    <label>Alignment</label>
+    <ng-select
+      [items]="alignments"
+      [clearable]="false"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.alignment"
+    >
+    </ng-select>
+  </div>
+</div>

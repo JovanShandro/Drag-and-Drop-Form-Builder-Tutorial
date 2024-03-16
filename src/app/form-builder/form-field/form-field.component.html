@@ -49,4 +49,9 @@
     *ngIf="field?.fieldType === formFieldType.Spacer"
     [settings]="asSpacerSettings(field.settings!)"
   ></app-form-spacer-field>
+
+  <app-form-picture-field
+    *ngIf="field?.fieldType === formFieldType.Picture"
+    [settings]="asPictureSettings(field.settings!)"
+  ></app-form-picture-field>
 </div>

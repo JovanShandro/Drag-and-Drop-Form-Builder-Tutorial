@@ -13,6 +13,7 @@ import {
   DropdownSettings,
   RadioButtonSettings,
   SpacerSettings,
+  PictureSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -68,5 +69,9 @@ export class FormFieldComponent {
 
   asSpacerSettings(settings: FormFieldSettings) {
     return settings as SpacerSettings;
+  }
+
+  asPictureSettings(settings: FormFieldSettings) {
+    return settings as PictureSettings;
   }
 }

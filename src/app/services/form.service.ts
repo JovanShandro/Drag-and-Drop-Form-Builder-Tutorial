@@ -153,15 +153,11 @@ export interface RadioButtonSettings {
 }
 
 export interface PictureSettings {
-  file: File;
+  imageSrc: string;
   altText: string;
+  linkTo: string;
   width: number;
-  height: number;
-  borderRadius: number;
   alignment: Alignment;
-  caption: string;
-  captionAlignment: Alignment;
-  captionColor: string;
 }
 
 export interface SpacerSettings {
@@ -323,15 +319,10 @@ export class FormService {
       }
       case FormFieldType.Picture: {
         return {
-          file: null,
-          altText: 'Image',
+          src: '',
+          altText: 'Image alt',
           width: 100,
-          height: 100,
-          borderRadius: 0,
           alignment: Alignment.Center,
-          caption: 'Caption',
-          captionAlignment: Alignment.Center,
-          captionColor: '#000000',
         } as unknown as PictureSettings;
       }
       case FormFieldType.Spacer: {

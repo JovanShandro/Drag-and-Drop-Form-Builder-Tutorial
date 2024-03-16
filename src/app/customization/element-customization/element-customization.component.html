@@ -39,5 +39,10 @@
     [settings]="asSpacerSettings(selectedField.settings!)"
   ></app-spacer-customization>
 
+  <app-picture-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Picture"
+    [settings]="asPictureSettings(selectedField.settings!)"
+  ></app-picture-customization>
+
   <!--<div>{{ selectedField | json }}</div>-->
 </div>
