@@ -1,0 +1,14 @@
+.form-radiobutton-field {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+label {
+  margin-bottom: 5px;
+}

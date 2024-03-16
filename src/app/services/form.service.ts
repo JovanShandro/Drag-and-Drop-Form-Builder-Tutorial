@@ -147,7 +147,8 @@ export interface RadioButtonSettings {
   label: string;
   showLabel: boolean;
   fieldName: string;
-  options: { label: string; value: string; isSelected: boolean }[];
+  options: { label: string; value: string }[];
+  selectedValue: string | null;
   isRequired: boolean;
 }
 
@@ -315,7 +316,8 @@ export class FormService {
           label: 'Radio button label',
           showLabel: true,
           fieldName: 'radioName',
-          options: [{ label: 'Option 1', value: 'option1', isSelected: true }],
+          options: [{ label: 'Option 1', value: 'Option 1'}],
+          selectedValue: 'Option 1',
           isRequired: false,
         } as RadioButtonSettings;
       }
