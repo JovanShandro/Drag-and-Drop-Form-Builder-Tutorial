@@ -79,7 +79,8 @@
           <label class="mb-1">Is selected</label>
           <mat-checkbox
             color="primary"
-            [(ngModel)]="settings.options[i].isSelected"
+            [ngModel]="settings.selectedValue === settings.options[i].value"
+            (ngModelChange)="settings.selectedValue = settings.options[i].value"
           ></mat-checkbox>
         </div>
       </div>

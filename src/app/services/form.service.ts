@@ -138,7 +138,8 @@ export interface DropdownSettings {
   label: string;
   showLabel: boolean;
   fieldName: string;
-  options: { label: string; value: string; isSelected: boolean }[];
+  options: { label: string; value: string; }[];
+  selectedValue: string | null;
   isRequired: boolean;
 }
 
@@ -304,7 +305,8 @@ export class FormService {
           label: 'Dropdown label',
           showLabel: true,
           fieldName: 'dropdownName',
-          options: [{ label: 'Option 1', value: 'Option 1', isSelected: true }],
+          options: [{ label: 'Option 1', value: 'Option 1' }],
+          selectedValue: 'Option 1',
           isRequired: false,
         } as DropdownSettings;
       }

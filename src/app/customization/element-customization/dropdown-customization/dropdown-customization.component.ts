@@ -11,18 +11,22 @@ import { v4 as uuid } from 'uuid';
 export class DropdownCustomizationComponent {
   @Input() settings!: DropdownSettings;
   trashIcon = faTrash;
-
   checkboxId = uuid();
 
   addOption() {
     this.settings.options.push({
       value: `Option ${this.settings.options.length + 1}`,
       label: `Option ${this.settings.options.length + 1}`,
-      isSelected: false,
     });
   }
 
   deleteOption(index: number) {
+    const isDeletingSelectedValue = this.settings.selectedValue === this.settings.options[index].value;
+
     this.settings.options.splice(index, 1);
+
+    if(isDeletingSelectedValue) {
+      this.settings.selectedValue = this.settings.options?.[0]?.value || null;
+    }
   }
 }
