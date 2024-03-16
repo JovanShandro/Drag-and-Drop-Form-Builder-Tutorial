@@ -5,11 +5,10 @@ import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'app-form-radiobutton-field',
   templateUrl: './form-radiobutton-field.component.html',
-  styleUrls: ['./form-radiobutton-field.component.scss']
+  styleUrls: ['./form-radiobutton-field.component.scss'],
 })
 export class FormRadiobuttonFieldComponent {
   @Input() settings!: RadioButtonSettings;
 
   radioButtonId = uuid();
-
 }

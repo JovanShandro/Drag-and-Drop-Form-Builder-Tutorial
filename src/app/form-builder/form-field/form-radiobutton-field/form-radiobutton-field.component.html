@@ -1,10 +1,19 @@
 <div class="form-radiobutton-field">
-    <label *ngIf="settings.showLabel" [for]="radioButtonId">{{settings.label}}</label>
-    <div class="radio-buttons">
-        <div *ngFor="let option of settings.options; let i = index ">
-            <input [checked]="option.isSelected" [required]="settings.isRequired" type="radio" [id]="radioButtonId+i" [value]="option.value" [name]="settings.fieldName" />
-            <label [for]="radioButtonId+i">{{option.label}}</label>
-        </div>
+  <label *ngIf="settings.showLabel" [for]="radioButtonId">{{
+    settings.label
+  }}</label>
+
+  <div class="radio-buttons">
+    <div *ngFor="let option of settings.options; let i = index">
+      <input
+        [checked]="settings.selectedValue === option.value"
+        [required]="settings.isRequired"
+        type="radio"
+        [id]="radioButtonId + i"
+        [value]="option.value"
+        [name]="settings.fieldName"
+      />
+      <label [for]="radioButtonId + i">{{ option.label }}</label>
     </div>
-    
+  </div>
 </div>
