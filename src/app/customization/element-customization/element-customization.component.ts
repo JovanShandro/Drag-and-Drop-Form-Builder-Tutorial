@@ -8,7 +8,9 @@ import {
   InputSettings,
   TextareaSettings,
   CheckboxSettings,
-  TextSettings
+  TextSettings,
+  DropdownSettings,
+  RadioButtonSettings
 } from '../../services/form.service';
 
 @Component({
@@ -41,5 +43,13 @@ export class ElementCustomizationComponent {
 
   asTextSettings(settings: FormFieldSettings) {
     return settings as TextSettings;
+  }
+
+  asDropdownSettings(settings: FormFieldSettings) {
+    return settings as DropdownSettings;
+  }
+
+  asRadioButtonsSettings(settings: FormFieldSettings) {
+    return settings as RadioButtonSettings;
   }
 }

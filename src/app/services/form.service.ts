@@ -44,6 +44,12 @@ export enum Font {
   TrebuchetMS = 'Trebuchet MS',
 }
 
+export enum LineStyle {
+  Solid = 'solid',
+  Dotted = 'dotted',
+  Dashed = 'dashed',
+}
+
 export enum InputType {
   Text = 'text',
   Email = 'email',
@@ -128,7 +134,54 @@ export interface TextSettings {
   text: string;
 }
 
-export type FormFieldSettings = TextSettings | CheckboxSettings | ButtonSettings | InputSettings | TextareaSettings;
+export interface DropdownSettings {
+  label: string;
+  showLabel: boolean;
+  fieldName: string;
+  options: {label: string, value: string, isSelected: boolean}[];
+  isRequired: boolean;
+}
+
+export interface RadioButtonSettings {
+  label: string;
+  showLabel: boolean;
+  fieldName: string;
+  options: {label: string, value: string, isSelected: boolean}[];
+  isRequired: boolean;
+}
+
+export interface PictureSettings {
+  file: File;
+  altText: string;
+  width: number;
+  height: number;
+  borderRadius: number;
+  alignment: Alignment;
+  caption: string;
+  captionAlignment: Alignment;
+  captionColor: string;
+}
+
+export interface SpacerSettings {
+  height: number;
+}
+
+export interface SeparatorLineSettings {
+  color: string;
+  thickness: number;
+  style: LineStyle;
+}
+
+export type FormFieldSettings = SeparatorLineSettings | 
+                                SpacerSettings | 
+                                RadioButtonSettings |
+                                PictureSettings |
+                                DropdownSettings |
+                                TextSettings |
+                                CheckboxSettings | 
+                                ButtonSettings | 
+                                InputSettings | 
+                                TextareaSettings;
 
 export enum FormFieldType {
   Empty = 0,
@@ -137,6 +190,11 @@ export enum FormFieldType {
   Button = 3,
   Checkbox = 4,
   Text = 5,
+  Dropdown = 6,
+  RadioButton = 7,
+  Picture = 8,
+  Spacer = 9,
+  SeparatorLine = 10,
 }
 
 @Injectable({
@@ -239,6 +297,49 @@ export class FormService {
           lineHeight: 1.5,
           text: 'Example Text',
         } as TextSettings;
+      }
+      case FormFieldType.Dropdown: {
+        return {
+          label: 'Dropdown label',
+          showLabel: true,
+          fieldName: "dropdownName",
+          options: [{label: 'Option 1', value: 'option1', isSelected: true }],
+          isRequired: false,
+        } as DropdownSettings;
+      }
+      case FormFieldType.RadioButton: {
+        return {
+          label: 'Radio button label',
+          showLabel: true,
+          fieldName: "radioName",
+          options: [{label: 'Option 1', value: 'option1', isSelected: true }],
+          isRequired: false,
+        } as RadioButtonSettings;
+      }
+      case FormFieldType.Picture: {
+        return {
+          file: null,
+          altText: 'Image',
+          width: 100,
+          height: 100,
+          borderRadius: 0,
+          alignment: Alignment.Center,
+          caption: 'Caption',
+          captionAlignment: Alignment.Center,
+          captionColor: '#000000',
+        } as unknown as PictureSettings;
+      }
+      case FormFieldType.Spacer: {
+        return {
+          height: 20,
+        } as SpacerSettings;
+      }
+      case FormFieldType.SeparatorLine: {
+        return {
+          color: '#000000',
+          thickness: 1,
+          style: LineStyle.Solid,
+        } as SeparatorLineSettings;
       }
       default:
         return null as any;

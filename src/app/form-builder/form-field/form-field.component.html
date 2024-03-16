@@ -34,4 +34,15 @@
     *ngIf="field?.fieldType === formFieldType.Text"
     [settings]="asTextSettings(field.settings!)"
   ></app-form-text-field>
+
+  <app-form-dropdown-field
+    *ngIf="field?.fieldType === formFieldType.Dropdown"
+    [settings]="asDropdownSettings(field.settings!)"
+  ></app-form-dropdown-field>
+
+  <app-form-radiobutton-field
+    *ngIf="field?.fieldType === formFieldType.RadioButton"
+    [settings]="asRadioButtonSettings(field.settings!)"
+  ></app-form-radiobutton-field>
+
 </div>

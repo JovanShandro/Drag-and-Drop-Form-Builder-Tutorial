@@ -10,6 +10,8 @@ import {
   FormService,
   CheckboxSettings,
   TextSettings,
+  DropdownSettings,
+  RadioButtonSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -53,5 +55,13 @@ export class FormFieldComponent {
 
   asTextSettings(settings: FormFieldSettings) {
     return settings as TextSettings;
+  }
+
+  asDropdownSettings(settings: FormFieldSettings) {
+    return settings as DropdownSettings;
+  }
+
+  asRadioButtonSettings(settings: FormFieldSettings) {
+    return settings as RadioButtonSettings;
   }
 }

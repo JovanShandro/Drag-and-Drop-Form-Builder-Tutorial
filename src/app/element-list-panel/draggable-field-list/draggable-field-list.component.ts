@@ -2,9 +2,15 @@ import { Component } from '@angular/core';
 import {
   faSquare as faSquareOutline,
   faCheckSquare,
+  faSquareCaretDown,
+  faImage,
 } from '@fortawesome/free-regular-svg-icons';
 import {
+  faArrows,
+  faArrowsAltV,
+  faGripLines,
   faLanguage,
+  faList,
   faSquare as faSquareFilled,
   faWindowMaximize,
 } from '@fortawesome/free-solid-svg-icons';
@@ -51,6 +57,36 @@ export class DraggableFieldListComponent {
       title: 'Text',
       icon: faLanguage,
     },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.Dropdown,
+      title: 'Dropdown',
+      icon: faSquareCaretDown,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.RadioButton,
+      title: 'Radio Buttons',
+      icon: faList,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.Picture,
+      title: 'Picture',
+      icon: faImage,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.Spacer,
+      title: 'Spacer',
+      icon: faArrowsAltV,
+    },
+    {
+      type: FormItemType.Field,
+      fieldType: FormFieldType.SeparatorLine,
+      title: 'Separator Line',
+      icon: faGripLines,
+    }
   ];
 
   constructor(private formService: FormService) {}

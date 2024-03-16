@@ -2,6 +2,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,6 +40,10 @@ import { FormCheckboxFieldComponent } from './form-builder/form-field/form-check
 import { CheckboxCustomizationComponent } from './customization/element-customization/checkbox-customization/checkbox-customization.component';
 import { FormTextFieldComponent } from './form-builder/form-field/form-text-field/form-text-field.component';
 import { TextCustomizationComponent } from './customization/element-customization/text-customization/text-customization.component';
+import { FormDropdownFieldComponent } from './form-builder/form-field/form-dropdown-field/form-dropdown-field.component';
+import { DropdownCustomizationComponent } from './customization/element-customization/dropdown-customization/dropdown-customization.component';
+import { RadiobuttonCustomizationComponent } from './customization/element-customization/radiobutton-customization/radiobutton-customization.component';
+import { FormRadiobuttonFieldComponent } from './form-builder/form-field/form-radiobutton-field/form-radiobutton-field.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -74,6 +79,10 @@ export const routes: Routes = [
     CheckboxCustomizationComponent,
     FormTextFieldComponent,
     TextCustomizationComponent,
+    FormDropdownFieldComponent,
+    DropdownCustomizationComponent,
+    RadiobuttonCustomizationComponent,
+    FormRadiobuttonFieldComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,6 +95,7 @@ export const routes: Routes = [
     RouterModule.forRoot(routes),
     FontAwesomeModule,
     MatButtonModule,
+    MatIconModule,
     NgSelectModule,
     FormsModule,
   ],

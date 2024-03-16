@@ -24,5 +24,15 @@
     [settings]="asTextSettings(selectedField.settings!)"
   ></app-text-customization>
 
+  <app-dropdown-customization
+    *ngIf="selectedField.fieldType === fieldTypes.Dropdown"
+    [settings]="asDropdownSettings(selectedField.settings!)"
+  ></app-dropdown-customization>
+
+  <app-radiobutton-customization
+    *ngIf="selectedField.fieldType === fieldTypes.RadioButton"
+    [settings]="asRadioButtonsSettings(selectedField.settings!)"
+  ></app-radiobutton-customization>
+
   <!--<div>{{ selectedField | json }}</div>-->
 </div>
