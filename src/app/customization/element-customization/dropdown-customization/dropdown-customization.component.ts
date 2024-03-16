@@ -18,11 +18,23 @@ export class DropdownCustomizationComponent {
     this.settings.options.push({
       value: `Option ${this.settings.options.length + 1}`,
       label: `Option ${this.settings.options.length + 1}`,
-      isSelected: false,
     });
   }
 
   deleteOption(index: number) {
+    const isDeletingSelectedValue =
+      this.settings.selectedValue === this.settings.options[index].value;
+
     this.settings.options.splice(index, 1);
+
+    if (isDeletingSelectedValue) {
+      this.settings.selectedValue = this.settings.options?.[0]?.value || null;
+    }
+  }
+
+  onSelect(checked: boolean, index: number) {
+    this.settings.selectedValue = checked
+      ? this.settings.options[index].value
+      : null;
   }
 }

@@ -77,7 +77,8 @@
           <label>Is selected</label>
           <mat-checkbox
             color="primary"
-            [(ngModel)]="settings.options[i].isSelected"
+            [ngModel]="settings.options[i].value === settings.selectedValue"
+            (ngModelChange)="onSelect($event, i)"
           ></mat-checkbox>
         </div>
       </div>
