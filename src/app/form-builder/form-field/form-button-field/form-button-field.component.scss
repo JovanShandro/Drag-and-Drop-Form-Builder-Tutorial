@@ -2,9 +2,10 @@
   cursor: pointer;
   display: flex;
   padding: 0 20px;
-  height: 100%;
   align-items: center;
   width: 100%;
+  height: 100%;
+  min-height: 115px;
 }
 
 .form-button-field.align-left {
