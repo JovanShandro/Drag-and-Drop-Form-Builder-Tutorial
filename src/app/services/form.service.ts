@@ -138,7 +138,7 @@ export interface DropdownSettings {
   label: string;
   showLabel: boolean;
   fieldName: string;
-  options: {label: string, value: string, isSelected: boolean}[];
+  options: { label: string; value: string; isSelected: boolean }[];
   isRequired: boolean;
 }
 
@@ -146,7 +146,7 @@ export interface RadioButtonSettings {
   label: string;
   showLabel: boolean;
   fieldName: string;
-  options: {label: string, value: string, isSelected: boolean}[];
+  options: { label: string; value: string; isSelected: boolean }[];
   isRequired: boolean;
 }
 
@@ -172,16 +172,17 @@ export interface SeparatorLineSettings {
   style: LineStyle;
 }
 
-export type FormFieldSettings = SeparatorLineSettings | 
-                                SpacerSettings | 
-                                RadioButtonSettings |
-                                PictureSettings |
-                                DropdownSettings |
-                                TextSettings |
-                                CheckboxSettings | 
-                                ButtonSettings | 
-                                InputSettings | 
-                                TextareaSettings;
+export type FormFieldSettings =
+  | SeparatorLineSettings
+  | SpacerSettings
+  | RadioButtonSettings
+  | PictureSettings
+  | DropdownSettings
+  | TextSettings
+  | CheckboxSettings
+  | ButtonSettings
+  | InputSettings
+  | TextareaSettings;
 
 export enum FormFieldType {
   Empty = 0,
@@ -268,7 +269,7 @@ export class FormService {
           type: InputType.Text,
           label: 'Input label',
           placeholder: 'Placeholder text',
-          fieldName: "inputName",
+          fieldName: 'inputName',
           isRequired: false,
           showLabel: true,
         } as InputSettings;
@@ -277,7 +278,7 @@ export class FormService {
         return {
           label: 'Textarea label',
           placeholder: 'Placeholder text',
-          fieldName: "textareaName",
+          fieldName: 'textareaName',
           isRequired: false,
           showLabel: true,
           borderRadius: 0,
@@ -286,7 +287,7 @@ export class FormService {
       case FormFieldType.Checkbox: {
         return {
           label: 'Checkbox label',
-          fieldName: "checkboxName",
+          fieldName: 'checkboxName',
           isRequired: false,
         } as CheckboxSettings;
       }
@@ -302,8 +303,8 @@ export class FormService {
         return {
           label: 'Dropdown label',
           showLabel: true,
-          fieldName: "dropdownName",
-          options: [{label: 'Option 1', value: 'option1', isSelected: true }],
+          fieldName: 'dropdownName',
+          options: [{ label: 'Option 1', value: 'Option 1', isSelected: true }],
           isRequired: false,
         } as DropdownSettings;
       }
@@ -311,8 +312,8 @@ export class FormService {
         return {
           label: 'Radio button label',
           showLabel: true,
-          fieldName: "radioName",
-          options: [{label: 'Option 1', value: 'option1', isSelected: true }],
+          fieldName: 'radioName',
+          options: [{ label: 'Option 1', value: 'Option 1', isSelected: true }],
           isRequired: false,
         } as RadioButtonSettings;
       }
