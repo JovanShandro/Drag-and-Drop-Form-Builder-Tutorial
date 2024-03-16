@@ -44,11 +44,18 @@ import { FormDropdownFieldComponent } from './form-builder/form-field/form-dropd
 import { DropdownCustomizationComponent } from './customization/element-customization/dropdown-customization/dropdown-customization.component';
 import { RadiobuttonCustomizationComponent } from './customization/element-customization/radiobutton-customization/radiobutton-customization.component';
 import { FormRadiobuttonFieldComponent } from './form-builder/form-field/form-radiobutton-field/form-radiobutton-field.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'tutorial', component: TutorialComponent },
 ];
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -98,6 +105,14 @@ export const routes: Routes = [
     MatIconModule,
     NgSelectModule,
     FormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [FormService],
   bootstrap: [AppComponent],

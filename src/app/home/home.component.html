@@ -1,7 +1,24 @@
 <div class="app">
   <nav>
-    <h1>Drag and drop form builder</h1>
-    <button>Generate HTML</button>
+    <h1>{{ "Title" | translate }}</h1>
+    <div class="actions">
+      <button>{{ "GenerateHtml" | translate }}</button>
+      <ng-select
+        [items]="languages"
+        bindLabel="label"
+        bindValue="value"
+        [clearable]="false"
+        [ngModel]="currentLocale"
+        (ngModelChange)="updateLocale($event)"
+      >
+        <ng-template ng-label-tmp let-item="item">
+          <div class="label">
+            <fa-icon size="lg" [icon]="faLanguage"></fa-icon>
+            <div>{{ item.label }}</div>
+          </div>
+        </ng-template>
+      </ng-select>
+    </div>
   </nav>
 
   <div class="container">
