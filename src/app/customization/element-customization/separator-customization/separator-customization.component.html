@@ -1,0 +1,27 @@
+<div class="separator-customization">
+  <div class="row">
+    <label>Separator height</label>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.thickness"
+    />
+  </div>
+
+  <div class="row">
+    <label>Separator style</label>
+    <ng-select
+      [items]="styleTypes"
+      [clearable]="false"
+      bindLabel="label"
+      bindValue="value"
+      [(ngModel)]="settings.style"
+    >
+    </ng-select>
+  </div>
+
+  <div class="row">
+    <label>Separator Color</label>
+    <input class="color-input" type="color" [(ngModel)]="settings.color" />
+  </div>
+</div>

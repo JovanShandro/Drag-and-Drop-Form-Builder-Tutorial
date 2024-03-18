@@ -44,5 +44,10 @@
     [settings]="asPictureSettings(selectedField.settings!)"
   ></app-picture-customization>
 
+  <app-separator-customization
+    *ngIf="selectedField.fieldType === fieldTypes.SeparatorLine"
+    [settings]="asSeparatorSettings(selectedField.settings!)"
+  ></app-separator-customization>
+
   <!--<div>{{ selectedField | json }}</div>-->
 </div>
