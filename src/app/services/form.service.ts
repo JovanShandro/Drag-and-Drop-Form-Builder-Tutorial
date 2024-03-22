@@ -202,6 +202,9 @@ export enum FormFieldType {
 export class FormService {
   sections: FormSection[] = [];
   selectedField$ = new BehaviorSubject<FormField | null>(null);
+  formSettings = {
+    fullWidth: false,
+  }
 
   createSection(sectionType: FormSectionType, index: number) {
     const newSection: FormSection = {
@@ -342,46 +345,3 @@ export class FormService {
     }
   }
 }
-
-/**
-
-export const DraggableElementsList = [
-    {
-        title: 'Dropdown',
-        icon: 'fa-regular fa-caret-square-down',
-    },
-    {
-        title: 'Radio Buttons',
-        icon: 'fa-solid fa-list-ul',
-    },
-    {
-        title: 'Check Box',
-        icon: 'fa-regular fa-check-square',
-    },
-    {
-        title: 'Text',
-        icon: 'fa-solid fa-language',
-    },
-    // {
-    //     title: 'Picture',
-    //     icon: 'fa-regular fa-image',
-    // },
-    // {
-    //     title: 'Spacer',
-    //     icon: 'fa-solid fa-arrows-alt-v',
-    // },
-    // {
-    //     title: 'Separator',
-    //     icon: 'fa-solid fa-grip-lines',
-    // },
-    // {
-    //     title: 'Social',
-    //     icon: 'fa-solid fa-share-alt',
-    // },
-    // {
-    //     title: 'Uploader',
-    //     icon: 'fa-solid fa-upload',
-    // },
-];
-
-  */

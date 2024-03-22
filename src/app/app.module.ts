@@ -53,6 +53,7 @@ import { TwoListsHorizontalComponent } from './tutorial/two-lists-horizontal/two
 import { TwoListsComponent } from './tutorial/two-lists/two-lists.component';
 import { FormSeparatorFieldComponent } from './form-builder/form-field/form-separator-field/form-separator-field.component';
 import { SeparatorCustomizationComponent } from './customization/element-customization/separator-customization/separator-customization.component';
+import { FormCustomizationComponent } from './customization/form-customization/form-customization.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -102,6 +103,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormPictureFieldComponent,
     FormSeparatorFieldComponent,
     SeparatorCustomizationComponent,
+    FormCustomizationComponent,
   ],
   imports: [
     BrowserModule,
