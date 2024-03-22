@@ -2,7 +2,7 @@
   <nav>
     <h1>Drag and drop form builder</h1>
     <div class="actions">
-      <button>{{ "GenerateHtml" | translate }}</button>
+      <button (click)="generateHtml()">{{ "GenerateHtml" | translate }}</button>
       <ng-select
         [items]="languages"
         bindLabel="label"
