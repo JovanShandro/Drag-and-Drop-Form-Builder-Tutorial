@@ -54,4 +54,9 @@
     *ngIf="field?.fieldType === formFieldType.Picture"
     [settings]="asPictureSettings(field.settings!)"
   ></app-form-picture-field>
+
+  <app-form-separator-field
+    *ngIf="field?.fieldType === formFieldType.Separator"
+    [settings]="asSeparatorSettings(field.settings!)"
+  ></app-form-separator-field>
 </div>

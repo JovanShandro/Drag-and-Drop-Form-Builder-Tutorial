@@ -164,14 +164,14 @@ export interface SpacerSettings {
   height: number;
 }
 
-export interface SeparatorLineSettings {
+export interface SeparatorSettings {
   color: string;
   thickness: number;
   style: LineStyle;
 }
 
 export type FormFieldSettings =
-  | SeparatorLineSettings
+  | SeparatorSettings
   | SpacerSettings
   | RadioButtonSettings
   | PictureSettings
@@ -182,18 +182,19 @@ export type FormFieldSettings =
   | InputSettings
   | TextareaSettings;
 
+
 export enum FormFieldType {
-  Empty = 0,
-  Input = 1,
-  Textarea = 2,
-  Button = 3,
-  Checkbox = 4,
-  Text = 5,
-  Dropdown = 6,
-  RadioButton = 7,
-  Picture = 8,
-  Spacer = 9,
-  SeparatorLine = 10,
+Empty=0,
+Input=1,
+Textarea=2,
+Button=3,
+Checkbox=4,
+Text=5,
+Dropdown=6,
+RadioButton=7,
+Picture=8,
+Spacer=9,
+Separator=10,
 }
 
 @Injectable({
@@ -330,12 +331,12 @@ export class FormService {
           height: 95,
         } as SpacerSettings;
       }
-      case FormFieldType.SeparatorLine: {
+      case FormFieldType.Separator: {
         return {
           color: '#000000',
           thickness: 1,
           style: LineStyle.Solid,
-        } as SeparatorLineSettings;
+        } as SeparatorSettings;
       }
       default:
         return null as any;

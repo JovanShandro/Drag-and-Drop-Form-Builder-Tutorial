@@ -14,6 +14,7 @@ import {
   RadioButtonSettings,
   SpacerSettings,
   PictureSettings,
+  SeparatorSettings,
 } from '../../services/form.service';
 
 @Component({
@@ -73,5 +74,9 @@ export class FormFieldComponent {
 
   asPictureSettings(settings: FormFieldSettings) {
     return settings as PictureSettings;
+  }
+
+  asSeparatorSettings(settings: FormFieldSettings) {
+    return settings as SeparatorSettings;
   }
 }

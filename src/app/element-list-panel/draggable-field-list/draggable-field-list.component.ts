@@ -83,7 +83,7 @@ export class DraggableFieldListComponent {
     },
     {
       type: FormItemType.Field,
-      fieldType: FormFieldType.SeparatorLine,
+      fieldType: FormFieldType.Separator,
       title: 'Separator',
       icon: faGripLines,
     }
