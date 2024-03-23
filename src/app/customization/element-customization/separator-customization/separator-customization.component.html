@@ -1,39 +1,38 @@
 <div class="separator-customization">
-    <div class="row">
-      <label>Thickness</label>
-  
-      <input
-        class="custom-input"
-        type="number"
-        [(ngModel)]="settings.thickness"
-      />
-    </div>
+  <div class="row">
+    <label>Thickness</label>
 
-    <div class="row">
-      <label>Style</label>
-  
-      <ng-select
-        class="custom-select"
-        [(ngModel)]="settings.style"
-      >
-        <ng-option value="solid">Solid</ng-option>
-        <ng-option value="dotted">Dotted</ng-option>
-        <ng-option value="dashed">Dashed</ng-option>
-        <!-- <ng-option value="double">Double</ng-option>
-        <ng-option value="groove">Groove</ng-option>
-        <ng-option value="ridge">Ridge</ng-option>
-        <ng-option value="inset">Inset</ng-option>
-        <ng-option value="outset">Outset</ng-option> -->
-      </ng-select>
-    </div>
-
-    <div class="row">
-      <label>Color</label>
-  
-      <input
-        class="custom-input"
-        type="color"
-        [(ngModel)]="settings.color"
-      />
-    </div>
+    <input
+      class="custom-input"
+      type="number"
+      [(ngModel)]="settings.thickness"
+    />
   </div>
+
+  <div class="row">
+    <label>Style</label>
+
+    <ng-select
+      [items]="lineStyles"
+      bindLabel="label"
+      bindValue="value"
+      [clearable]="false"
+      class="custom-select"
+      [(ngModel)]="settings.style"
+    >
+      <ng-template ng-option-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
+
+      <ng-template ng-label-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
+    </ng-select>
+  </div>
+
+  <div class="row">
+    <label>Color</label>
+
+    <input class="custom-input" type="color" [(ngModel)]="settings.color" />
+  </div>
+</div>

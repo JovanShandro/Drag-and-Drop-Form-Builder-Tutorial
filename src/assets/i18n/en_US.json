@@ -1,3 +1,8 @@
 {
-  "GenerateHtml": "Generate HTML"
+  "GenerateHtml": "Generate HTML",
+  "LineStyle": {
+    "Solid": "Solid",
+    "Dotted": "Dotted",
+    "Dashed": "Dashed"
+  }
 }
