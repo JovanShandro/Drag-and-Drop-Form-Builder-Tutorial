@@ -1,6 +1,6 @@
 <div class="input-customization">
   <div class="row">
-    <label>Input type</label>
+    <label>{{"Input type" | translate}}</label>
 
     <ng-select
       [items]="inputTypes"
@@ -13,7 +13,7 @@
   </div>
 
   <div class="row">
-    <label>Show label</label>
+    <label>{{"Show label" | translate}}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.showLabel"
@@ -21,7 +21,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Label</label>
+    <label class="mb-1">{{"Label" | translate}}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -30,7 +30,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Input placeholder</label>
+    <label class="mb-1">{{"Input placeholder" | translate}}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -39,7 +39,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Field name</label>
+    <label class="mb-1">{{"Field name" | translate}}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -48,7 +48,7 @@
   </div>
 
   <div class="row">
-    <label>Is required</label>
+    <label>{{"Is required" | translate}}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.isRequired"

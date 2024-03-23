@@ -1,6 +1,6 @@
 <div class="button-customization">
   <div>
-    <label class="mb-1">Button Type</label>
+    <label class="mb-1">{{"Button Type" | translate}}</label>
 
     <ng-select
       [items]="buttonTypes"
@@ -13,7 +13,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Button Text</label>
+    <label class="mb-1">{{"Button Text" | translate}}</label>
 
     <input
       class="custom-input full-width"
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Link To</label>
+    <label class="mb-1">{{"Link To" | translate}}</label>
 
     <input
       class="custom-input full-width"
@@ -33,7 +33,7 @@
   </div>
 
   <div>
-    <label class="mb-1">Button Style</label>
+    <label class="mb-1">{{"Button Style" | translate}}</label>
 
     <ng-select
       [items]="buttonStyles"
@@ -46,17 +46,17 @@
   </div>
 
   <div class="row">
-    <label>Button Color</label>
+    <label>{{"Button Color" | translate}}</label>
     <input class="color-input" type="color" [(ngModel)]="settings.color" />
   </div>
 
   <div class="row">
-    <label>Text Color</label>
+    <label>{{"Text Color" | translate}}</label>
     <input class="color-input" type="color" [(ngModel)]="settings.textColor" />
   </div>
 
   <div class="row">
-    <label>Border Radius</label>
+    <label>{{"Border Radius" | translate}}</label>
     <input
       class="custom-input"
       type="number"
@@ -65,11 +65,11 @@
   </div>
 
   <div class="row">
-    <label>Button Height</label>
+    <label>{{"Button Height" | translate}}</label>
     <input class="custom-input" type="number" [(ngModel)]="settings.height" />
   </div>
   <div class="row">
-    <label>Button Width</label>
+    <label>{{"Button Width" | translate}}</label>
     <ng-select
       [items]="buttonWidthValues"
       [clearable]="false"
@@ -81,7 +81,7 @@
   </div>
 
   <div class="row" *ngIf="settings.width === ButtonWidth.FixedSize">
-    <label>Fixed size</label>
+    <label>{{"Fixed size" | translate}}</label>
     <input
       class="custom-input"
       type="number"
@@ -90,7 +90,7 @@
   </div>
 
   <div class="row">
-    <label>Button Alignment</label>
+    <label>{{"Button Alignment" | translate}}</label>
     <ng-select
       [items]="alignments"
       [clearable]="false"
@@ -102,7 +102,7 @@
   </div>
 
   <div class="row">
-    <label>Text Alignment</label>
+    <label>{{"Text Alignment" | translate}}</label>
     <ng-select
       [items]="textAlignment"
       [clearable]="false"
@@ -114,12 +114,12 @@
   </div>
 
   <div class="row">
-    <label>Font Size</label>
+    <label>{{"Font Size" | translate}}</label>
     <input class="custom-input" type="number" [(ngModel)]="settings.fontSize" />
   </div>
 
   <div class="row">
-    <label>Font Family</label>
+    <label>{{"Font Family" | translate}}</label>
     <ng-select
       [items]="fonts"
       [clearable]="false"
@@ -131,12 +131,12 @@
   </div>
 
   <div class="row">
-    <label>Is Bold</label>
+    <label>{{"Is Bold" | translate}}</label>
     <mat-checkbox color="primary" [(ngModel)]="settings.isBold"></mat-checkbox>
   </div>
 
   <div class="row">
-    <label>Is Italic</label>
+    <label>{{"Is Italic" | translate}}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.isItalic"

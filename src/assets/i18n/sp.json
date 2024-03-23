@@ -1,3 +1,98 @@
 {
-  "GenerateHtml": "Generar HTML"
+  "Generate Html": "Generar HTML",
+  "Drag and drop form builder": "Crea interfaces via arrastrando y soltando elementos",
+  "Form Sections": "Secciones",
+  "Form Fields": "Elementos",
+  "Elements": "Elementos",
+  
+  
+  "Drop Content Here": "Suelta contenido aquí",
+  "Current Element": "Elemento actual",
+  "Form Design": "Diseño de formulario",
+  
+  "Input": "Cuadro de texto",
+  "Input type": "Tipo de entrada",
+  "Label": "Etiqueta",
+  "Input Label": "Etiqueta de entrada",
+  "Input placeholder": "Marcador de posición de entrada",
+  "Placeholder Text": "Texto de marcador de posición",
+  "Input Name": "Nombre de entrada",
+  
+
+  "Button": "Botón",
+  "Button Type": "Tipo de botón",
+  "Submit": "Enviar",
+  "Button Text": "Texto del botón",
+  "Link To": "Enlace a",
+  "Button Style": "Estilo de botón",
+  "Flat": "Plano",
+  "Raised": "Elevado",
+  "Stroked": "Trazado",
+  "Button Color": "Color del botón",
+  "Text Color": "Color del texto",
+  "Border Radius": "Radio de borde",
+  "Button Height": "Altura del botón",
+  "Button Width": "Ancho del botón",
+  "Auto": "Auto",
+  "Full Size": "Tamaño completo",
+  "Fixed Size": "Tamaño fijo",
+  "Button Alignment": "Alineación del botón",
+  "Left": "Izquierda",
+  "Center": "Centro",
+  "Right": "Derecha",
+  "Text Alignment": "Alineación de texto",
+  "Start": "Inicio",
+  "End": "Fin",
+  "Font Size": "Tamaño de fuente",
+  "Font Family": "Familia de fuentes",
+  "Is Bold": "Es negrita",
+  "Is Italic": "Es cursiva",
+
+  "Textarea": "Área de texto",
+  "Textarea label": "Etiqueta de área de texto",
+  "Textarea placeholder": "Marcador de posición de área de texto",
+  "Textarea Name": "Nombre de área de texto",
+
+  "Checkbox": "Casilla de verificación",
+  "Checkbox label": "Etiqueta de casilla",
+  "Checkbox Name": "Nombre de casilla",
+
+  "Text": "Texto",
+  "Font": "Fuente",
+  "Line Height": "Altura de línea",
+  "Example Text": "Texto de ejemplo",
+
+  "Dropdown": "Lista desplegable",
+  "Dropdown label": "Etiqueta de lista desplegable",
+  "Options List": "Lista de opciones",
+  "Option": "Opción",
+  "Value": "Valor",
+  "Is selected": "Está seleccionado",
+  "Add option": "Agregar opción",
+
+  "Radio": "Radio",
+  "Radio button label": "Etiqueta de botón de radio",
+  "Radio label": "Etiqueta de radio",
+
+  "Picture": "Imagen",
+  "Image source": "Fuente de imagen",
+  "Alternative text": "Texto alternativo",
+  "Image Alt": "Texto alternativo de imagen",
+  "Link to": "Enlace a",
+  "Image width": "Anchura de imagen",
+  "Alignment": "Alineación",
+
+  "Spacer": "Espaciador",
+  "Height": "Altura",
+
+  "Separator": "Separador",
+  "Width": "Anchura",
+  "Style": "Estilo",
+  
+
+
+  "Show label": "Mostrar etiqueta",
+  "Is required": "Es requerido",
+  "Field name": "Nombre del campo"
+
 }

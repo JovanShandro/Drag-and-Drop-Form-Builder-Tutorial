@@ -25,7 +25,7 @@ export class HomeComponent {
       value: 'en_US',
     },
     {
-      label: 'Espanol',
+      label: 'Español',
       value: 'sp',
     },
   ];

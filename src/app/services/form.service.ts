@@ -21,7 +21,7 @@ export enum ButtonWidth {
 
 export enum Alignment {
   Left = 'left',
-  Center = 'center',
+  Center = 'middle',
   Right = 'right',
 }
 

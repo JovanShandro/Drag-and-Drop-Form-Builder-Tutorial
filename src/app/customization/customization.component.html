@@ -5,14 +5,14 @@
       [ngClass]="{ active: selectedTab === 0 }"
       (click)="selectedTab = 0"
     >
-      Current Element
+      {{"Current Element" | translate}}
     </div>
     <div
       class="tab"
       [ngClass]="{ active: selectedTab === 1 }"
       (click)="selectedTab = 1"
     >
-      Form Design
+      {{"Form Design" | translate}}
     </div>
   </div>
   <div *ngIf="selectedTab === 0" class="tab-content">

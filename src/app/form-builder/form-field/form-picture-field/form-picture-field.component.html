@@ -1,6 +1,18 @@
 <div class="form-picture-field">
   <div *ngIf="!settings.imageSrc" class="empty-image">
     <fa-icon size="xl" [icon]="faImage"></fa-icon>
-    Add picture
+    Add image
+  </div>
+  <div *ngIf="settings.imageSrc" class="image-container">
+    <a (click)="goToLink(settings.linkTo)">
+      <img
+      [align]="settings.alignment"
+      [ngStyle]="{
+        width: settings.width + 'px'
+      }"
+      
+      [src]="settings.imageSrc" [alt]="settings.altText" />
+    </a>
+    
   </div>
 </div>
