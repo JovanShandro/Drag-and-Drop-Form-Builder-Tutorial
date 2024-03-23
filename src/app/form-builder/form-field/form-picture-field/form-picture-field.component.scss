@@ -16,3 +16,15 @@
   justify-content: center;
   gap: 15px;
 }
+
+.image-container {
+  display: flex;
+}
+
+.align-middle {
+  margin: 0 auto;
+}
+
+.align-right {
+  margin-left: auto;
+}

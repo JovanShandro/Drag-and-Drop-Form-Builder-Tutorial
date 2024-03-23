@@ -4,15 +4,11 @@
     Add image
   </div>
   <div *ngIf="settings.imageSrc" class="image-container">
-    <a (click)="goToLink(settings.linkTo)">
-      <img
-      [align]="settings.alignment"
-      [ngStyle]="{
-        width: settings.width + 'px'
-      }"
-      
-      [src]="settings.imageSrc" [alt]="settings.altText" />
-    </a>
-    
+    <img
+      [ngClass]="['align-' + settings.alignment]"
+      [ngStyle]="{ width: settings.width + '%' }"
+      [src]="settings.imageSrc"
+      [alt]="settings.altText"
+    />
   </div>
 </div>

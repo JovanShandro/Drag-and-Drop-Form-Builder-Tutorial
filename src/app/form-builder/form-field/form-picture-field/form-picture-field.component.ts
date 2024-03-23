@@ -10,14 +10,4 @@ import { faImage } from '@fortawesome/free-regular-svg-icons';
 export class FormPictureFieldComponent {
   @Input() settings!: PictureSettings;
   faImage = faImage;
-
-  goToLink(url: string) {
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      url = 'https://' + url;
-    }
-    if (!url.startsWith('https://www.') && !url.startsWith('http://www.')) {
-      url = url.replace('www.', '');
-    }
-    window.open(url, "_blank");
-  }
 }

@@ -4,5 +4,8 @@
     "Solid": "Solid",
     "Dotted": "Dotted",
     "Dashed": "Dashed"
+  },
+  "PictureCustomizations": {
+    "ImageWidth": "Image width(%)"
   }
 }

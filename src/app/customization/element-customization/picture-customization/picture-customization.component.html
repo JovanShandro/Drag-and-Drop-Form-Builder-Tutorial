@@ -1,6 +1,6 @@
 <div class="picture-customization">
   <div>
-    <label class="mb-1">{{"Image source" | translate}}</label>
+    <label class="mb-1">{{ "Image source" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -10,7 +10,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Alternative text" | translate}}</label>
+    <label class="mb-1">{{ "Alternative text" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -20,7 +20,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Link to" | translate}}</label>
+    <label class="mb-1">{{ "Link to" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -30,17 +30,19 @@
   </div>
 
   <div class="row">
-    <label>{{"Image width" | translate}}</label>
+    <label>{{ "PictureCustomizations.ImageWidth" | translate }}</label>
 
     <input
       class="custom-input"
       type="number"
+      max="100"
+      min="0"
       [(ngModel)]="settings.width"
     />
   </div>
 
   <div class="row">
-    <label>{{"Alignment" | translate}}</label>
+    <label>{{ "Alignment" | translate }}</label>
     <ng-select
       [items]="alignments"
       [clearable]="false"

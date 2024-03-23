@@ -78,8 +78,11 @@
   "Alternative text": "Texto alternativo",
   "Image Alt": "Texto alternativo de imagen",
   "Link to": "Enlace a",
-  "Image width": "Anchura de imagen",
   "Alignment": "Alineación",
+
+  "PictureCustomizations": {
+    "ImageWidth": "Anchura de imagen(%)"
+  },
 
   "Spacer": "Espaciador",
   "Height": "Altura",
@@ -87,7 +90,6 @@
   "Separator": "Separador",
   "Width": "Anchura",
   "Style": "Estilo",
-
 
 
   "Show label": "Mostrar etiqueta",
