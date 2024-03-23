@@ -2,7 +2,7 @@
   <nav>
     <h1>{{ "Drag and drop form builder" | translate}}</h1>
     <div class="actions">
-      <button>{{ "GenerateHtml" | translate }}</button>
+      <button (click)="generateHtml()">{{ "GenerateHtml" | translate }}</button>
       <ng-select
         [items]="languages"
         bindLabel="label"
@@ -32,5 +32,18 @@
     <section class="customization-section">
       <app-customization></app-customization>
     </section>
+  </div>
+</div>
+
+<div *ngIf="isHtmlCodeDialogOpen" class="dialog-backdrop">
+  <div class="dialog">
+    <div class="dialog-header">
+      <div>HTML code</div>
+      <fa-icon class="icon" (click)="closeDialog()" size='lg' [icon]="faXmark"></fa-icon>
+    </div>
+    <hr>
+    <div class="dialog-content">
+      {{ generatedHtmlCode }}
+    </div>
   </div>
 </div>
