@@ -51,6 +51,8 @@ import { SingleListComponent } from './tutorial/single-list/single-list.componen
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { TwoListsHorizontalComponent } from './tutorial/two-lists-horizontal/two-lists-horizontal.component';
 import { TwoListsComponent } from './tutorial/two-lists/two-lists.component';
+import { SeparatorCustomizationComponent } from './customization/element-customization/separator-customization/separator-customization.component';
+import { FormSeparatorFieldComponent } from './form-builder/form-field/form-separator-field/form-separator-field.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -98,6 +100,8 @@ export function createTranslateLoader(http: HttpClient) {
     SpacerCustomizationComponent,
     PictureCustomizationComponent,
     FormPictureFieldComponent,
+    SeparatorCustomizationComponent,
+    FormSeparatorFieldComponent,
   ],
   imports: [
     BrowserModule,
