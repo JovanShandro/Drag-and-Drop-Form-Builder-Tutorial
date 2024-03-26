@@ -12,7 +12,7 @@ import {
 @Component({
   selector: 'app-button-customization',
   templateUrl: './button-customization.component.html',
-  styleUrls: ['./button-customization.component.scss'],
+  styleUrls: [],
 })
 export class ButtonCustomizationComponent {
   @Input() settings!: ButtonSettings;
