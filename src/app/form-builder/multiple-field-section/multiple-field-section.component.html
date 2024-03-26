@@ -23,6 +23,10 @@
 
     <div class="placeholder">Drop here</div>
 
+    <div class="preview" *cdkDragPreview>
+      <app-form-field class="form-field" [field]="field"></app-form-field>
+    </div>
+
     <div
       class="handle"
       [ngClass]="{
