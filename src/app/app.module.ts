@@ -30,7 +30,6 @@ import { TextareaCustomizationComponent } from './customization/element-customiz
 import { DraggableFieldListComponent } from './element-list-panel/draggable-field-list/draggable-field-list.component';
 import { DraggableSectionListComponent } from './element-list-panel/draggable-section-list/draggable-section-list.component';
 import { ElementListPanelComponent } from './element-list-panel/element-list-panel.component';
-import { FieldItemComponent } from './form-builder/field-item/field-item.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { FormButtonFieldComponent } from './form-builder/form-field/form-button-field/form-button-field.component';
 import { FormCheckboxFieldComponent } from './form-builder/form-field/form-checkbox-field/form-checkbox-field.component';
@@ -43,8 +42,8 @@ import { FormTextFieldComponent } from './form-builder/form-field/form-text-fiel
 import { FormSectionComponent } from './form-builder/form-section/form-section.component';
 import { MultipleFieldSectionComponent } from './form-builder/multiple-field-section/multiple-field-section.component';
 import { SingleFieldSectionComponent } from './form-builder/single-field-section/single-field-section.component';
-import { FormInputFieldComponent } from './form-field/form-input-field/form-input-field.component';
-import { FormTextareaFieldComponent } from './form-field/form-textarea-field/form-textarea-field.component';
+import { FormInputFieldComponent } from './form-builder/form-field/form-input-field/form-input-field.component';
+import { FormTextareaFieldComponent } from './form-builder/form-field/form-textarea-field/form-textarea-field.component';
 import { HomeComponent } from './home/home.component';
 import { FormService } from './services/form.service';
 import { SingleListComponent } from './tutorial/single-list/single-list.component';
@@ -73,7 +72,6 @@ export function createTranslateLoader(http: HttpClient) {
     TwoListsHorizontalComponent,
     FormBuilderComponent,
     CustomizationComponent,
-    FieldItemComponent,
     ElementListPanelComponent,
     FormSectionComponent,
     SingleFieldSectionComponent,
