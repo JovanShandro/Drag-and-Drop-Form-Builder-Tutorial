@@ -1,6 +1,8 @@
-<div class="button-customization">
+<div class="element-customization-container">
   <div>
-    <label class="mb-1">{{"Button Type" | translate}}</label>
+    <label class="mb-1">{{
+      "ButtonCustomization.ButtonType.Label" | translate
+    }}</label>
 
     <ng-select
       [items]="buttonTypes"
@@ -9,11 +11,20 @@
       bindValue="value"
       [(ngModel)]="settings.type"
     >
+      <ng-template ng-option-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
+
+      <ng-template ng-label-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
     </ng-select>
   </div>
 
   <div>
-    <label class="mb-1">{{"Button Text" | translate}}</label>
+    <label class="mb-1">{{
+      "ButtonCustomization.ButtonTextLabel" | translate
+    }}</label>
 
     <input
       class="custom-input full-width"
@@ -23,7 +34,9 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Link To" | translate}}</label>
+    <label class="mb-1">{{
+      "ButtonCustomization.LinkToLabel" | translate
+    }}</label>
 
     <input
       class="custom-input full-width"
@@ -33,7 +46,9 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Button Style" | translate}}</label>
+    <label class="mb-1">{{
+      "ButtonCustomization.ButtonStyle.Label" | translate
+    }}</label>
 
     <ng-select
       [items]="buttonStyles"
@@ -42,21 +57,28 @@
       bindValue="value"
       [(ngModel)]="settings.style"
     >
+      <ng-template ng-option-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
+
+      <ng-template ng-label-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
     </ng-select>
   </div>
 
   <div class="row">
-    <label>{{"Button Color" | translate}}</label>
+    <label>{{ "ButtonCustomization.ButtonColorLabel" | translate }}</label>
     <input class="color-input" type="color" [(ngModel)]="settings.color" />
   </div>
 
   <div class="row">
-    <label>{{"Text Color" | translate}}</label>
+    <label>{{ "TextColorLabel" | translate }}</label>
     <input class="color-input" type="color" [(ngModel)]="settings.textColor" />
   </div>
 
   <div class="row">
-    <label>{{"Border Radius" | translate}}</label>
+    <label>{{ "BorderRadiusLabel" | translate }}</label>
     <input
       class="custom-input"
       type="number"
@@ -65,23 +87,33 @@
   </div>
 
   <div class="row">
-    <label>{{"Button Height" | translate}}</label>
+    <label>{{ "ButtonCustomization.ButtonHeightLabel" | translate }}</label>
     <input class="custom-input" type="number" [(ngModel)]="settings.height" />
   </div>
   <div class="row">
-    <label>{{"Button Width" | translate}}</label>
-    <ng-select
-      [items]="buttonWidthValues"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.width"
-    >
-    </ng-select>
+    <label>{{ "ButtonCustomization.ButtonWidth.Label" | translate }}</label>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="buttonWidthValues"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.width"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+
+        <ng-template ng-label-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+      </ng-select>
+    </div>
   </div>
 
   <div class="row" *ngIf="settings.width === ButtonWidth.FixedSize">
-    <label>{{"Fixed size" | translate}}</label>
+    <label>{{ "ButtonCustomization.FixedSizeLabel" | translate }}</label>
     <input
       class="custom-input"
       type="number"
@@ -90,53 +122,76 @@
   </div>
 
   <div class="row">
-    <label>{{"Button Alignment" | translate}}</label>
-    <ng-select
-      [items]="alignments"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.alignment"
-    >
-    </ng-select>
+    <label>{{ "ButtonCustomization.ButtonAlignmentLabel" | translate }}</label>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="alignments"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.alignment"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+
+        <ng-template ng-label-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">
-    <label>{{"Text Alignment" | translate}}</label>
-    <ng-select
-      [items]="textAlignment"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.textAlignment"
-    >
-    </ng-select>
+    <label>{{ "TextAlignmentLabel" | translate }}</label>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="textAlignment"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.textAlignment"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+
+        <ng-template ng-label-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">
-    <label>{{"Font Size" | translate}}</label>
+    <label>{{ "ButtonCustomization.FontSizeLabel" | translate }}</label>
     <input class="custom-input" type="number" [(ngModel)]="settings.fontSize" />
   </div>
 
   <div class="row">
-    <label>{{"Font Family" | translate}}</label>
-    <ng-select
-      [items]="fonts"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.fontFamily"
-    >
-    </ng-select>
+    <label>{{ "ButtonCustomization.FontFamilyLabel" | translate }}</label>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="fonts"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.fontFamily"
+      >
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">
-    <label>{{"Is Bold" | translate}}</label>
+    <label>{{ "ButtonCustomization.IsBoldLabel" | translate }}</label>
     <mat-checkbox color="primary" [(ngModel)]="settings.isBold"></mat-checkbox>
   </div>
 
   <div class="row">
-    <label>{{"Is Italic" | translate}}</label>
+    <label>{{ "ButtonCustomization.IsItalicLabel" | translate }}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.isItalic"

@@ -21,15 +21,15 @@ export class ButtonCustomizationComponent {
 
   textAlignment = [
     {
-      label: 'Start',
+      label: 'TextAlignment.Start',
       value: TextAlignment.Start,
     },
     {
-      label: 'Center',
+      label: 'TextAlignment.Center',
       value: TextAlignment.Center,
     },
     {
-      label: 'End',
+      label: 'TextAlignment.End',
       value: TextAlignment.End,
     },
   ]
@@ -75,41 +75,41 @@ export class ButtonCustomizationComponent {
 
   buttonTypes = [
     {
-      label: 'Button',
+      label: 'ButtonCustomization.ButtonType.Button',
       value: ButtonType.Button,
     },
     {
-      label: 'Submit',
+      label: 'ButtonCustomization.ButtonType.Submit',
       value: ButtonType.Submit,
     },
   ];
 
   buttonStyles = [
     {
-      label: 'Flat',
+      label: 'ButtonCustomization.ButtonStyle.Flat',
       value: ButtonStyle.Flat,
     },
     {
-      label: 'Raised',
+      label: 'ButtonCustomization.ButtonStyle.Raised',
       value: ButtonStyle.Raised,
     },
     {
-      label: 'Stroked',
+      label: 'ButtonCustomization.ButtonStyle.Stroked',
       value: ButtonStyle.Stroked,
     },
   ];
 
   buttonWidthValues = [
     {
-      label: 'Auto',
+      label: 'ButtonCustomization.ButtonWidth.Auto',
       value: ButtonWidth.Auto,
     },
     {
-      label: 'Full width',
+      label: 'ButtonCustomization.ButtonWidth.FullWidth',
       value: ButtonWidth.FullWidth,
     },
     {
-      label: 'Fixed size',
+      label: 'ButtonCustomization.ButtonWidth.FixedSize',
       value: ButtonWidth.FixedSize,
     },
   ];
@@ -117,15 +117,15 @@ export class ButtonCustomizationComponent {
 
   alignments = [
     {
-      label: 'Left',
+      label: 'Alignment.Left',
       value: Alignment.Left,
     },
     {
-      label: 'Center',
+      label: 'Alignment.Center',
       value: Alignment.Center,
     },
     {
-      label: 'Right',
+      label: 'Alignment.Right',
       value: Alignment.Right,
     },
   ];

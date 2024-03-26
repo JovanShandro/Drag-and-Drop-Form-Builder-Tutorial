@@ -1,5 +1,57 @@
 {
   "GenerateHtml": "Generate HTML",
+  "NavTitle": "Drag and drop form builder",
+  "FormSections": "Form Sections",
+  "FormFields": "Form Fields",
+  "Elements": "Elements",
+  "EmptyFieldText": "Drop Content Here",
+  "Customization": {
+    "CurrentElementTabName": "Current Element",
+    "FormDesignTabName": "Form Design"
+  },
+  "TextAlignment": {
+    "Start": "Start",
+    "Center": "Center",
+    "End": "End"
+  },
+  "Alignment": {
+    "Left": "Left",
+    "Center": "Center",
+    "Right": "Right"
+  },
+  "ButtonCustomization": {
+    "ButtonTextLabel": "Button text",
+    "ButtonColorLabel": "Button color",
+    "ButtonHeightLabel": "Button height",
+    "ButtonAlignmentLabel": "Button alignment",
+    "FixedSizeLabel": "Fixed size",
+    "LinkToLabel": "Link to",
+    "FontSizeLabel": "Font size",
+    "FontFamilyLabel": "Font family",
+    "IsBoldLabel": "Is Bold",
+    "IsItalicLabel": "Is Italic",
+    "ButtonType": {
+      "Label": "Button Type",
+      "Button": "Button",
+      "Submit": "Submit"
+    },
+    "ButtonStyle": {
+      "Label": "Button style",
+      "Flat": "Flat",
+      "Raised": "Raised",
+      "Stroked": "Stroked"
+    },
+    "ButtonWidth": {
+      "Label": "Button width",
+      "Auto": "Auto",
+      "FullWidth": "Full width",
+      "FixedSize": "Fixed size"
+    }
+  },
+  "TextColorLabel": "Text color",
+  "TextAlignmentLabel": "Text alignment",
+  "BorderRadiusLabel": "Border radius",
+
   "LineStyle": {
     "Solid": "Solid",
     "Dotted": "Dotted",

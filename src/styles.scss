@@ -41,3 +41,21 @@ label.mb-1 {
   margin-bottom: 5px;
   display: block;
 }
+
+.element-customization-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.select-wrapper, .row input[type="number"] {
+  min-width: 200px;
+}
