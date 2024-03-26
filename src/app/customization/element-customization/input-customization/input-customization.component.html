@@ -1,19 +1,29 @@
-<div class="input-customization">
+<div class="element-customization-container">
   <div class="row">
-    <label>{{"Input type" | translate}}</label>
+    <label>{{ "InputCustomization.InputType.Label" | translate }}</label>
 
-    <ng-select
-      [items]="inputTypes"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.type"
-    >
-    </ng-select>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="inputTypes"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.type"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+
+        <ng-template ng-label-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">
-    <label>{{"Show label" | translate}}</label>
+    <label>{{ "InputCustomization.ShowLabel" | translate }}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.showLabel"
@@ -21,7 +31,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Label" | translate}}</label>
+    <label class="mb-1">{{ "Label" | translate }}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -30,7 +40,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Input placeholder" | translate}}</label>
+    <label class="mb-1">{{ "InputCustomization.InputPlaceholderLabel" | translate }}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -39,7 +49,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Field name" | translate}}</label>
+    <label class="mb-1">{{ "FieldNameLabel" | translate }}</label>
     <input
       class="custom-input full-width"
       type="text"
@@ -48,7 +58,7 @@
   </div>
 
   <div class="row">
-    <label>{{"Is required" | translate}}</label>
+    <label>{{ "IsRequiredLabel" | translate }}</label>
     <mat-checkbox
       color="primary"
       [(ngModel)]="settings.isRequired"

@@ -4,22 +4,22 @@ import { InputSettings, InputType } from 'src/app/services/form.service';
 @Component({
   selector: 'app-input-customization',
   templateUrl: './input-customization.component.html',
-  styleUrls: ['./input-customization.component.scss']
+  styleUrls: []
 })
 export class InputCustomizationComponent {
   @Input() settings!: InputSettings;
 
   inputTypes = [
     {
-      label: 'Text',
+      label: 'InputCustomization.InputType.Text',
       value: InputType.Text,
     },
     {
-      label: 'Email',
+      label: 'InputCustomization.InputType.Email',
       value: InputType.Email,
     },
     {
-      label: 'Password',
+      label: 'InputCustomization.InputType.Password',
       value: InputType.Password,
     },
   ]

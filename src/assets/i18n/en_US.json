@@ -48,9 +48,22 @@
       "FixedSize": "Fixed size"
     }
   },
+  "InputCustomization": {
+    "InputPlaceholderLabel": "Input placeholder",
+    "ShowLabel": "Show label",
+    "InputType": {
+      "Label": "Input type",
+      "Text": "Text",
+      "Email": "Email",
+      "Password": "Password"
+    }
+  },
   "TextColorLabel": "Text color",
   "TextAlignmentLabel": "Text alignment",
   "BorderRadiusLabel": "Border radius",
+  "FieldNameLabel": "Field name",
+  "IsRequiredLabel": "Is required",
+  "Label": "Label",
 
   "LineStyle": {
     "Solid": "Solid",
