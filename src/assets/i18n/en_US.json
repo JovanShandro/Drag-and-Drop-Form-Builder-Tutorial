@@ -4,7 +4,6 @@
   "FormSections": "Form Sections",
   "FormFields": "Form Fields",
   "Elements": "Elements",
-  "EmptyFieldText": "Drop Content Here",
   "Customization": {
     "CurrentElementTabName": "Current Element",
     "FormDesignTabName": "Form Design"
@@ -100,10 +99,25 @@
   "Text": "Text",
   "Font": "Font",
   "LineHeightLabel": "Line height",
-
+  "DraggableFieldList": {
+    "Input": "Input",
+    "Button": "Button",
+    "Text": "Text",
+    "Textarea": "Textarea",
+    "Dropdown": "Dropdown",
+    "Checkbox": "Checkbox",
+    "Radio": "Radio",
+    "Picture": "Image",
+    "Spacer": "Spacer",
+    "Separator": "Separator"
+  },
   "LineStyle": {
     "Solid": "Solid",
     "Dotted": "Dotted",
     "Dashed": "Dashed"
-  }
+  },
+  "DragPlaceholderLabel": "Drop here",
+  "EmptyFieldText": "Drop Content Here",
+  "AddImage": "Add image",
+  "EmptySpace": "Empty space"
 }

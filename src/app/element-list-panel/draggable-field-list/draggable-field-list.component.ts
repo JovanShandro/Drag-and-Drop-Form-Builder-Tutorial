@@ -30,63 +30,63 @@ export class DraggableFieldListComponent {
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Input,
-      title: 'Input',
+      title: 'DraggableFieldList.Input',
       icon: faSquareOutline,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Button,
-      title: 'Button',
+      title: 'DraggableFieldList.Button',
       icon: faSquareFilled,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Textarea,
-      title: 'Textarea',
+      title: 'DraggableFieldList.Textarea',
       icon: faWindowMaximize,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Checkbox,
-      title: 'Checkbox',
+      title: 'DraggableFieldList.Checkbox',
       icon: faCheckSquare,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Text,
-      title: 'Text',
+      title: 'DraggableFieldList.Text',
       icon: faLanguage,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Dropdown,
-      title: 'Dropdown',
+      title: 'DraggableFieldList.Dropdown',
       icon: faSquareCaretDown,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.RadioButton,
-      title: 'Radio',
+      title: 'DraggableFieldList.Radio',
       icon: faList,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Picture,
-      title: 'Picture',
+      title: 'DraggableFieldList.Picture',
       icon: faImage,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Spacer,
-      title: 'Spacer',
+      title: 'DraggableFieldList.Spacer',
       icon: faArrowsAltV,
     },
     {
       type: FormItemType.Field,
       fieldType: FormFieldType.Separator,
-      title: 'Separator',
+      title: 'DraggableFieldList.Separator',
       icon: faGripLines,
-    }
+    },
   ];
 
   constructor(private formService: FormService) {}

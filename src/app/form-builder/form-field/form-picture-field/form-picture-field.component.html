@@ -1,7 +1,7 @@
 <div class="form-picture-field">
   <div *ngIf="!settings.imageSrc" class="empty-image">
     <fa-icon size="xl" [icon]="faImage"></fa-icon>
-    Add image
+    {{ "AddImage" | translate }}
   </div>
   <div *ngIf="settings.imageSrc" class="image-container">
     <img

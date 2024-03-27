@@ -4,7 +4,6 @@
   "FormSections": "Secciones",
   "FormFields": "Elementos",
   "Elements": "Elementos",
-  "EmptyFieldText": "Suelta contenido aquí",
   "Customization": {
     "CurrentElementTabName": "Elemento actual",
     "FormDesignTabName": "Diseño de formulario"
@@ -97,44 +96,27 @@
   "FieldNameLabel": "Nombre del campo",
   "IsRequiredLabel": "Es requerido",
   "Label": "Etiqueta",
-  "Text": "Texto",
   "Font": "Fuente",
   "LineHeightLabel": "Altura de línea",
-
-  "Input": "Cuadro de texto",
-  "Input Label": "Etiqueta de entrada",
-  "Placeholder Text": "Texto de marcador de posición",
-  "Input Name": "Nombre de entrada",
-  "Button": "Botón",
-  "Submit": "Enviar",
-  "Start": "Inicio",
-  "End": "Fin",
-
-  "Textarea": "Área de texto",
-  "Textarea Name": "Nombre de área de texto",
-
-  "Checkbox": "Casilla de verificación",
-  "Checkbox Name": "Nombre de casilla",
-  "Example Text": "Texto de ejemplo",
-
-  "Dropdown": "Lista desplegable",
-
-  "Radio": "Radio",
-  "Radio button label": "Etiqueta de botón de radio",
-
-  "Picture": "Imagen",
-  "Link to": "Enlace a",
-
-
-  "Spacer": "Espaciador",
-
-  "Separator": "Separador",
-  "Width": "Anchura",
-  "Style": "Estilo",
-
+  "DraggableFieldList": {
+    "Input": "Cuadro de texto",
+    "Button": "Botón",
+    "Text": "Texto",
+    "Textarea": "Área de texto",
+    "Dropdown": "Lista desplegable",
+    "Checkbox": "Casilla de verificación",
+    "Radio": "Radio",
+    "Picture": "Imagen",
+    "Spacer": "Espaciador",
+    "Separator": "Separador"
+  },
   "LineStyle": {
     "Solid": "Sólido",
     "Dotted": "Puntos",
     "Dashed": "Rayado"
-  }
+  },
+  "DragPlaceholderLabel": "Dejar aquí",
+  "EmptyFieldText": "Suelta contenido aquí",
+  "AddImage": "Añadir imagen",
+  "EmptySpace": "Espacio vacío"
 }
