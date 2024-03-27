@@ -4,7 +4,7 @@ import { Font, TextSettings } from 'src/app/services/form.service';
 @Component({
   selector: 'app-text-customization',
   templateUrl: './text-customization.component.html',
-  styleUrls: ['./text-customization.component.scss'],
+  styleUrls: [],
 })
 export class TextCustomizationComponent {
   @Input() settings!: TextSettings;

@@ -1,24 +1,27 @@
-<div class="text-customization">
+<div class="element-customization-container">
   <div class="row">
-    <label>{{"Text Color" | translate}}</label>
+    <label>{{ "TextColorLabel" | translate }}</label>
     <input class="color-input" type="color" [(ngModel)]="settings.textColor" />
   </div>
 
   <div class="row">
-    <label>{{"Font" | translate}}</label>
+    <label>{{ "Font" | translate }}</label>
 
-    <ng-select
-      [items]="fonts"
-      [clearable]="false"
-      bindLabel="label"
-      bindValue="value"
-      [(ngModel)]="settings.font"
-    >
-    </ng-select>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="fonts"
+        [clearable]="false"
+        bindLabel="label"
+        bindValue="value"
+        [(ngModel)]="settings.font"
+      >
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">
-    <label>{{"Line Height" | translate}}</label>
+    <label>{{ "LineHeightLabel" | translate }}</label>
     <input
       class="custom-input"
       type="number"
@@ -27,7 +30,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{"Text" | translate}}</label>
+    <label class="mb-1">{{ "Text" | translate }}</label>
     <input
       class="custom-input full-width"
       type="text"

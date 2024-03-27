@@ -4,22 +4,22 @@ import { Alignment, PictureSettings } from '../../../services/form.service';
 @Component({
   selector: 'app-picture-customization',
   templateUrl: './picture-customization.component.html',
-  styleUrls: ['./picture-customization.component.scss'],
+  styleUrls: [],
 })
 export class PictureCustomizationComponent {
   @Input() settings!: PictureSettings;
 
   alignments = [
     {
-      label: 'Left',
+      label: 'Alignment.Left',
       value: Alignment.Left,
     },
     {
-      label: 'Center',
+      label: 'Alignment.Center',
       value: Alignment.Center,
     },
     {
-      label: 'Right',
+      label: 'Alignment.Right',
       value: Alignment.Right,
     },
   ];

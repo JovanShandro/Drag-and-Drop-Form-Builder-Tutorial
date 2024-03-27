@@ -4,7 +4,7 @@ import { LineStyle, SeparatorSettings } from 'src/app/services/form.service';
 @Component({
   selector: 'app-separator-customization',
   templateUrl: './separator-customization.component.html',
-  styleUrls: ['./separator-customization.component.scss']
+  styleUrls: []
 })
 export class SeparatorCustomizationComponent {
   @Input() settings!: SeparatorSettings;

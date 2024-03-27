@@ -1,6 +1,6 @@
-<div class="separator-customization">
+<div class="element-customization-container">
   <div class="row">
-    <label>Thickness</label>
+    <label>{{ "SeparatorCustomization.ThicknessLabel" | translate }}</label>
 
     <input
       class="custom-input"
@@ -10,24 +10,27 @@
   </div>
 
   <div class="row">
-    <label>Style</label>
+    <label>{{ "SeparatorCustomization.StyleLabel" | translate }}</label>
 
-    <ng-select
-      [items]="lineStyles"
-      bindLabel="label"
-      bindValue="value"
-      [clearable]="false"
-      class="custom-select"
-      [(ngModel)]="settings.style"
-    >
-      <ng-template ng-option-tmp let-item="item">
-        <div>{{ item.label | translate }}</div>
-      </ng-template>
+    <div class="select-wrapper">
+      <ng-select
+        class="full-width"
+        [items]="lineStyles"
+        bindLabel="label"
+        bindValue="value"
+        [clearable]="false"
+        class="custom-select"
+        [(ngModel)]="settings.style"
+      >
+        <ng-template ng-option-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
 
-      <ng-template ng-label-tmp let-item="item">
-        <div>{{ item.label | translate }}</div>
-      </ng-template>
-    </ng-select>
+        <ng-template ng-label-tmp let-item="item">
+          <div>{{ item.label | translate }}</div>
+        </ng-template>
+      </ng-select>
+    </div>
   </div>
 
   <div class="row">

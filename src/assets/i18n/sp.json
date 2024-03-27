@@ -50,7 +50,6 @@
   },
   "InputCustomization": {
     "InputPlaceholderLabel": "Marcador de posición de entrada",
-    "ShowLabel": "Mostrar etiqueta",
     "InputType": {
       "Label": "Tipo de entrada",
       "Text": "Texto",
@@ -58,12 +57,49 @@
       "Password": "Contraseña"
     }
   },
+  "TextareaCustomization": {
+    "Label": "Etiqueta de área de texto",
+    "PlaceholderLabel": "Marcador de posición de área de texto"
+  },
+  "DropdownCustomization": {
+    "Label": "Etiqueta de lista desplegable"
+  },
+  "RadioCustomization": {
+    "Label": "Etiqueta de radio"
+  },
+  "OptionList": {
+    "Title": "Lista de opciones",
+    "Option": "Opción",
+    "Label": "Etiqueta",
+    "Value": "Valor",
+    "IsSelected": "Está seleccionado",
+    "AddOption": "Agregar opción"
+  },
+  "PictureCustomizations": {
+    "ImageWidthLabel": "Anchura de imagen(%)",
+    "LinkToLabel": "Enlace a",
+    "AlternativeTextLabel": "Texto alternativo",
+    "ImageSourceLabel": "Fuente de imagen",
+    "AlignmentLabel": "Alineación"
+  },
+  "SpacerCustomization": {
+    "HeightLabel": "Altura"
+  },
+  "SeparatorCustomization": {
+    "ThicknessLabel": "Espesor",
+    "StyleLabel": "Estilo"
+  },
+  "ShowLabel": "Mostrar etiqueta",
+  "CheckboxLabel": "Etiqueta de casilla",
   "TextColorLabel": "Color del texto",
   "TextAlignmentLabel": "Alineación de texto",
   "BorderRadiusLabel": "Radio de borde",
   "FieldNameLabel": "Nombre del campo",
   "IsRequiredLabel": "Es requerido",
   "Label": "Etiqueta",
+  "Text": "Texto",
+  "Font": "Fuente",
+  "LineHeightLabel": "Altura de línea",
 
   "Input": "Cuadro de texto",
   "Input Label": "Etiqueta de entrada",
@@ -75,44 +111,22 @@
   "End": "Fin",
 
   "Textarea": "Área de texto",
-  "Textarea label": "Etiqueta de área de texto",
-  "Textarea placeholder": "Marcador de posición de área de texto",
   "Textarea Name": "Nombre de área de texto",
 
   "Checkbox": "Casilla de verificación",
-  "Checkbox label": "Etiqueta de casilla",
   "Checkbox Name": "Nombre de casilla",
-
-  "Text": "Texto",
-  "Font": "Fuente",
-  "Line Height": "Altura de línea",
   "Example Text": "Texto de ejemplo",
 
   "Dropdown": "Lista desplegable",
-  "Dropdown label": "Etiqueta de lista desplegable",
-  "Options List": "Lista de opciones",
-  "Option": "Opción",
-  "Value": "Valor",
-  "Is selected": "Está seleccionado",
-  "Add option": "Agregar opción",
 
   "Radio": "Radio",
   "Radio button label": "Etiqueta de botón de radio",
-  "Radio label": "Etiqueta de radio",
 
   "Picture": "Imagen",
-  "Image source": "Fuente de imagen",
-  "Alternative text": "Texto alternativo",
-  "Image Alt": "Texto alternativo de imagen",
   "Link to": "Enlace a",
-  ".Alignment": "Alineación",
 
-  "PictureCustomizations": {
-    "ImageWidth": "Anchura de imagen(%)"
-  },
 
   "Spacer": "Espaciador",
-  "Height": "Altura",
 
   "Separator": "Separador",
   "Width": "Anchura",

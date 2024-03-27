@@ -56,6 +56,29 @@ label.mb-1 {
   gap: 10px;
 }
 
-.select-wrapper, .row input[type="number"] {
+.select-wrapper, .row input[type="number"], .row input[type="color"] {
   min-width: 200px;
+}
+
+.options {
+  display: flex;
+  flex-flow: column;
+}
+
+.option {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.option-delete-button {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }

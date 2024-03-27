@@ -4,7 +4,7 @@ import { SpacerSettings } from '../../../services/form.service';
 @Component({
   selector: 'app-spacer-customization',
   templateUrl: './spacer-customization.component.html',
-  styleUrls: ['./spacer-customization.component.scss'],
+  styleUrls: [],
 })
 export class SpacerCustomizationComponent {
   @Input() settings!: SpacerSettings;

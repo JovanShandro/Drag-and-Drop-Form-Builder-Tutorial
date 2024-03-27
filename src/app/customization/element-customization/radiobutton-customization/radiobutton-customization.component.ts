@@ -6,7 +6,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-radiobutton-customization',
   templateUrl: './radiobutton-customization.component.html',
-  styleUrls: ['./radiobutton-customization.component.scss'],
+  styleUrls: [],
 })
 export class RadiobuttonCustomizationComponent {
   @Input() settings!: RadioButtonSettings;

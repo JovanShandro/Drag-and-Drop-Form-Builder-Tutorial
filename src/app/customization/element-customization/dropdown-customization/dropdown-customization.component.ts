@@ -6,7 +6,7 @@ import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'app-dropdown-customization',
   templateUrl: './dropdown-customization.component.html',
-  styleUrls: ['./dropdown-customization.component.scss'],
+  styleUrls: [],
 })
 export class DropdownCustomizationComponent {
   @Input() settings!: DropdownSettings;

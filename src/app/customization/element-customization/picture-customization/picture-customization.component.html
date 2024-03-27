@@ -1,6 +1,6 @@
-<div class="picture-customization">
+<div class="element-customization-container">
   <div>
-    <label class="mb-1">{{ "Image source" | translate }}</label>
+    <label class="mb-1">{{ "PictureCustomizations.ImageSourceLabel" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -10,7 +10,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{ "Alternative text" | translate }}</label>
+    <label class="mb-1">{{ "PictureCustomizations.AlternativeTextLabel" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -20,7 +20,7 @@
   </div>
 
   <div>
-    <label class="mb-1">{{ "Link to" | translate }}</label>
+    <label class="mb-1">{{ "PictureCustomizations.LinkToLabel" | translate }}</label>
 
     <input
       class="custom-input full-width"
@@ -30,7 +30,7 @@
   </div>
 
   <div class="row">
-    <label>{{ "PictureCustomizations.ImageWidth" | translate }}</label>
+    <label>{{ "PictureCustomizations.ImageWidthLabel" | translate }}</label>
 
     <input
       class="custom-input"
@@ -42,7 +42,7 @@
   </div>
 
   <div class="row">
-    <label>{{ "Alignment" | translate }}</label>
+    <label>{{ "PictureCustomizations.AlignmentLabel" | translate }}</label>
     <ng-select
       [items]="alignments"
       [clearable]="false"
@@ -50,6 +50,13 @@
       bindValue="value"
       [(ngModel)]="settings.alignment"
     >
+      <ng-template ng-option-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
+
+      <ng-template ng-label-tmp let-item="item">
+        <div>{{ item.label | translate }}</div>
+      </ng-template>
     </ng-select>
   </div>
 </div>

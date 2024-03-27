@@ -50,7 +50,6 @@
   },
   "InputCustomization": {
     "InputPlaceholderLabel": "Input placeholder",
-    "ShowLabel": "Show label",
     "InputType": {
       "Label": "Input type",
       "Text": "Text",
@@ -58,19 +57,53 @@
       "Password": "Password"
     }
   },
+  "TextareaCustomization": {
+    "Label": "Textarea label",
+    "PlaceholderLabel": "Textarea placeholder"
+  },
+  "DropdownCustomization": {
+    "Label": "Dropdown label"
+  },
+  "RadioCustomization": {
+    "Label": "Radio label"
+  },
+  "OptionList": {
+    "Title": "Options List",
+    "Option": "Option",
+    "Label": "Label",
+    "Value": "Value",
+    "IsSelected": "Is selected",
+    "AddOption": "Add option"
+  },
+  "PictureCustomizations": {
+    "ImageWidthLabel": "Image width(%)",
+    "LinkToLabel": "Link to",
+    "AlternativeTextLabel": "Alternative text",
+    "ImageSourceLabel": "Image source",
+    "AlignmentLabel": "Alignment"
+  },
+  "SpacerCustomization": {
+    "HeightLabel": "Height"
+  },
+  "SeparatorCustomization": {
+    "ThicknessLabel": "Thickness",
+    "StyleLabel": "Style"
+  },
+  "ShowLabel": "Show label",
+  "CheckboxLabel": "Checkbox label",
   "TextColorLabel": "Text color",
   "TextAlignmentLabel": "Text alignment",
   "BorderRadiusLabel": "Border radius",
   "FieldNameLabel": "Field name",
   "IsRequiredLabel": "Is required",
   "Label": "Label",
+  "Text": "Text",
+  "Font": "Font",
+  "LineHeightLabel": "Line height",
 
   "LineStyle": {
     "Solid": "Solid",
     "Dotted": "Dotted",
     "Dashed": "Dashed"
-  },
-  "PictureCustomizations": {
-    "ImageWidth": "Image width(%)"
   }
 }
